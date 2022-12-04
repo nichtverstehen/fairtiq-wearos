@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/payment_nav" app:startDestination="@id/paymentProfilesFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <action android:id="@id/toPaymentMethodDetails" app:destination="@id/paymentMethodDetailsFragment" />
+    <fragment android:label="@string/MenuItemPaymentKey" android:name="com.fairtiq.androidkit.payment.profiles.PaymentProfilesFragment" android:id="@id/paymentProfilesFragment" />
+    <dialog android:name="com.fairtiq.androidkit.payment.method.details.PaymentMethodDetailsFragment" android:id="@id/paymentMethodDetailsFragment">
+        <argument android:name="paymentMethod" app:argType="com.fairtiq.androidkit.sdk.domain.payment.PaymentMethod" app:nullable="false" />
+        <argument android:name="paymentProfile" app:argType="com.fairtiq.androidkit.sdk.domain.payment.PaymentProfile" app:nullable="false" />
+        <action android:id="@id/toDeletePaymentMethodConfirmation" app:destination="@id/deletePaymentMethodConfirmationFragment" />
+    </dialog>
+    <dialog android:name="com.fairtiq.androidkit.payment.method.details.DeletePaymentMethodConfirmationDialog" android:id="@id/deletePaymentMethodConfirmationFragment" />
+</navigation>

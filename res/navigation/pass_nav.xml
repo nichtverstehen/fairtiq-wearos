@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/pass_nav" app:startDestination="@id/passActivity"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <action android:id="@id/toPass" app:destination="@id/passFragment" />
+    <action android:id="@id/toHalfFarePass" app:destination="@id/halfFarePassFragment" />
+    <action android:id="@id/toVVVAnnualPass" app:destination="@id/VVVAnnualPassFragment" />
+    <action android:id="@id/toSwissPass" app:destination="@id/swissPassFragment" />
+    <action android:id="@id/toTravelcardSelection" app:destination="@id/travelcardSelectionFragment" />
+    <activity android:label="PassActivity" android:name="com.fairtiq.pass.ui.PassActivity" android:id="@id/passActivity" />
+    <fragment android:label="@string/TicketSettingsPassCards" android:name="com.fairtiq.pass.ui.tariff.TravelcardSelectionFragment" android:id="@id/travelcardSelectionFragment">
+        <argument android:name="communityId" app:argType="string" app:nullable="true" />
+        <argument android:name="passHolder" app:argType="com.fairtiq.pass.ui.model.PassHolderUiModel" />
+        <action android:id="@id/toPassMetaSelection" app:destination="@id/passMetaSelectionFragment" />
+        <action android:id="@id/toNoPass" app:destination="@id/noPassFragment" app:enterAnim="@anim/slide_in_right" />
+    </fragment>
+    <fragment android:label="@string/TicketSettingsAddPass" android:name="com.fairtiq.pass.ui.tariff.PassMetaSelectionFragment" android:id="@id/passMetaSelectionFragment">
+        <argument android:name="passForm" app:argType="com.fairtiq.pass.ui.model.PassForm" />
+    </fragment>
+    <fragment android:label="@string/TicketSettingsPassCards" android:name="com.fairtiq.pass.ui.NoPassFragment" android:id="@id/noPassFragment" />
+    <fragment android:label="@string/HalfFareCardTitle" android:name="com.fairtiq.pass.ui.halfFare.HalfFarePassFragment" android:id="@id/halfFarePassFragment">
+        <action android:id="@id/toSwissPass" app:destination="@id/legacySwissPassFragment" />
+        <argument android:name="passForm" app:argType="com.fairtiq.pass.ui.model.PassForm" />
+    </fragment>
+    <fragment android:label="@string/SwissPassDisplayName" android:name="com.fairtiq.pass.ui.swissPass.LegacySwissPassFragment" android:id="@id/legacySwissPassFragment">
+        <argument android:name="passForm" app:argType="com.fairtiq.pass.ui.model.PassForm" />
+    </fragment>
+    <fragment android:label="@string/TicketSettingsVVVCard" android:name="com.fairtiq.pass.ui.VVVAnnualPassFragment" android:id="@id/VVVAnnualPassFragment">
+        <argument android:name="passForm" app:argType="com.fairtiq.pass.ui.model.PassForm" />
+    </fragment>
+    <fragment android:label="@string/TicketSettingsPassCards" android:name="com.fairtiq.pass.ui.PassFragment" android:id="@id/passFragment">
+        <action android:id="@id/toPassZones" app:destination="@id/passZonesFragment" />
+        <argument android:name="passForm" app:argType="com.fairtiq.pass.ui.model.PassForm" />
+    </fragment>
+    <fragment android:name="com.fairtiq.pass.ui.zone.PassZonesFragment" android:id="@id/passZonesFragment">
+        <argument android:name="passForm" app:argType="com.fairtiq.pass.ui.model.PassForm" />
+        <argument android:name="zones" app:argType="com.fairtiq.pass.ui.model.Zone[]" />
+    </fragment>
+    <fragment android:label="@string/SwissPassDisplayName" android:name="com.fairtiq.pass.ui.swissPass.SwissPassFragment" android:id="@id/swissPassFragment">
+        <argument android:name="passForm" app:argType="com.fairtiq.pass.ui.model.PassForm" />
+        <argument android:name="fromRegistration" android:defaultValue="false" app:argType="boolean" app:nullable="false" />
+    </fragment>
+</navigation>

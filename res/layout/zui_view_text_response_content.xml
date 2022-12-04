@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <zendesk.messaging.ui.AvatarView android:layout_gravity="bottom" android:id="@id/zui_agent_message_avatar" android:layout_width="@dimen/zui_avatar_view_size" android:layout_height="@dimen/zui_avatar_view_size" android:layout_marginRight="@dimen/zui_avatar_spacing" android:layout_marginEnd="@dimen/zui_avatar_spacing" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <include android:id="@id/zui_cell_status_view" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/zui_cell_agent_response_label" />
+        <TextView android:autoLink="web" android:id="@id/zui_agent_message_cell_text_field" android:background="@drawable/zui_background_agent_cell" android:paddingLeft="@dimen/zui_cell_text_field_padding_horizontal" android:paddingTop="@dimen/zui_cell_text_field_padding_vertical" android:paddingRight="@dimen/zui_cell_text_field_padding_horizontal" android:paddingBottom="@dimen/zui_cell_text_field_padding_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="true" android:importantForAccessibility="no" style="@style/ZendeskSdkTheme.Light.Cell.Text.Response" />
+    </LinearLayout>
+</merge>

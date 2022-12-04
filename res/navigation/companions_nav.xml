@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/companions_nav"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="@string/MenuItemTravelCompanions" android:name="com.fairtiq.multitraveler.ui.list.CompanionsListFragment" android:id="@id/companionsListFragment">
+        <action android:id="@id/toCompanionDetailsFragment" app:destination="@id/companionDetailsFragment" />
+    </fragment>
+    <fragment android:label="@string/TravelCompanionEditorAddCompanionTitle" android:name="com.fairtiq.multitraveler.ui.details.CompanionDetailsFragment" android:id="@id/companionDetailsFragment">
+        <argument android:name="travelCompanionId" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+    </fragment>
+</navigation>

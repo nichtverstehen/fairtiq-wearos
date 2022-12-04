@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/textView_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/AdyenCheckout.AddressForm.HeaderTextAppearance" />
+    <com.google.android.material.textfield.TextInputLayout android:id="@id/textInputLayout_country" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AdyenCheckout.DropdownTextInputLayout.CountryInput">
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView android:id="@id/autoCompleteTextView_country" android:layout_width="fill_parent" android:layout_height="wrap_content" android:dropDownAnchor="@id/textInputLayout_country" style="@style/AdyenCheckout.DropdownTextInputEditText" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayout_formContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.cardview.widget.CardView android:id="@id/request_attachment_file_carousel_container" android:layout_width="160.0dip" android:layout_height="95.0dip" style="@style/ZendeskSdkTheme.Light.Request.Attachment.Carousel.Item">
+        <RelativeLayout android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="noHideDescendants" android:paddingStart="8.0dip" android:paddingEnd="8.0dip">
+            <TextView android:textSize="12.0sp" android:textColor="?android:textColorPrimary" android:id="@id/request_attachment_carousel_file_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:layout_alignParentTop="true" style="@style/TextAppearance.MaterialComponents.Body1" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <ImageView android:id="@id/request_attachment_carousel_file_icon" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@android:drawable/sym_def_app_icon" />
+                <TextView android:textSize="12.0sp" android:textColor="?android:textColorSecondary" android:gravity="center_vertical" android:id="@id/request_attachment_carousel_file_app_name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:maxLines="1" android:layout_marginStart="8.0dip" style="@style/TextAppearance.MaterialComponents.Body1" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <View android:layout_gravity="end|center|top" android:id="@id/request_attachment_carousel_remove" android:background="@drawable/zs_request_attachment_carousel_button" android:focusable="true" android:clickable="true" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_margin="4.0dip" android:foreground="?android:selectableItemBackground" android:elevation="4.0dip" />
+</FrameLayout>

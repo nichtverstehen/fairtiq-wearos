@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/landing_nav" app:startDestination="@id/welcomeFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="WelcomeFragment" android:name="com.fairtiq.androidkit.signup.welcome.WelcomeFragment" android:id="@id/welcomeFragment">
+        <action android:id="@id/toLocationRequest" app:destination="@id/locationPermissionRequestFragment" />
+        <action android:id="@id/toRootedDevice" app:destination="@id/rootedDeviceFragment" />
+    </fragment>
+    <fragment android:label="LocationPermissionRequestFragment" android:name="com.fairtiq.androidkit.signup.locationPermission.LocationPermissionRequestFragment" android:id="@id/locationPermissionRequestFragment">
+        <action android:id="@id/toLocationPermissionDenied" app:destination="@id/locationPermissionDeniedFragment" />
+    </fragment>
+    <fragment android:label="LocationPermissionDeniedFragment" android:name="com.fairtiq.androidkit.signup.locationPermission.LocationPermissionDeniedFragment" android:id="@id/locationPermissionDeniedFragment" />
+    <fragment android:label="RootedDeviceFragment" android:name="com.fairtiq.androidkit.signup.rooted.RootedDeviceFragment" android:id="@id/rootedDeviceFragment" />
+</navigation>

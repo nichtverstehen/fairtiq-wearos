@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AdyenCheckout.RecyclerListItem"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.adyen.checkout.components.ui.view.RoundCornerImageView android:id="@id/imageView_logo" app:strokeColor="@color/stroke_color" style="@style/AdyenCheckout.Image.Logo" />
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/textView_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdyenCheckout.ListItemText" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/request_list_coordinator_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" android:id="@id/request_list_toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:navigationContentDescription="@string/abc_action_bar_up_description" app:navigationIcon="@drawable/zs_request_icon_back" app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light" app:title="@string/request_list_activity_title" />
+            <zendesk.support.request.ViewAlmostRealProgressBar android:layout_gravity="bottom" android:id="@id/request_list_progressBar" android:layout_width="fill_parent" android:layout_height="@dimen/zs_request_toolbar_progress_bar_height" android:indeterminate="false" android:progressDrawable="@drawable/zs_request_toolbar_progress_bar" style="?android:progressBarStyleHorizontal" />
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:id="@id/request_list_scene_root" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/request_list_create_new_ticket_fab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:accessibilityTraversalBefore="@id/request_list_scene_root" style="@style/zs_contact_us_fab" />
+    <View android:id="@id/request_list_compat_shadow" android:background="@drawable/zs_request_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/zs_request_toolbar_shadow_space" android:layout_marginTop="?actionBarSize" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

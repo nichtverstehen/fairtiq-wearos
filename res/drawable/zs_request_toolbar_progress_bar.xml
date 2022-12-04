@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<clip
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape android:shape="rectangle">
+        <solid android:color="@color/zs_request_toolbar_progress_bar_background_color" />
+    </shape>
+</clip>

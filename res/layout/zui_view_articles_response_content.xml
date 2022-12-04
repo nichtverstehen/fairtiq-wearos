@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <zendesk.messaging.ui.AvatarView android:layout_gravity="bottom" android:id="@id/zui_agent_message_avatar" android:layout_width="@dimen/zui_avatar_view_size" android:layout_height="@dimen/zui_avatar_view_size" android:layout_marginRight="@dimen/zui_avatar_spacing" android:layout_marginEnd="@dimen/zui_avatar_spacing" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <include android:id="@id/zui_cell_status_view" layout="@layout/zui_cell_agent_response_label" />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/zui_background_agent_cell" android:padding="@dimen/zui_layout_divider_size" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:gravity="start" android:id="@id/zui_header_article_suggestions" android:paddingLeft="@dimen/zui_cell_text_field_padding_horizontal" android:paddingTop="@dimen/zui_cell_text_field_padding_vertical" android:paddingRight="@dimen/zui_cell_text_field_padding_horizontal" android:paddingBottom="@dimen/zui_cell_text_field_padding_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="false" android:importantForAccessibility="no" android:paddingStart="@dimen/zui_cell_text_field_padding_horizontal" android:paddingEnd="@dimen/zui_cell_text_field_padding_horizontal" style="@style/ZendeskSdkTheme.Light.Cell.Text.Response" />
+            <FrameLayout android:id="@id/zui_first_article_suggestion" android:background="@color/zui_color_white_100" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/zui_view_article_suggestion" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/zui_second_article_suggestion" android:background="@color/zui_color_white_100" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/zui_layout_divider_size">
+                <include layout="@layout/zui_view_article_suggestion" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/zui_third_article_suggestion" android:background="@color/zui_color_white_100" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/zui_layout_divider_size">
+                <include layout="@layout/zui_view_article_suggestion" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</merge>

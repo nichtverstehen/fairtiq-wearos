@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/zs_color_white" />
+        </shape>
+    </item>
+    <item android:id="@id/inner_circle" android:left="@dimen/zs_request_attachment_indicator_counter_border_thickness" android:top="@dimen/zs_request_attachment_indicator_counter_border_thickness" android:right="@dimen/zs_request_attachment_indicator_counter_border_thickness" android:bottom="@dimen/zs_request_attachment_indicator_counter_border_thickness">
+        <shape android:shape="rectangle">
+            <corners android:radius="7.0dip" />
+            <solid android:color="@color/zs_color_black" />
+        </shape>
+    </item>
+</layer-list>

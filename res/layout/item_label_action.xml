@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/item_label_action_0" android:background="@drawable/white_background" android:paddingTop="@dimen/spacing_m" android:paddingBottom="@dimen/spacing_m" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/spacing_l" android:paddingEnd="@dimen/spacing_s" android:paddingVertical="@dimen/spacing_m"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/itemLabelActionTitle" android:tag="binding_1" android:layout_width="0.0dip" android:layout_height="wrap_content" app:drawableEndCompat="@drawable/ic_chevron_right_dark" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/RegularDark" />
+</androidx.constraintlayout.widget.ConstraintLayout>

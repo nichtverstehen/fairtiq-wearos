@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="end|bottom|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/zui_cell_file_content" />
+        <zendesk.messaging.ui.MessageStatusView android:id="@id/zui_cell_status_view" android:visibility="visible" android:layout_width="@dimen/zui_cell_message_status_icon_size" android:layout_height="@dimen/zui_cell_message_status_icon_size" android:layout_marginLeft="@dimen/zui_cell_supplementary_label_spacing" android:layout_marginStart="@dimen/zui_cell_supplementary_label_spacing" />
+    </LinearLayout>
+    <TextView android:id="@id/zui_cell_label_message" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ZendeskSdkTheme.Light.Cell.Caption.Error" />
+</merge>

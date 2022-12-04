@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/zs_toolbar_search_selector" android:id="@id/fragment_help_menu_search" android:visible="false" android:title="@android:string/search_go" app:actionViewClass="androidx.appcompat.widget.SearchView" app:showAsAction="ifRoom|collapseActionView" />
+    <item android:icon="?zs_helpConversationsIcon" android:id="@id/fragment_help_menu_contact" android:visible="false" android:title="@string/support_conversations_menu" app:showAsAction="always" />
+</menu>

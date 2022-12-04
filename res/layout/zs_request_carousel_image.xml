@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.cardview.widget.CardView android:id="@id/request_attachment_image_carousel_container" android:layout_width="160.0dip" android:layout_height="95.0dip" style="@style/ZendeskSdkTheme.Light.Request.Attachment.Carousel.Item">
+        <ImageView android:id="@id/request_attachment_carousel_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" android:elevation="2.0dip" />
+    </androidx.cardview.widget.CardView>
+    <View android:layout_gravity="end|center|top" android:id="@id/request_attachment_carousel_remove" android:background="@drawable/zs_request_attachment_carousel_button" android:focusable="true" android:clickable="true" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_margin="4.0dip" android:foreground="?android:selectableItemBackground" android:elevation="4.0dip" />
+</FrameLayout>

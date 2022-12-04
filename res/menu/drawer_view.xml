@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/group_feature" android:checkableBehavior="none">
+        <item android:icon="@drawable/ic_history_solid_red" android:id="@id/nav_history" android:title="@string/MenuItemHistory" />
+        <item android:icon="@drawable/ic_promotions_red" android:id="@id/nav_promotions" android:title="@string/MenuItemPromotionsKey" />
+        <item android:icon="@drawable/ic_companions" android:id="@id/nav_travel_companions" android:title="@string/MenuItemTravelCompanions" />
+        <item android:icon="@drawable/ic_gift_solid_red" android:id="@id/nav_free_rides" android:title="@string/MenuItemFreeRidesKey" />
+        <item android:icon="@drawable/ic_payment_red" android:id="@id/nav_payment" android:title="@string/MenuItemPaymentKey" />
+        <item android:icon="@drawable/ic_help_red" android:id="@id/nav_information" android:visible="false" android:title="@string/MenuItemInformationKey" />
+        <item android:icon="@drawable/ic_settings_red" android:id="@id/nav_settings" android:title="@string/MenuItemSettingsKey" />
+    </group>
+    <group android:id="@id/group_info" android:checkableBehavior="none">
+        <item android:icon="@drawable/ic_bulb_red" android:id="@id/nav_how_it_works" android:title="@string/MenuItemHowItWorksKey" />
+        <item android:icon="@drawable/ic_help_red" android:id="@id/nav_help" android:title="@string/MenuItemHelpCenterKey" />
+        <item android:icon="@drawable/ic_email_red" android:id="@id/nav_contact" android:title="@string/MenuItemContactKey" />
+    </group>
+    <group android:id="@id/group_about" android:checkableBehavior="none">
+        <item android:id="@id/nav_about" android:title="@string/MenuItemAbout" />
+    </group>
+</menu>

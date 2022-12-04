@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>check_in_bottom_drawer</key>
+        <value>{"is_enabled":false, "is_available":false}</value>
+    </entry>
+    <entry>
+        <key>multiTraveller</key>
+        <value>{"is_enabled":false, "is_available":false}</value>
+    </entry>
+    <entry>
+        <key>multiTravellerMtp</key>
+        <value>{"is_enabled":false, "is_available":false}</value>
+    </entry>
+    <entry>
+        <key>remoteLoggerEnabled</key>
+        <value>{"is_enabled":false, "is_available":false}</value>
+    </entry>
+</defaultsMap>

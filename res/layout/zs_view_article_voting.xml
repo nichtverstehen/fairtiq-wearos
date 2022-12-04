@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/article_voting_container" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/zs_help_voting_prompt_text_size" android:textColor="@color/zs_help_voting_prompt_text" android:id="@id/vote_was_this_helpful" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/zs_help_voting_prompt_margin_top" android:text="@string/view_article_vote_prompt" />
+    <FrameLayout android:id="@id/downvote_button_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/vote_was_this_helpful" style="@style/zs_article_voting_button_frame">
+        <ImageButton android:id="@id/downvote_button" android:padding="@dimen/zs_help_voting_button_icon_padding" android:layout_width="@dimen/zs_help_voting_button_width" android:layout_height="@dimen/zs_help_voting_button_height" android:scaleType="fitCenter" android:contentDescription="@string/zs_view_article_vote_no_accessibility" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/upvote_button_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/downvote_button_frame" android:layout_below="@id/vote_was_this_helpful" android:layout_toEndOf="@id/downvote_button_frame" style="@style/zs_article_voting_button_frame">
+        <ImageButton android:id="@id/upvote_button" android:padding="@dimen/zs_help_voting_button_icon_padding" android:layout_width="@dimen/zs_help_voting_button_width" android:layout_height="@dimen/zs_help_voting_button_height" android:scaleType="fitCenter" android:contentDescription="@string/zs_view_article_vote_yes_accessibility" />
+    </FrameLayout>
+</merge>

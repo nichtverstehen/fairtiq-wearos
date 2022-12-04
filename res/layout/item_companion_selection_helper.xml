@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/helper_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_m" android:layout_marginTop="@dimen/spacing_s" android:layout_marginRight="@dimen/spacing_m" android:layout_marginBottom="@dimen/spacing_xl" android:text="@string/CompanionsEmptyListSubtitle" android:layout_marginHorizontal="@dimen/spacing_m" style="@style/SubtitleGrey" />
+    <View android:id="@id/divider" android:background="@color/grayscale_060" android:layout_width="fill_parent" android:layout_height="1.0dip" app:layout_constraintBottom_toTopOf="@id/saved_companions_section_header" />
+    <TextView android:id="@id/saved_companions_section_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_m" android:layout_marginTop="@dimen/spacing_xl" android:layout_marginRight="@dimen/spacing_m" android:layout_marginBottom="@dimen/spacing_s" android:text="@string/CompanionsSavedCompanionsLabel" android:textAllCaps="true" android:layout_marginHorizontal="@dimen/spacing_m" style="@style/SubtitleDark" />
+</LinearLayout>

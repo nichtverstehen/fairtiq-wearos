@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/shadowThumb" android:left="0.0dip" android:bottom="0.0dip">
+        <shape android:shape="oval">
+            <size android:height="88.0dip" android:width="88.0dip" />
+            <solid android:color="@color/thumb_shadow" />
+        </shape>
+    </item>
+    <item android:id="@id/outerThumb" android:left="0.0dip" android:bottom="2.0dip">
+        <shape android:shape="oval">
+            <size android:height="88.0dip" android:width="88.0dip" />
+            <solid android:color="@color/grey_1" />
+        </shape>
+    </item>
+    <item android:id="@id/innerThumb" android:left="9.0dip" android:top="9.0dip" android:right="9.0dip" android:bottom="9.0dip">
+        <shape android:shape="oval">
+            <size android:height="88.0dip" android:width="88.0dip" />
+            <solid android:color="@color/grayscale_100" />
+        </shape>
+    </item>
+    <item android:left="0.0dip" android:bottom="0.0dip">
+        <shape android:shape="oval">
+            <size android:height="88.0dip" android:width="88.0dip" />
+            <gradient android:startColor="#0ee5e5e5" android:endColor="#0effffff" android:angle="90.0" />
+        </shape>
+    </item>
+</layer-list>

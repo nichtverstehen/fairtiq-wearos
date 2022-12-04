@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="DominoSelectionSelectionCount">
+        <item quantity="other">%d Dominos ausgewählt</item>
+        <item quantity="one">Ein Domino ausgewählt</item>
+    </plurals>
+    <plurals name="SelectedCompanionsForTravellingCountAccessibilityLabel">
+        <item quantity="other">%d Mitreisende ausgewählt</item>
+        <item quantity="one">Ein·e Mitreisende·r ausgewählt</item>
+    </plurals>
+    <plurals name="TicketSettingsDominoPassCount">
+        <item quantity="other">%d Dominos</item>
+        <item quantity="one">%d Domino</item>
+    </plurals>
+    <plurals name="TicketSettingsZonePass">
+        <item quantity="other">%2$s: %1$d Zonen</item>
+        <item quantity="one">%2$s: %1$d Zone</item>
+    </plurals>
+    <plurals name="TicketSettingsZonePassAndroid">
+        <item quantity="other">%1$s: %2$d Zonen</item>
+        <item quantity="one">%1$s: %2$d Zone</item>
+    </plurals>
+    <plurals name="TicketSettingsZonePassCount">
+        <item quantity="other">%d Zonen</item>
+        <item quantity="one">%d Zone</item>
+    </plurals>
+    <plurals name="ZoneSelectionSelectionCount">
+        <item quantity="other">%d Zonen ausgewählt</item>
+        <item quantity="one">Eine Zone ausgewählt</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d neue Benachrichtigungen</item>
+        <item quantity="one">%d neue Benachrichtigung</item>
+    </plurals>
+</resources>

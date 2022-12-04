@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:autoLink="web" android:id="@id/zui_end_user_message_cell_text_field" android:paddingLeft="@dimen/zui_cell_text_field_padding_horizontal" android:paddingTop="@dimen/zui_cell_text_field_padding_vertical" android:paddingRight="@dimen/zui_cell_text_field_padding_horizontal" android:paddingBottom="@dimen/zui_cell_text_field_padding_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" android:textIsSelectable="false" android:importantForAccessibility="no" style="@style/ZendeskSdkTheme.Light.Cell.Text.Query" />
+        <zendesk.messaging.ui.MessageStatusView android:id="@id/zui_cell_status_view" android:visibility="visible" android:layout_width="@dimen/zui_cell_message_status_icon_size" android:layout_height="@dimen/zui_cell_message_status_icon_size" android:layout_marginLeft="@dimen/zui_cell_supplementary_label_spacing" android:layout_marginStart="@dimen/zui_cell_supplementary_label_spacing" />
+    </LinearLayout>
+    <TextView android:id="@id/zui_cell_label_message" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ZendeskSdkTheme.Light.Cell.Caption.Error" />
+</merge>

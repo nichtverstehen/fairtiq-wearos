@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/spacing_s" style="?android:progressBarStyleSmall" />
+    <TextView android:id="@id/sectionHeader" android:paddingLeft="@dimen/spacing_l" android:paddingTop="@dimen/spacing_xl" android:paddingRight="@dimen/spacing_l" android:paddingBottom="@dimen/spacing_s" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/TicketSettingsPassCards" android:includeFontPadding="false" android:textAllCaps="true" android:paddingHorizontal="@dimen/spacing_l" style="@style/SubtitleGrey" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/passesList" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include android:id="@id/addPassButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_m" layout="@layout/item_adding_button" />
+    <TextView android:id="@id/passHint" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/spacing_m" android:text="@string/TicketSettingsPassFooter" style="@style/fieldFooter" />
+</merge>

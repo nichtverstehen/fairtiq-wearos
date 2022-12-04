@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="zui_avatar_view__background_color_palette">
+        <item>#ffb35827</item>
+        <item>#ff03363d</item>
+        <item>#ff144a75</item>
+        <item>#ff03363d</item>
+        <item>#ff68737d</item>
+    </array>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/component_notification_settings_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/sectionHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/item_section_header" />
+    <include android:id="@id/receiptSwitch" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/item_label_subtitle_toggle" />
+    <include android:id="@id/bonusSwitch" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/item_label_subtitle_toggle" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imageView_logo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@null" />
+    <TextView android:id="@id/textView_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/AdyenCheckout.Voucher.DescriptionTextAppearance" />
+    <TextView android:gravity="center_horizontal" android:id="@id/textView_download" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/AdyenCheckout.Voucher.DownloadTextAppearance" />
+</merge>

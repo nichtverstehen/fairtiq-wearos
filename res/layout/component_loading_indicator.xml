@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/loadingIndicatorContainer" android:tag="layout/component_loading_indicator_0" android:background="@color/faded_background" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:id="@id/loadingIndicatorBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" app:cardBackgroundColor="@color/grayscale_100" app:cardCornerRadius="18.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="36.0dip">
+            <ProgressBar android:id="@id/progressBar" android:layout_width="24.0dip" android:layout_height="24.0dip" android:indeterminate="true" android:layout_marginStart="@dimen/spacing_s" style="?android:progressBarStyle" />
+            <TextView android:id="@id/loadingText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/GenericLoading" android:paddingStart="@dimen/spacing_s" android:paddingEnd="@dimen/spacing_m" style="@style/RegularDark" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

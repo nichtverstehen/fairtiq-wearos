@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/login_nav" app:startDestination="@id/mobileNumberFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <action android:id="@id/toMobileNumber" app:destination="@id/mobileNumberFragment" />
+    <action android:id="@id/toExperimentActivation" app:destination="@id/experimentActivationFragment" />
+    <fragment android:label="ExperimentActivationFragment" android:name="com.fairtiq.androidkit.login.experiment.ExperimentActivationFragment" android:id="@id/experimentActivationFragment">
+        <action android:id="@id/toMobileNumber" app:destination="@id/mobileNumberFragment" />
+    </fragment>
+    <fragment android:label="MobileNumberFragment" android:name="com.fairtiq.androidkit.login.phonenumber.MobileNumberFragment" android:id="@id/mobileNumberFragment">
+        <action android:id="@id/toCountryCodeSelection" app:destination="@id/countryCodeSelectionFragment" />
+        <action android:id="@id/toPinNumber" app:destination="@id/pinNumberFragment" />
+    </fragment>
+    <fragment android:label="PinNumberFragment" android:name="com.fairtiq.androidkit.login.pinnumber.PinNumberFragment" android:id="@id/pinNumberFragment">
+        <argument android:name="phoneNumber" app:argType="string" app:nullable="false" />
+    </fragment>
+    <fragment android:label="CountryCodeSelectionFragment" android:name="com.fairtiq.androidkit.login.countrylist.CountryCodeSelectionFragment" android:id="@id/countryCodeSelectionFragment" />
+</navigation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/activity_request_recycler_view" android:paddingTop="@dimen/zs_request_message_margin_vertical" android:focusable="true" android:focusableInTouchMode="true" android:clipToPadding="false" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="false" />
+    <zendesk.support.request.ViewMessageComposer android:layout_gravity="bottom" android:id="@id/activity_request_message_composer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no" style="@style/ZendeskSdkTheme.Light.Request.User.Attachment.Holder"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.cardview.widget.CardView android:id="@id/request_user_message_attachment_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/ZendeskSdkTheme.Light.Request.User.Attachment.Bubble">
+        <ImageView android:id="@id/request_user_message_attachment_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
+    </androidx.cardview.widget.CardView>
+    <TextView android:id="@id/request_user_attachment_image_status" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="8.0dip" android:layout_below="@id/request_user_message_attachment_container" android:layout_alignParentRight="true" android:importantForAccessibility="no" android:layout_marginEnd="24.0dip" android:layout_alignParentEnd="true" style="@style/ZendeskSdkTheme.Light.Request.Message.Status" />
+</RelativeLayout>

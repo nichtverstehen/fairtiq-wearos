@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout android:id="@id/drawer" android:tag="layout/activity_main_0" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/toolbar" layout="@layout/toolbar" />
+        <androidx.fragment.app.FragmentContainerView android:name="androidx.navigation.fragment.NavHostFragment" android:id="@id/nav_host" android:background="@color/grayscale_100" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:defaultNavHost="true" />
+    </LinearLayout>
+    <com.google.android.material.navigation.NavigationView android:layout_gravity="start" android:id="@id/menuNavigation" android:background="@color/grayscale_100" android:fitsSystemWindows="false" android:layout_width="wrap_content" android:layout_height="fill_parent" app:headerLayout="@layout/nav_header" app:itemBackground="@drawable/nav_drawer_row_item_background" app:itemIconTint="@color/primary" app:itemMaxLines="2" app:itemTextAppearance="@style/NavigationDrawerTextStyle" app:menu="@menu/drawer_view" />
+</androidx.drawerlayout.widget.DrawerLayout>

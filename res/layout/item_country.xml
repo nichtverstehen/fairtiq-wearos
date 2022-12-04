@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/item_country_0" android:padding="@dimen/spacing_l" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.emoji.widget.EmojiTextView android:id="@id/countryFlag" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/RegularDark" />
+    <TextView android:id="@id/countryName" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="24.0dip" android:letterSpacing="0.02" style="@style/RegularDark" />
+</LinearLayout>

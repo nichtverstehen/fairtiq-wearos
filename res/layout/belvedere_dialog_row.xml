@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/BelvedereDialogListRow"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/belvedere_dialog_row_image" style="@style/BelvedereListRowIcon" />
+    <TextView android:id="@id/belvedere_dialog_row_text" android:layout_toRightOf="@id/belvedere_dialog_row_image" style="@style/BelvedereListRowText" />
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/component_item_price_0" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_gravity="center" android:id="@id/priceEmpty" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FootnoteGrey" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/priceContent" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/sign" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FootnoteGrey" />
+        <TextView android:id="@id/currency" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FootnoteGrey" />
+        <TextView android:id="@id/amountText" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/spacing_xs" style="@style/RegularDark" />
+    </LinearLayout>
+</FrameLayout>

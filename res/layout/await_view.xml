@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/imageView_logo" android:contentDescription="@null" style="@style/AdyenCheckout.Image.Logo.Large" />
+    <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/textView_open_app" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin" android:text="@string/checkout_await_message_blik" style="@style/AdyenCheckout.TextAppearance.Primary" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin">
+        <ProgressBar android:layout_width="36.0dip" android:layout_height="36.0dip" android:indeterminateTint="@color/primaryColor" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/textView_waiting_confirmation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_half_margin" android:text="@string/checkout_await_waiting_confirmation" style="@style/AdyenCheckout.TextAppearance.Secondary" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/zs_help_search_row_padding_start" android:paddingTop="@dimen/zs_help_search_row_padding_top" android:paddingRight="@dimen/zs_help_search_row_padding_end" android:paddingBottom="@dimen/zs_help_search_row_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/zs_help_search_row_min_height" android:paddingStart="@dimen/zs_help_search_row_padding_start" android:paddingEnd="@dimen/zs_help_search_row_padding_end"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ZendeskSdkTheme.Light.HelpCenter.SearchResult.Title" />
+    <TextView android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ZendeskSdkTheme.Light.HelpCenter.SearchResult.Subtitle" />
+</LinearLayout>

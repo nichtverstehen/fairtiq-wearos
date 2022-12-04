@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/promo_nav" app:startDestination="@id/promotionsFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="PromotionsFragment" android:name="com.fairtiq.androidkit.promotion.list.PromotionsFragment" android:id="@id/promotionsFragment">
+        <action android:id="@id/toPromotionDetailsFromList" app:destination="@id/promotionDetailsFragment" />
+        <action android:id="@id/toJoinPromotion" app:destination="@id/joinPromotionFragment" />
+    </fragment>
+    <fragment android:label="@string/PromotionDescriptionTitle" android:name="com.fairtiq.androidkit.promotion.details.PromotionDetailsFragment" android:id="@id/promotionDetailsFragment">
+        <argument android:name="promoCodeEntry" android:defaultValue="@null" app:argType="com.fairtiq.common.sdk.domain.model.promotion.PromoCodeEntry" app:nullable="true" />
+        <argument android:name="promotionId" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <argument android:name="fromRegistration" android:defaultValue="false" app:argType="boolean" />
+    </fragment>
+    <fragment android:label="PromotionJoinFragment" android:name="com.fairtiq.androidkit.promotion.join.JoinPromotionFragment" android:id="@id/joinPromotionFragment">
+        <action android:id="@id/toPromotionDetailsFromJoin" app:destination="@id/promotionDetailsFragment" />
+        <action android:id="@id/toPromotions" app:destination="@id/promotionsFragment" app:launchSingleTop="true" app:popUpTo="@id/promo_nav" />
+    </fragment>
+</navigation>

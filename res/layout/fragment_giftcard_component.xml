@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/standard_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/bottom_sheet_indicator" />
+    <TextView android:id="@id/header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/AdyenCheckout.TextAppearance.HeaderTitle" />
+    <androidx.core.widget.NestedScrollView android:paddingBottom="@dimen/standard_margin" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/componentContainer" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@id/redeemButton" android:text="@string/checkout_giftcard_redeem_button" style="@style/AdyenCheckout.Button.Colored" />
+            <androidx.core.widget.ContentLoadingProgressBar android:layout_gravity="center" android:id="@id/progressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.AppCompat.ProgressBar" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

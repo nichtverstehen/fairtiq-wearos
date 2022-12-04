@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="top" android:id="@id/zui_navbar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" android:id="@id/zui_toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:navigationContentDescription="@string/abc_action_bar_up_description" app:navigationIcon="@drawable/zui_ic_back" app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light" app:title="@string/zui_toolbar_title" />
+        <zendesk.commonui.AlmostRealProgressBar android:layout_gravity="bottom" android:id="@id/zui_progressBar" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/zui_toolbar_progress_bar_height" android:indeterminate="false" android:progressDrawable="@drawable/zui_background_progressbar" style="?android:progressBarStyleHorizontal" />
+    </FrameLayout>
+</com.google.android.material.appbar.AppBarLayout>

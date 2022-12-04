@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="noHideDescendants"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="12.0dip" app:srcCompat="@drawable/zs_request_conversations_disabled_menu_ic_add_attachments" />
+    <FrameLayout android:layout_gravity="end|center|top" android:id="@id/request_actionview_badge_container" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginEnd="6.0dip">
+        <View android:layout_gravity="center" android:id="@id/request_actionview_compat_shadow" android:background="@drawable/zs_request_dropshadow" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" />
+        <TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/request_actionview_attachment_count" android:background="@drawable/zs_request_attachment_actionview_badge" android:layout_width="14.0dip" android:layout_height="14.0dip" android:elevation="2.0dip" />
+    </FrameLayout>
+</merge>

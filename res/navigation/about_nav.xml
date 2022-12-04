@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/about_nav" app:startDestination="@id/aboutFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include app:graph="@navigation/contact_nav" />
+    <fragment android:label="@string/PartnersTitle" android:name="com.fairtiq.about.ui.partners.PartnersFragment" android:id="@id/partnersFragment" />
+    <fragment android:label="@string/AboutMenuCompanyTitle" android:name="com.fairtiq.about.ui.AboutFragment" android:id="@id/aboutFragment">
+        <action android:id="@id/toPartners" app:destination="@id/partnersFragment" />
+    </fragment>
+</navigation>

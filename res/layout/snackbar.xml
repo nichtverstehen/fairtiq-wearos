@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/snackbar_container" android:background="@color/grayscale_000" android:paddingTop="19.0dip" android:paddingBottom="18.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="20.0dip" android:paddingEnd="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:layout_gravity="center_vertical" android:id="@id/snackbar_close" android:background="@android:color/transparent" android:layout_width="24.0dip" android:layout_height="24.0dip" android:contentDescription="@null" android:layout_marginEnd="20.0dip" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/grayscale_100" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/snackbar_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" android:fontFamily="@font/lato_regular" android:letterSpacing="0.02" />
+</LinearLayout>

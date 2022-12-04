@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/view_article_attachment_coordinator" style="@style/zs_view_article_container"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" android:id="@id/view_article_toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationIcon="@drawable/zui_ic_back" app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ProgressBar android:id="@id/view_article_progress" style="@style/zs_view_article_details_progress" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <WebView android:id="@id/view_article_content_webview" style="@style/zs_view_article_content_webview" />
+                <ListView android:id="@id/view_article_attachment_list" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/zs_article_attachment_list" />
+                <zendesk.support.guide.ArticleVotingView android:id="@id/article_voting_container" android:paddingLeft="@dimen/zs_article_voting_horizontal_margin" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/zs_article_voting_horizontal_margin" />
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+    <View android:id="@id/view_article_compat_shadow" android:background="@drawable/zg_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/zui_toolbar_shadow_height" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/contact_us_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" style="@style/zs_contact_us_fab" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

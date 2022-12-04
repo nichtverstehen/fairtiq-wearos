@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/fragment_payment_profiles_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/errorBanner" app:layout_constraintBottom_toTopOf="@id/separator" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/component_message_banner" />
+    <View android:id="@id/separator" android:tag="binding_1" android:background="@color/grayscale_080" android:layout_width="0.0dip" android:layout_height="1.0dip" app:layout_constraintBottom_toTopOf="@id/swipeContainer" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/errorBanner" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/swipeContainer" android:tag="binding_2" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/errorBanner">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/paymentMethodList" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <include app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/component_loading_indicator" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="zs_request_image_picker_full_screen">false</bool>
+</resources>

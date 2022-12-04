@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" android:id="@id/support_toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationIcon="@drawable/zui_ic_back" app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light" app:title="@string/support_activity_title" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:id="@id/fragment_container" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <View android:id="@id/support_compat_shadow" android:background="@drawable/zg_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/zui_toolbar_shadow_height" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <include android:id="@id/loading_view" android:visibility="gone" layout="@layout/zs_row_loading_progress" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/contact_us_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" android:accessibilityTraversalBefore="@id/fragment_container" style="@style/zs_contact_us_fab" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

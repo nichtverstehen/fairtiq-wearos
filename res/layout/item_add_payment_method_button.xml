@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/addPaymentMethodButton" android:tag="layout/item_add_payment_method_button_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/spacing_s" />
+    <include layout="@layout/item_adding_button" />
+</LinearLayout>

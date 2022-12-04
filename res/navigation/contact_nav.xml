@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/common_nav" app:startDestination="@id/contactFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <activity android:label="ContactActivity" android:name="com.fairtiq.androidkit.zendesk.ContactActivity" android:id="@id/contactActivity">
+        <deepLink app:uri="fairtiq://contact/{zendeskId}?isContactForm={isContactForm}" />
+        <argument android:name="isContactForm" android:defaultValue="false" app:argType="boolean" app:nullable="false" />
+        <argument android:name="zendeskId" android:defaultValue="null" app:argType="string" app:nullable="true" />
+    </activity>
+    <fragment android:name="com.fairtiq.androidkit.zendesk.ContactFragment" android:id="@id/contactFragment" />
+</navigation>

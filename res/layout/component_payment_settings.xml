@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/component_payment_settings_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/sectionHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" bind:layout_constraintBottom_toTopOf="@id/paymentLabel" bind:layout_constraintEnd_toEndOf="parent" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toTopOf="parent" layout="@layout/item_section_header" />
+    <include android:id="@id/paymentLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" bind:layout_constraintBottom_toBottomOf="parent" bind:layout_constraintEnd_toEndOf="parent" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toBottomOf="@id/sectionHeader" layout="@layout/item_label_action" />
+    <ProgressBar android:id="@id/paymentMethodProgressBar" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" bind:layout_constraintBottom_toBottomOf="@id/paymentLabel" bind:layout_constraintEnd_toEndOf="parent" bind:layout_constraintHorizontal_bias="0.92" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toTopOf="@id/paymentLabel" style="?android:progressBarStyleSmall" />
+</androidx.constraintlayout.widget.ConstraintLayout>

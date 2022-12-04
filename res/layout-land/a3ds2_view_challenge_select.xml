@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.adyen.threeds2.internal.ui.widget.NonScrollableListView android:id="@id/listView_selectInfoItems" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/a3ds2_padding_tiny" android:layout_marginBottom="@dimen/a3ds2_padding_normal" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/button_next" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Widget.ThreeDS2.Button.Colored.Next" />
+        <Button android:id="@id/button_resend" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Widget.ThreeDS2.Button.Borderless.Resend" />
+    </LinearLayout>
+</merge>

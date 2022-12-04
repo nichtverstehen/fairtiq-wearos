@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="DominoSelectionSelectionCount">
+        <item quantity="other">dominos valgt</item>
+        <item quantity="one">En domino valgt</item>
+    </plurals>
+    <plurals name="SelectedCompanionsForTravellingCountAccessibilityLabel">
+        <item quantity="other">medrejsende er valgt</item>
+        <item quantity="one">En medrejsende er valgt</item>
+    </plurals>
+    <plurals name="TicketSettingsDominoPassCount">
+        <item quantity="other">Dominos</item>
+        <item quantity="one">Domino</item>
+    </plurals>
+    <plurals name="TicketSettingsZonePass">
+        <item quantity="other">zoner</item>
+        <item quantity="one">zone</item>
+    </plurals>
+    <plurals name="TicketSettingsZonePassAndroid">
+        <item quantity="other">zoner</item>
+        <item quantity="one">zone</item>
+    </plurals>
+    <plurals name="TicketSettingsZonePassCount">
+        <item quantity="other">zoner</item>
+        <item quantity="one">zone</item>
+    </plurals>
+    <plurals name="ZoneSelectionSelectionCount">
+        <item quantity="other">%d zoner valgt</item>
+        <item quantity="one">En zone valgt</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nye notifikationer</item>
+        <item quantity="one">%d ny notifikation</item>
+    </plurals>
+</resources>

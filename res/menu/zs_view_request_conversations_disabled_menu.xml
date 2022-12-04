@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/request_conversations_disabled_menu_ic_add_attachments" android:visible="true" android:title="@string/request_menu_button_label_add_attachments" app:actionViewClass="zendesk.support.request.ViewCellAttachmentMenuItem" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/zs_request_conversations_disabled_menu_ic_send" android:id="@id/request_conversations_disabled_menu_ic_send" android:visible="true" android:title="@string/request_menu_button_label_send" app:showAsAction="always" />
+</menu>

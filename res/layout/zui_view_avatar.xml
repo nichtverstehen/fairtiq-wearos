@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="center" android:id="@id/zui_avatar_letter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/zui_avatar_view_size" android:maxHeight="@dimen/zui_avatar_view_size" />
+    <ImageView android:id="@id/zui_avatar_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerInside" />
+</merge>

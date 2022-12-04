@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:gravity="start" android:id="@id/editText_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/a3ds2_padding_normal" android:layout_marginRight="@dimen/a3ds2_padding_normal" android:maxLines="1" android:singleLine="true" android:inputType="textVisiblePassword|textNoSuggestions" android:textCursorDrawable="@null" android:layout_marginStart="@dimen/a3ds2_padding_normal" android:layout_marginEnd="@dimen/a3ds2_padding_normal" android:importantForAutofill="no" />
+    <Button android:id="@id/button_continue" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.ThreeDS2.Button.Colored.Continue" />
+    <Button android:id="@id/button_resend" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.ThreeDS2.Button.Borderless.Resend" />
+</merge>

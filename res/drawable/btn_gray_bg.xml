@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/secondary_broken_white"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <selector>
+            <item android:state_selected="true">
+                <shape>
+                    <solid android:color="@color/grey_1" />
+                    <corners android:radius="@dimen/input_field_round" />
+                </shape>
+            </item>
+            <item android:state_pressed="true">
+                <shape>
+                    <solid android:color="@color/grey_1" />
+                    <corners android:radius="@dimen/input_field_round" />
+                </shape>
+            </item>
+            <item android:state_enabled="false">
+                <shape>
+                    <solid android:color="@color/grey_2" />
+                    <corners android:radius="@dimen/input_field_round" />
+                </shape>
+            </item>
+            <item>
+                <shape>
+                    <solid android:color="#ff4a4a4a" />
+                    <corners android:radius="@dimen/input_field_round" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

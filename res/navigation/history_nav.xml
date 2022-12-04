@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:label="@string/MenuHistory" android:id="@id/history_nav" app:startDestination="@id/historyTabsFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="@string/MenuHistory" android:name="com.fairtiq.androidkit.history.HistoryFragment" android:id="@id/historyTabsFragment">
+        <action android:id="@id/toJourneyHistoryDetails" app:destination="@id/journeyHistoryDetailsFragment" />
+        <action android:id="@id/toTransactionDetails" app:destination="@id/transactionDetailFragment" />
+        <action android:id="@id/toPromotionDetailsFromHistory" app:destination="@id/promotionDetailsFragment" />
+    </fragment>
+    <fragment android:name="com.fairtiq.androidkit.history.journey.details.JourneyHistoryDetailsFragment" android:id="@id/journeyHistoryDetailsFragment">
+        <argument android:name="journey" app:argType="com.fairtiq.androidkit.sdk.domain.journey.JourneyData" app:nullable="false" />
+        <action android:id="@id/toSmartStopSettings" app:destination="@id/smartStopSettings" />
+    </fragment>
+    <fragment android:label="@string/MenuHistory" android:name="com.fairtiq.androidkit.history.transaction.details.TransactionDetailFragment" android:id="@id/transactionDetailFragment">
+        <action android:id="@id/toJourneyHistoryDetails" app:destination="@id/journeyHistoryDetailsFragment" />
+        <argument android:name="invoiceTransaction" app:argType="com.fairtiq.androidkit.sdk.domain.InvoiceTransactionData" app:nullable="false" />
+    </fragment>
+    <fragment android:label="@string/PromotionDescriptionTitle" android:name="com.fairtiq.androidkit.promotion.details.PromotionDetailsFragment" android:id="@id/promotionDetailsFragment">
+        <argument android:name="promoCodeEntry" android:defaultValue="@null" app:argType="com.fairtiq.common.sdk.domain.model.promotion.PromoCodeEntry" app:nullable="true" />
+        <argument android:name="promotionId" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <argument android:name="fromRegistration" android:defaultValue="false" app:argType="boolean" />
+    </fragment>
+    <fragment android:label="@string/SmartStopSettingsTitle" android:name="com.fairtiq.androidkit.settings.ticket.smartstop.SmartStopSettingsFragment" android:id="@id/smartStopSettings" />
+</navigation>

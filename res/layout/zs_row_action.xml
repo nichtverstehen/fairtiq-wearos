@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/zs_help_row_action_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/help_section_action_button" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ZendeskSdkTheme.Light.HelpCenter.Action" />
+    <ProgressBar android:layout_gravity="center_vertical" android:id="@id/help_section_loading_progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/zs_progress_bar_small" android:indeterminate="true" />
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:layout_gravity="center_horizontal" android:id="@id/button_app" android:paddingLeft="@dimen/a3ds2_padding_normal" android:paddingRight="@dimen/a3ds2_padding_normal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/a3ds2_padding_normal" android:layout_marginBottom="@dimen/a3ds2_padding_normal" android:paddingStart="@dimen/a3ds2_padding_normal" android:paddingEnd="@dimen/a3ds2_padding_normal" style="@style/Widget.ThreeDS2.Button.Colored.OutOfBand" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/button_continue" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Widget.ThreeDS2.Button.Colored.Continue" />
+        <Button android:id="@id/button_resend" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Widget.ThreeDS2.Button.Borderless.Resend" />
+    </LinearLayout>
+</merge>

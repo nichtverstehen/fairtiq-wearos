@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/main_nav" app:startDestination="@id/travelFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <action android:id="@id/toLegalDocumentsUpdate" app:destination="@id/legalDocumentUpdateActivity" />
+    <action android:id="@id/toLegalDocument" app:destination="@id/legalDocumentActivity" />
+    <action android:id="@id/toHistory" app:destination="@id/nav_history" />
+    <action android:id="@id/toTicket" app:destination="@id/ticketActivity" />
+    <action android:id="@id/toJourney" app:destination="@id/journeyActivity" />
+    <action android:id="@id/toPromotions" app:destination="@id/promotionsActivity" />
+    <action android:id="@id/toFreeRides" app:destination="@id/freeRidesActivity" />
+    <action android:id="@id/toSettings" app:destination="@id/settingsActivity" />
+    <action android:id="@id/toPayment" app:destination="@id/paymentActivity" />
+    <include app:graph="@navigation/about_nav" />
+    <include app:graph="@navigation/contact_nav" />
+    <action android:id="@id/toAbout" app:destination="@id/aboutActivity" />
+    <action android:id="@id/toContact" app:destination="@id/contactActivity" />
+    <action android:id="@id/toWebView" app:destination="@id/webViewActivity" />
+    <action android:id="@id/toHowItWork" app:destination="@id/howItWorkActivity" />
+    <action android:id="@id/toSmartStopSettings" app:destination="@id/smartStopSettingsActivity" />
+    <action android:id="@id/toCompanions" app:destination="@id/companionsActivity" />
+    <action android:id="@id/toCompanionSelection" app:destination="@id/companionSelectionFragment" />
+    <action android:id="@id/toPhysicalActivityPermission" app:destination="@id/physicalActivityPermissionActivity" />
+    <action android:id="@id/toTravel" app:destination="@id/travelFragment" app:popUpTo="@id/main_nav" app:popUpToInclusive="true" />
+    <fragment android:label="TravelFragment" android:name="com.fairtiq.androidkit.travel.TravelFragment" android:id="@id/travelFragment">
+        <argument android:name="notificationAction" app:argType="string" app:nullable="true" />
+        <argument android:name="fromCheckoutWarning" android:defaultValue="false" app:argType="boolean" />
+    </fragment>
+    <activity android:label="MainActivity" android:name="com.fairtiq.androidkit.MainActivity" android:id="@id/mainActivity" />
+    <activity android:label="LegalDocumentActivity" android:name="com.fairtiq.androidkit.legalDocument.LegalDocumentActivity" android:id="@id/legalDocumentActivity">
+        <deepLink app:uri="fairtiq://legalDocuments/{documentName}" />
+        <argument android:name="documentName" app:argType="string" />
+    </activity>
+    <activity android:label="LegalDocumentUpdateActivity" android:name="com.fairtiq.androidkit.legalDocument.LegalDocumentUpdateActivity" android:id="@id/legalDocumentUpdateActivity">
+        <argument android:name="stateDetails" app:argType="com.fairtiq.common.domain.legal.LegalDocumentsStateDetails" />
+    </activity>
+    <activity android:label="HistoryActivity" android:name="com.fairtiq.androidkit.history.HistoryActivity" android:id="@id/nav_history">
+        <argument android:name="initialSection" app:argType="com.fairtiq.androidkit.history.HistorySection" />
+    </activity>
+    <activity android:label="TicketActivity" android:name="com.fairtiq.androidkit.ticket.TicketActivity" android:id="@id/ticketActivity">
+        <argument android:name="ticketLanguage" app:argType="string" app:nullable="false" />
+    </activity>
+    <activity android:label="JourneyActivity" android:name="com.fairtiq.androidkit.journey.JourneyActivity" android:id="@id/journeyActivity">
+        <argument android:name="trackerId" app:argType="string" app:nullable="true" />
+        <argument android:name="fromCheckoutWarning" android:defaultValue="false" app:argType="boolean" app:nullable="false" />
+    </activity>
+    <activity android:label="PromotionsActivity" android:name="com.fairtiq.androidkit.promotion.PromotionsActivity" android:id="@id/promotionsActivity" />
+    <activity android:label="FreeRidesActivity" android:name="com.fairtiq.androidkit.freeRides.FreeRidesActivity" android:id="@id/freeRidesActivity" />
+    <activity android:label="SettingsActivity" android:name="com.fairtiq.androidkit.settings.SettingsActivity" android:id="@id/settingsActivity">
+        <argument android:name="destination" android:defaultValue="0" app:argType="integer" />
+    </activity>
+    <activity android:label="PaymentActivity" android:name="com.fairtiq.androidkit.payment.PaymentActivity" android:id="@id/paymentActivity" />
+    <activity android:label="AboutActivity" android:name="com.fairtiq.about.ui.AboutActivity" android:id="@id/aboutActivity" />
+    <activity android:label="HowItWorkActivity" android:name="com.fairtiq.androidkit.howitwork.HowItWorkActivity" android:id="@id/howItWorkActivity" />
+    <activity android:label="ContactActivity" android:name="com.fairtiq.androidkit.zendesk.ContactActivity" android:id="@id/contactActivity">
+        <deepLink app:uri="fairtiq://contact/{zendeskId}?isContactForm={isContactForm}" />
+        <argument android:name="isContactForm" android:defaultValue="false" app:argType="boolean" app:nullable="false" />
+        <argument android:name="zendeskId" android:defaultValue="null" app:argType="string" app:nullable="true" />
+    </activity>
+    <activity android:label="ContactActivity" android:name="com.fairtiq.androidkit.web.WebViewActivity" android:id="@id/webViewActivity">
+        <argument android:name="url" app:argType="string" app:nullable="true" />
+        <argument android:name="title" app:argType="string" app:nullable="true" />
+    </activity>
+    <activity android:label="PhysicalActivityPermissionActivity" android:name="com.fairtiq.androidkit.signup.permissions.PermissionsAcceptanceActivity" android:id="@id/physicalActivityPermissionActivity" />
+    <activity android:label="CompanionsActivity" android:name="com.fairtiq.multitraveler.ui.CompanionsActivity" android:id="@id/companionsActivity">
+        <argument android:name="createCompanion" android:defaultValue="false" app:argType="boolean" app:nullable="false" />
+    </activity>
+    <activity android:label="SmartStopSettingsActivity" android:name="com.fairtiq.androidkit.settings.ticket.smartstop.SmartStopSettingsActivity" android:id="@id/smartStopSettingsActivity" />
+    <dialog android:label="CompanionSelectionFragment" android:name="com.fairtiq.multitraveler.ui.selection.CompanionSelectionFragment" android:id="@id/companionSelectionFragment">
+        <action android:id="@id/toCompanions" app:destination="@id/companionsActivity" />
+    </dialog>
+</navigation>

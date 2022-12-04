@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="23.0dip" android:width="34.0dip" android:viewportWidth="34.0" android:viewportHeight="23.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$ic_amex__0" android:pathData="M2,0L31.5,0A2,2 0,0 1,33.5 2L33.5,20.333A2,2 0,0 1,31.5 22.333L2,22.333A2,2 0,0 1,0 20.333L0,2A2,2 0,0 1,2 0z" android:fillType="nonZero" />
+    <path android:fillColor="#ffffffff" android:pathData="M7.693,7.884L5.025,13.95L8.22,13.95l0.395,-0.967h0.906l0.395,0.967h3.517v-0.738l0.312,0.738h1.82l0.313,-0.754v0.754h7.313l0.889,-0.943 0.832,0.943 3.755,0.008 -2.677,-3.025 2.677,-3.049h-3.698l-0.864,0.926 -0.807,-0.926h-7.955L14.66,9.45l-0.7,-1.566h-3.187v0.713l-0.354,-0.713L7.693,7.884zM8.311,8.744h1.556l1.77,4.116L11.637,8.745h1.705l1.367,2.95 1.26,-2.95h1.696v4.353h-1.03l-0.007,-3.41 -1.507,3.41h-0.923l-1.515,-3.41v3.41L10.56,13.098l-0.404,-0.976L7.981,12.122l-0.403,0.976L6.44,13.098l1.87,-4.353zM18.612,8.744h4.2l1.284,1.427 1.326,-1.426h1.285l-1.952,2.189 1.952,2.164h-1.342l-1.285,-1.443 -1.334,1.443h-4.134L18.612,8.745zM9.068,9.483l-0.716,1.737h1.433l-0.717,-1.737zM19.65,9.647v0.795h2.289v0.885h-2.29v0.869h2.57l1.194,-1.279 -1.145,-1.27L19.65,9.647z" android:fillType="nonZero" />
+</vector>

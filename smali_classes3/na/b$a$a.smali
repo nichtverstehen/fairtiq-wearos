@@ -1,0 +1,166 @@
+.class public final Lna/b$a$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lna/b$a;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "a"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008\u0086\u0003\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0006\u0010\u0007J\u000e\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002\u00a8\u0006\u0008"
+    }
+    d2 = {
+        "Lna/b$a$a;",
+        "",
+        "Lcom/fairtiq/common/utils/ErrorDescription;",
+        "errorResponse",
+        "Lna/b$a;",
+        "a",
+        "<init>",
+        "()V",
+        "fairtiqkit_playstore"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x7,
+        0x1
+    }
+.end annotation
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/h;)V
+    .locals 0
+
+    invoke-direct {p0}, Lna/b$a$a;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/fairtiq/common/utils/ErrorDescription;)Lna/b$a;
+    .locals 2
+
+    .line 1
+    const-string v0, "errorResponse"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/p;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-virtual {p1}, Lcom/fairtiq/common/utils/ErrorDescription;->getCode()I
+
+    .line 7
+    .line 8
+    .line 9
+    move-result p1
+
+    .line 10
+    sget-object v0, Lna/b$a;->e:Lna/b$a;
+
+    .line 11
+    .line 12
+    invoke-virtual {v0}, Lna/b$a;->b()I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v1
+
+    .line 16
+    if-ne p1, v1, :cond_0
+
+    .line 17
+    .line 18
+    goto :goto_0
+
+    .line 19
+    :cond_0
+    sget-object v0, Lna/b$a;->c:Lna/b$a;
+
+    .line 20
+    .line 21
+    invoke-virtual {v0}, Lna/b$a;->b()I
+
+    .line 22
+    .line 23
+    .line 24
+    move-result v1
+
+    .line 25
+    if-ne p1, v1, :cond_1
+
+    .line 26
+    .line 27
+    goto :goto_0
+
+    .line 28
+    :cond_1
+    sget-object v0, Lna/b$a;->d:Lna/b$a;
+
+    .line 29
+    .line 30
+    invoke-virtual {v0}, Lna/b$a;->b()I
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v1
+
+    .line 34
+    if-ne p1, v1, :cond_2
+
+    .line 35
+    .line 36
+    goto :goto_0
+
+    .line 37
+    :cond_2
+    sget-object v0, Lna/b$a;->f:Lna/b$a;
+
+    .line 38
+    .line 39
+    :goto_0
+    return-object v0
+    .line 40
+    .line 41
+    .line 42
+    .line 43
+    .line 44
+    .line 45
+    .line 46
+    .line 47
+    .line 48
+    .line 49
+    .line 50
+    .line 51
+    .line 52
+    .line 53
+    .line 54
+    .line 55
+    .line 56
+    .line 57
+.end method
