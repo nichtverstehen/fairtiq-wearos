@@ -106,6 +106,7 @@
 
     <application
         android:allowBackup="false"
+        android:debuggable="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"

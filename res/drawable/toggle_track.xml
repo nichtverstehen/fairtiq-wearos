@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- toggle component sizes itself to the graphic: scale the original in half -->
 <layer-list
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@id/outerTrack" android:left="0.0dip" android:bottom="0.0dip">
         <shape android:shape="rectangle">
-            <size android:height="100.0dip" />
+            <size android:height="50.0dip" />
             <solid android:color="@color/color_eef0f5" />
-            <corners android:radius="200.0dip" />
+            <corners android:radius="100.0dip" />
         </shape>
     </item>
     <item android:id="@id/innerTrack" android:left="9.0dip" android:top="9.0dip" android:right="9.0dip" android:bottom="9.0dip">
         <shape android:shape="rectangle">
-            <size android:height="88.0dip" />
+            <size android:height="44.0dip" />
             <gradient android:startColor="#00ffffff" android:endColor="#ffffffff" android:useLevel="false" android:angle="0.0" android:type="linear" android:centerY="0.5" android:centerColor="#16ffffff" android:rotation="-180.0" />
-            <corners android:radius="200.0dip" />
+            <corners android:radius="100.0dip" />
         </shape>
     </item>
 </layer-list>

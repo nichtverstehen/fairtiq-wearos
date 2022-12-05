@@ -848,7 +848,8 @@
     const/4 v2, 0x2
 
     .line 251
-    const/high16 v3, 0x41700000    # 15.0f
+    # Smaller font for "START" text on the swiper thumb.
+    const/high16 v3, 12.0f # 0x41700000    # 15.0f
 
     .line 252
     .line 253

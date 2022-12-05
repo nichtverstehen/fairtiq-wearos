@@ -1,4 +1,4 @@
-.class public Lu8/b;
+.class public Lu8/b; # ActivityMainBindingImpl?
 .super Lu8/a;
 .source "SourceFile"
 
@@ -10,7 +10,9 @@
 
 
 # instance fields
-.field private final Z:Landroid/widget/LinearLayout;
+# We changed the component in activity_main, so need to update it here.
+# See also the cast below.
+.field private final Z:Landroid/widget/FrameLayout;
 
 .field private k1:J
 
@@ -181,9 +183,9 @@
     .line 7
     aget-object p1, p3, p1
 
-    check-cast p1, Landroid/widget/LinearLayout;
+    check-cast p1, Landroid/widget/FrameLayout;
 
-    iput-object p1, p0, Lu8/b;->Z:Landroid/widget/LinearLayout;
+    iput-object p1, p0, Lu8/b;->Z:Landroid/widget/FrameLayout;
 
     .line 8
     invoke-virtual {p1, v9}, Landroid/view/View;->setTag(Ljava/lang/Object;)V

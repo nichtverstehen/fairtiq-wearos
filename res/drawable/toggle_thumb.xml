@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Toggle component sizes itself to the graphic (see JourneyToggle.smali).
+    We scale it down in half.
+    It weirdly depends on intrinsic width, otherwise aspect ration breaks.
+    So we add to outerThumb dimensions what we subtract from outerThumb insets. -->
 <layer-list
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@id/shadowThumb" android:left="0.0dip" android:bottom="0.0dip">
         <shape android:shape="oval">
-            <size android:height="88.0dip" android:width="88.0dip" />
+            <size android:height="44.0dip" android:width="44.0dip" />
             <solid android:color="@color/thumb_shadow" />
         </shape>
     </item>
     <item android:id="@id/outerThumb" android:left="0.0dip" android:bottom="2.0dip">
         <shape android:shape="oval">
-            <size android:height="88.0dip" android:width="88.0dip" />
+            <size android:height="44.0dip" android:width="44.0dip" />
             <solid android:color="@color/grey_1" />
         </shape>
     </item>
-    <item android:id="@id/innerThumb" android:left="9.0dip" android:top="9.0dip" android:right="9.0dip" android:bottom="9.0dip">
+    <item android:id="@id/innerThumb" android:left="4.0dip" android:top="4.0dip" android:right="4.0dip" android:bottom="4.0dip">
         <shape android:shape="oval">
-            <size android:height="88.0dip" android:width="88.0dip" />
+            <size android:height="54.0dip" android:width="54.0dip" />
             <solid android:color="@color/grayscale_100" />
         </shape>
     </item>
     <item android:left="0.0dip" android:bottom="0.0dip">
         <shape android:shape="oval">
-            <size android:height="88.0dip" android:width="88.0dip" />
+            <size android:height="44.0dip" android:width="44.0dip" />
             <gradient android:startColor="#0ee5e5e5" android:endColor="#0effffff" android:angle="90.0" />
         </shape>
     </item>
