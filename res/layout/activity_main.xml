@@ -8,15 +8,18 @@
     android:tag="layout/activity_main_0"
     android:fitsSystemWindows="true">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:tag="binding_1">
 
+        <!-- Overlay the forked transparent toolbar over the content on the main page.
+        There is just not enough space for everything at once. -->
         <include
             android:id="@id/toolbar"
-            layout="@layout/toolbar" />
+            android:layout_gravity="top"
+            layout="@layout/toolbar_transparent" />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@id/nav_host"
@@ -28,7 +31,7 @@
             android:clickable="true"
             app:defaultNavHost="true" />
 
-    </LinearLayout>
+    </FrameLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@id/menuNavigation"

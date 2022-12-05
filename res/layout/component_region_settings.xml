@@ -9,6 +9,28 @@
     android:background="@android:color/transparent"
     android:animateLayoutChanges="true">
 
+    <!--
+        Reorder vertically:
+        1. Community (partially occluded by watch shape, but doesn't matter).
+        2. Station
+        3. Change station.
+    -->
+    <TextView
+        android:id="@id/communityName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:tag="binding_4"
+        android:singleLine="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/stationName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        style="@style/RegularGrey" />
+
     <TextView
         android:id="@id/stationName"
         android:layout_width="wrap_content"
@@ -19,12 +41,10 @@
         android:layout_marginTop="@dimen/spacing_xs"
         android:singleLine="true"
         app:layout_constrainedWidth="true"
-        app:layout_constraintBottom_toTopOf="@id/communityName"
-        app:layout_constraintEnd_toStartOf="@id/changeStationContainer"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/changeStationContainer"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/communityName"
         style="@style/H1Dark" />
 
     <FrameLayout
@@ -33,10 +53,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacing_s"
         app:layout_constrainedWidth="true"
-        app:layout_constraintBottom_toBottomOf="@id/stationName"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/stationName"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stationName">
 
         <TextView
             android:id="@id/changeStationButton"
@@ -58,18 +78,5 @@
             android:contentDescription="@null" />
 
     </FrameLayout>
-
-    <TextView
-        android:id="@id/communityName"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:tag="binding_4"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/stationName"
-        style="@style/RegularGrey" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

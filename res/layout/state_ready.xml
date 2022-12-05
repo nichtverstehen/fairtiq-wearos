@@ -9,6 +9,7 @@
 
     <ImageView
         android:id="@id/stateReadyLogo"
+        android:visibility="gone"
         android:layout_width="0.0dip"
         android:layout_height="0.0dip"
         android:layout_margin="10.0dip"

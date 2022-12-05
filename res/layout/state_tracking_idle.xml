@@ -9,6 +9,7 @@
 
     <ImageView
         android:id="@id/trackingIdleStateImage"
+        android:visibility="gone"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/spacing_xxl"

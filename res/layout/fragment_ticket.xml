@@ -84,6 +84,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <!-- Reorder QR-code to the top and decrease margins. -->
+            <ImageView
+                android:id="@id/qr_code"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tag="binding_4"
+                android:layout_marginTop="20.0dip"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/qrCodeAccessibilityHint"
+                android:layout_marginStart="20.0dip"
+                android:layout_marginEnd="20.0dip"
+                app:layout_constraintBottom_toTopOf="@id/travelAuthorisationText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@id/travelAuthorisationText"
                 android:layout_width="fill_parent"
@@ -99,26 +116,10 @@
                 android:fontFamily="@font/lato_regular"
                 android:paddingStart="20.0dip"
                 android:paddingEnd="20.0dip"
-                app:layout_constraintBottom_toTopOf="@id/qr_code"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@id/qr_code"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:tag="binding_4"
-                android:layout_marginTop="20.0dip"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/qrCodeAccessibilityHint"
-                android:layout_marginStart="50.0dip"
-                android:layout_marginEnd="50.0dip"
                 app:layout_constraintBottom_toTopOf="@id/ticket_color_block"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/travelAuthorisationText" />
+                app:layout_constraintTop_toBottomOf="@id/qr_code" />
 
             <TextView
                 android:id="@id/string_code"

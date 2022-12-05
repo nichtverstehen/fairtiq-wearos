@@ -285,6 +285,10 @@
     .line 65
     invoke-virtual {p1, v0}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
 
+    # Hide toolbar on the ticket QR page.
+    const/16 v0, 0x8 # GONE
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
     .line 66
     .line 67
     .line 68

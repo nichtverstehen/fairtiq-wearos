@@ -9037,7 +9037,8 @@
     move-result-object v0
 
     .line 163
-    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/Toolbar;->setLogo(Landroid/graphics/drawable/Drawable;)V
+    # No logo on the main activity toolbar (the toolbar is also transparent).
+    #invoke-virtual {p1, v0}, Landroidx/appcompat/widget/Toolbar;->setLogo(Landroid/graphics/drawable/Drawable;)V
 
     .line 164
     .line 165

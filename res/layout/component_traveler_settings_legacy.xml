@@ -10,8 +10,14 @@
     android:padding="@dimen/spacing_m"
     android:animateLayoutChanges="true">
 
+    <!--
+        Not enough space for traveler settings.
+        Not easy to hide the whole panel at once since its visibility is data-bound.
+        So we just hide each individual element.
+    -->
     <TextView
         android:id="@id/legacyTravelerName"
+        android:visibility="gone"
         android:layout_width="0.0dip"
         android:layout_height="wrap_content"
         android:tag="binding_1"
@@ -23,6 +29,7 @@
 
     <TextView
         android:id="@id/paymentProfileBadge"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:tag="binding_2"
@@ -37,6 +44,7 @@
         style="@style/ButtonMedium" />
 
     <androidx.constraintlayout.widget.Barrier
+        android:visibility="gone"
         android:id="@id/barrier"
         android:layout_width="wrap_content"
         android:layout_height="0.0dip"
@@ -44,6 +52,7 @@
         app:constraint_referenced_ids="legacyTravelerName,paymentProfileBadge" />
 
     <TextView
+        android:visibility="gone"
         android:id="@id/legacyTicketClass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,6 +66,7 @@
 
     <TextView
         android:id="@id/separator"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:tag="binding_4"
@@ -71,6 +81,7 @@
 
     <TextView
         android:id="@id/legacyTravelerPasses"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:tag="binding_5"

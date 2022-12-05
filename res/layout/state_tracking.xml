@@ -9,6 +9,7 @@
 
     <ImageView
         android:id="@id/stateTrackingTicketLogo"
+        android:visibility="gone"
         android:layout_width="225.0dip"
         android:layout_height="70.0dip"
         android:src="@drawable/illu_clouds_ticket_dark"
@@ -25,7 +26,8 @@
         android:layout_width="wrap_content"
         android:paddingLeft="@dimen/spacing_xl"
         android:paddingRight="@dimen/spacing_xl"
-        android:layout_marginTop="@dimen/spacing_l"
+        android:layout_marginTop="@dimen/spacing_xs"
+        android:layout_marginBottom="@dimen/spacing_xs"
         android:text="@string/ShowTicket"
         android:paddingHorizontal="@dimen/spacing_xl"
         app:layout_constrainedHeight="true"

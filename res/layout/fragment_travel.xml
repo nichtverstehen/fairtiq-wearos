@@ -9,29 +9,48 @@
     android:background="@color/grayscale_100"
     android:clipChildren="false">
 
+    <!--
+        Reorder and make it more linear:
+        1. Stations.
+        2. "Contents" (the ticket button).
+        3. Swiper
+    -->
+
     <include
         android:id="@id/legacyTravelerSettings"
         android:layout_width="0.0dip"
-        android:layout_height="wrap_content"
+        android:layout_height="0.0dip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         layout="@layout/component_traveler_settings_legacy" />
 
+    <include
+        android:id="@id/stations_container"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dip"
+        android:layout_marginRight="50dip"
+        android:layout_marginHorizontal="@dimen/spacing_l"
+        app:layout_constraintBottom_toTopOf="@id/contents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/legacyTravelerSettings" 
+        layout="@layout/component_region_settings" />
+
     <ScrollView
         android:id="@id/contents"
         android:layout_width="fill_parent"
-        android:layout_height="0.0dip"
+        android:layout_height="0dip"
         android:scrollbarThumbVertical="@color/primary"
-        android:fillViewport="true"
         android:fadeScrollbars="false"
         android:requiresFadingEdge="vertical"
         app:layout_constrainedHeight="true"
-        app:layout_constraintBottom_toTopOf="@id/stations_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_default="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/legacyTravelerSettings">
+        app:layout_constraintTop_toBottomOf="@id/stations_container"
+        app:layout_constraintBottom_toTopOf="@id/journeyToggle">
 
         <FrameLayout
             android:id="@id/journeyStateViewContainer"
@@ -40,35 +59,23 @@
 
     </ScrollView>
 
-    <include
-        android:id="@id/stations_container"
-        android:layout_width="0.0dip"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/spacing_l"
-        android:layout_marginRight="@dimen/spacing_l"
-        android:layout_marginHorizontal="@dimen/spacing_l"
-        app:layout_constraintBottom_toTopOf="@id/journeyToggle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/contents"
-        layout="@layout/component_region_settings" />
-
+    <!-- Make the swiper smaller -->
     <com.fairtiq.androidkit.custom.JourneyToggle
         android:id="@id/journeyToggle"
         android:layout_width="fill_parent"
-        android:layout_height="100.0dip"
+        android:layout_height="50.0dip"
         android:tag="binding_1"
         android:layout_marginLeft="@dimen/spacing_l"
-        android:layout_marginTop="@dimen/spacing_m"
+        android:layout_marginTop="@dimen/spacing_xs"
         android:layout_marginRight="@dimen/spacing_l"
-        android:layout_marginBottom="@dimen/spacing_m"
+        android:layout_marginBottom="@dimen/spacing_l"
         android:fontFamily="@font/lato_bold"
         android:layout_marginHorizontal="@dimen/spacing_l"
         app:layout_constrainedHeight="true"
-        app:layout_constraintBottom_toTopOf="@id/travelerSettings"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/stations_container" />
+        app:layout_constraintTop_toBottomOf="@id/contents" />
 
     <ImageView
         android:id="@id/smartStopStatusImageView"
