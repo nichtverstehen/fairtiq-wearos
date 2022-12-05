@@ -1,19 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.google.android.material.textfield.TextInputLayout android:id="@id/textInputLayout_street" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AdyenCheckout.TextInputLayout">
-        <com.adyen.checkout.components.ui.view.AdyenTextInputEditText android:id="@id/editText_street" android:nextFocusDown="@id/editText_apartmentSuite" android:nextFocusForward="@id/editText_apartmentSuite" android:autofillHints="postalAddress" style="@style/AdyenCheckout.Card.AddressInput" />
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@id/textInputLayout_street"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/AdyenCheckout.TextInputLayout">
+
+        <com.adyen.checkout.components.ui.view.AdyenTextInputEditText
+            android:id="@id/editText_street"
+            android:nextFocusDown="@id/editText_apartmentSuite"
+            android:nextFocusForward="@id/editText_apartmentSuite"
+            android:autofillHints="postalAddress"
+            style="@style/AdyenCheckout.Card.AddressInput" />
+
     </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout android:id="@id/textInputLayout_apartmentSuite" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AdyenCheckout.TextInputLayout">
-        <com.adyen.checkout.components.ui.view.AdyenTextInputEditText android:id="@id/editText_apartmentSuite" android:nextFocusDown="@id/editText_city" android:nextFocusForward="@id/editText_city" android:autofillHints="postalAddress" style="@style/AdyenCheckout.Card.ApartmentSuiteInput" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@id/textInputLayout_apartmentSuite"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/AdyenCheckout.TextInputLayout">
+
+        <com.adyen.checkout.components.ui.view.AdyenTextInputEditText
+            android:id="@id/editText_apartmentSuite"
+            android:nextFocusDown="@id/editText_city"
+            android:nextFocusForward="@id/editText_city"
+            android:autofillHints="postalAddress"
+            style="@style/AdyenCheckout.Card.ApartmentSuiteInput" />
+
     </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout android:id="@id/textInputLayout_city" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AdyenCheckout.TextInputLayout">
-        <com.adyen.checkout.components.ui.view.AdyenTextInputEditText android:id="@id/editText_city" android:nextFocusDown="@id/editText_postalCode" android:nextFocusForward="@id/editText_postalCode" android:autofillHints="postalAddress" style="@style/AdyenCheckout.Card.CityInput" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@id/textInputLayout_city"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/AdyenCheckout.TextInputLayout">
+
+        <com.adyen.checkout.components.ui.view.AdyenTextInputEditText
+            android:id="@id/editText_city"
+            android:nextFocusDown="@id/editText_postalCode"
+            android:nextFocusForward="@id/editText_postalCode"
+            android:autofillHints="postalAddress"
+            style="@style/AdyenCheckout.Card.CityInput" />
+
     </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout android:id="@id/textInputLayout_postalCode" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AdyenCheckout.TextInputLayout">
-        <com.adyen.checkout.components.ui.view.AdyenTextInputEditText android:id="@id/editText_postalCode" android:autofillHints="postalCode" style="@style/AdyenCheckout.Card.PostalCodeInput" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@id/textInputLayout_postalCode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/AdyenCheckout.TextInputLayout">
+
+        <com.adyen.checkout.components.ui.view.AdyenTextInputEditText
+            android:id="@id/editText_postalCode"
+            android:autofillHints="postalCode"
+            style="@style/AdyenCheckout.Card.PostalCodeInput" />
+
     </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout android:id="@id/textInputLayout_state" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AdyenCheckout.DropdownTextInputLayout.ProvinceTerritoryInput">
-        <androidx.appcompat.widget.AppCompatAutoCompleteTextView android:id="@id/autoCompleteTextView_state" android:layout_width="fill_parent" android:layout_height="wrap_content" android:autofillHints="postalAddress" style="@style/AdyenCheckout.DropdownTextInputEditText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@id/textInputLayout_state"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/AdyenCheckout.DropdownTextInputLayout.ProvinceTerritoryInput">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@id/autoCompleteTextView_state"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="postalAddress"
+            style="@style/AdyenCheckout.DropdownTextInputEditText" />
+
     </com.google.android.material.textfield.TextInputLayout>
+
 </merge>

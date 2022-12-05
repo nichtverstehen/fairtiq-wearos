@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.google.android.material.textfield.TextInputLayout android:id="@id/textInputLayout_holderName" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AdyenCheckout.TextInputLayout">
-        <com.adyen.checkout.components.ui.view.AdyenTextInputEditText style="@style/AdyenCheckout.Sepa.HolderNameInput" />
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@id/textInputLayout_holderName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/AdyenCheckout.TextInputLayout">
+
+        <com.adyen.checkout.components.ui.view.AdyenTextInputEditText
+            style="@style/AdyenCheckout.Sepa.HolderNameInput" />
+
     </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout android:id="@id/textInputLayout_ibanNumber" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AdyenCheckout.TextInputLayout">
-        <com.adyen.checkout.sepa.ui.IbanInput style="@style/AdyenCheckout.Sepa.AccountNumberInput" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@id/textInputLayout_ibanNumber"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/AdyenCheckout.TextInputLayout">
+
+        <com.adyen.checkout.sepa.ui.IbanInput
+            style="@style/AdyenCheckout.Sepa.AccountNumberInput" />
+
     </com.google.android.material.textfield.TextInputLayout>
+
 </merge>

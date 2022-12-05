@@ -1,34 +1,398 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView android:tag="layout/fragment_ticket_0" android:background="@color/grayscale_100" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.constraintlayout.widget.ConstraintLayout android:paddingBottom="@dimen/spacing_s" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <androidx.constraintlayout.widget.ConstraintLayout android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
-            <TextView android:textSize="16.0sp" android:textColor="@color/grayscale_020" android:id="@id/fake_validity_description" android:background="@color/secondary_broken_white" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/NoTicketValidityDescription" android:fontFamily="@font/lato_regular" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" app:layout_constraintBottom_toTopOf="@id/fake_qr_code" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-            <ImageView android:id="@id/fake_qr_code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:src="@drawable/ic_qr_code_invalid" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@string/qrCodeAccessibilityHint" android:layout_marginStart="80.0dip" android:layout_marginEnd="80.0dip" app:layout_constraintBottom_toTopOf="@id/fake_validity_details" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/fake_validity_description" />
-            <TextView android:textSize="16.0sp" android:textColor="@color/grayscale_020" android:id="@id/fake_validity_details" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/NoTicketValidityDetails" android:fontFamily="@font/lato_regular" android:textAlignment="center" android:layout_marginStart="60.0dip" android:layout_marginEnd="60.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/fake_qr_code" />
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="layout/fragment_ticket_0"
+    android:background="@color/grayscale_100">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingBottom="@dimen/spacing_s">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:tag="binding_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@id/fake_validity_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16.0sp"
+                android:textColor="@color/grayscale_020"
+                android:background="@color/secondary_broken_white"
+                android:paddingTop="15.0dip"
+                android:paddingBottom="15.0dip"
+                android:text="@string/NoTicketValidityDescription"
+                android:fontFamily="@font/lato_regular"
+                android:paddingStart="20.0dip"
+                android:paddingEnd="20.0dip"
+                app:layout_constraintBottom_toTopOf="@id/fake_qr_code"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@id/fake_qr_code"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50.0dip"
+                android:src="@drawable/ic_qr_code_invalid"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/qrCodeAccessibilityHint"
+                android:layout_marginStart="80.0dip"
+                android:layout_marginEnd="80.0dip"
+                app:layout_constraintBottom_toTopOf="@id/fake_validity_details"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fake_validity_description" />
+
+            <TextView
+                android:id="@id/fake_validity_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16.0sp"
+                android:textColor="@color/grayscale_020"
+                android:layout_marginTop="20.0dip"
+                android:text="@string/NoTicketValidityDetails"
+                android:fontFamily="@font/lato_regular"
+                android:textAlignment="center"
+                android:layout_marginStart="60.0dip"
+                android:layout_marginEnd="60.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fake_qr_code" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
-        <androidx.constraintlayout.widget.ConstraintLayout android:tag="binding_2" android:paddingBottom="@dimen/spacing_xxxxl" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
-            <TextView android:textSize="16.0sp" android:textColor="@color/grayscale_020" android:ellipsize="end" android:id="@id/travelAuthorisationText" android:tag="binding_3" android:background="@color/secondary_broken_white" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="@font/lato_regular" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" app:layout_constraintBottom_toTopOf="@id/qr_code" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-            <ImageView android:id="@id/qr_code" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@string/qrCodeAccessibilityHint" android:layout_marginStart="50.0dip" android:layout_marginEnd="50.0dip" app:layout_constraintBottom_toTopOf="@id/ticket_color_block" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/travelAuthorisationText" />
-            <TextView android:textSize="16.0sp" android:textColor="@color/grayscale_020" android:id="@id/string_code" android:tag="binding_5" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:fontFamily="@font/lato_regular" android:textAlignment="center" android:layout_marginStart="50.0dip" android:layout_marginEnd="50.0dip" app:layout_constraintBottom_toTopOf="@id/ticket_color_block" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/travelAuthorisationText" />
-            <com.fairtiq.androidkit.custom.view.ProgressCircle android:tag="binding_6" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="32.0dip" android:layout_marginBottom="32.0dip" android:indeterminate="true" android:progressBackgroundTint="@color/general_confirm" android:indeterminateTintMode="src_atop" android:backgroundTint="@color/grayscale_000" android:backgroundTintMode="src_in" app:layout_constraintBottom_toTopOf="@id/ticket_color_block" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/travelAuthorisationText" />
-            <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/ticket_color_block" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_m" app:layout_constraintBottom_toTopOf="@id/valid_since" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/qr_code">
-                <TextView android:id="@id/class_block" android:tag="binding_8" android:layout_marginTop="@dimen/spacing_m" android:paddingStart="@dimen/spacing_m" android:paddingEnd="@dimen/spacing_m" android:layout_marginStart="@dimen/spacing_l" app:layout_constraintEnd_toStartOf="@id/fare_block" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/TagIcon" />
-                <TextView android:id="@id/fare_block" android:tag="binding_9" android:layout_marginTop="@dimen/spacing_m" android:paddingStart="@dimen/spacing_m" android:paddingEnd="@dimen/spacing_m" android:layout_marginStart="@dimen/spacing_s" app:layout_constraintStart_toEndOf="@id/class_block" app:layout_constraintTop_toTopOf="parent" style="@style/TagIcon" />
-                <androidx.constraintlayout.widget.Barrier android:id="@id/ticketTagBarrier" android:layout_width="wrap_content" android:layout_height="wrap_content" app:barrierDirection="bottom" app:constraint_referenced_ids="class_block, fare_block" />
-                <androidx.recyclerview.widget.RecyclerView android:id="@id/passesList" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_s" android:layout_marginStart="@dimen/spacing_l" android:layout_marginEnd="@dimen/spacing_l" android:nestedScrollingEnabled="false" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toTopOf="@id/valid_from" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ticketTagBarrier" />
-                <TextView android:textSize="16.0sp" android:textColor="@color/grayscale_100" android:id="@id/valid_from" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_s" android:fontFamily="@font/lato_regular" android:layout_marginStart="@dimen/spacing_l" android:layout_marginEnd="@dimen/spacing_l" app:layout_constraintBottom_toTopOf="@id/valid_until" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/passesList" />
-                <TextView android:textSize="16.0sp" android:textColor="@color/grayscale_100" android:id="@id/valid_until" android:tag="binding_11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/spacing_m" android:fontFamily="@font/lato_regular" android:layout_marginStart="@dimen/spacing_l" android:layout_marginEnd="@dimen/spacing_l" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/valid_from" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:tag="binding_2"
+            android:paddingBottom="@dimen/spacing_xxxxl"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@id/travelAuthorisationText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16.0sp"
+                android:textColor="@color/grayscale_020"
+                android:ellipsize="end"
+                android:tag="binding_3"
+                android:background="@color/secondary_broken_white"
+                android:paddingTop="15.0dip"
+                android:paddingBottom="15.0dip"
+                android:maxLines="1"
+                android:fontFamily="@font/lato_regular"
+                android:paddingStart="20.0dip"
+                android:paddingEnd="20.0dip"
+                app:layout_constraintBottom_toTopOf="@id/qr_code"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@id/qr_code"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tag="binding_4"
+                android:layout_marginTop="20.0dip"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/qrCodeAccessibilityHint"
+                android:layout_marginStart="50.0dip"
+                android:layout_marginEnd="50.0dip"
+                app:layout_constraintBottom_toTopOf="@id/ticket_color_block"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/travelAuthorisationText" />
+
+            <TextView
+                android:id="@id/string_code"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16.0sp"
+                android:textColor="@color/grayscale_020"
+                android:tag="binding_5"
+                android:paddingBottom="20.0dip"
+                android:layout_marginTop="20.0dip"
+                android:fontFamily="@font/lato_regular"
+                android:textAlignment="center"
+                android:layout_marginStart="50.0dip"
+                android:layout_marginEnd="50.0dip"
+                app:layout_constraintBottom_toTopOf="@id/ticket_color_block"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/travelAuthorisationText" />
+
+            <com.fairtiq.androidkit.custom.view.ProgressCircle
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:tag="binding_6"
+                android:layout_marginTop="32.0dip"
+                android:layout_marginBottom="32.0dip"
+                android:indeterminate="true"
+                android:progressBackgroundTint="@color/general_confirm"
+                android:indeterminateTintMode="src_atop"
+                android:backgroundTint="@color/grayscale_000"
+                android:backgroundTintMode="src_in"
+                app:layout_constraintBottom_toTopOf="@id/ticket_color_block"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/travelAuthorisationText" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@id/ticket_color_block"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tag="binding_7"
+                android:layout_marginTop="@dimen/spacing_m"
+                app:layout_constraintBottom_toTopOf="@id/valid_since"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/qr_code">
+
+                <TextView
+                    android:id="@id/class_block"
+                    android:tag="binding_8"
+                    android:layout_marginTop="@dimen/spacing_m"
+                    android:paddingStart="@dimen/spacing_m"
+                    android:paddingEnd="@dimen/spacing_m"
+                    android:layout_marginStart="@dimen/spacing_l"
+                    app:layout_constraintEnd_toStartOf="@id/fare_block"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/TagIcon" />
+
+                <TextView
+                    android:id="@id/fare_block"
+                    android:tag="binding_9"
+                    android:layout_marginTop="@dimen/spacing_m"
+                    android:paddingStart="@dimen/spacing_m"
+                    android:paddingEnd="@dimen/spacing_m"
+                    android:layout_marginStart="@dimen/spacing_s"
+                    app:layout_constraintStart_toEndOf="@id/class_block"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/TagIcon" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@id/ticketTagBarrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="class_block, fare_block" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@id/passesList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_s"
+                    android:layout_marginStart="@dimen/spacing_l"
+                    android:layout_marginEnd="@dimen/spacing_l"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toTopOf="@id/valid_from"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ticketTagBarrier" />
+
+                <TextView
+                    android:id="@id/valid_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16.0sp"
+                    android:textColor="@color/grayscale_100"
+                    android:tag="binding_10"
+                    android:layout_marginTop="@dimen/spacing_s"
+                    android:fontFamily="@font/lato_regular"
+                    android:layout_marginStart="@dimen/spacing_l"
+                    android:layout_marginEnd="@dimen/spacing_l"
+                    app:layout_constraintBottom_toTopOf="@id/valid_until"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/passesList" />
+
+                <TextView
+                    android:id="@id/valid_until"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16.0sp"
+                    android:textColor="@color/grayscale_100"
+                    android:tag="binding_11"
+                    android:layout_marginBottom="@dimen/spacing_m"
+                    android:fontFamily="@font/lato_regular"
+                    android:layout_marginStart="@dimen/spacing_l"
+                    android:layout_marginEnd="@dimen/spacing_l"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/valid_from" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
-            <TextView android:textSize="16.0sp" android:id="@id/valid_since" android:tag="binding_12" android:paddingTop="@dimen/spacing_m" android:paddingBottom="@dimen/spacing_m" android:layout_width="0.0dip" android:layout_height="wrap_content" android:fontFamily="@font/lato_regular" android:textAlignment="center" android:paddingStart="@dimen/spacing_l" android:paddingEnd="@dimen/spacing_l" app:layout_constraintBottom_toTopOf="@id/from" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ticket_color_block" />
-            <TextView android:textSize="20.0sp" android:textColor="@color/grayscale_020" android:ellipsize="end" android:id="@id/from" android:tag="binding_13" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_m" android:maxLines="3" android:fontFamily="@font/lato_regular" android:layout_marginStart="@dimen/spacing_l" android:layout_marginEnd="@dimen/spacing_l" app:layout_constraintBottom_toTopOf="@id/user_name" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/valid_since" />
-            <TextView android:textSize="16.0sp" android:textColor="@color/grayscale_020" android:ellipsize="end" android:id="@id/user_name" android:tag="binding_14" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_s" android:maxLines="2" android:fontFamily="@font/lato_regular" android:layout_marginStart="@dimen/spacing_l" android:layout_marginEnd="@dimen/spacing_l" app:layout_constraintBottom_toTopOf="@id/user_dateOfBirth" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/from" />
-            <TextView android:textSize="16.0sp" android:textColor="@color/grayscale_020" android:id="@id/user_dateOfBirth" android:tag="binding_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="@font/lato_regular" android:layout_marginStart="@dimen/spacing_l" android:layout_marginEnd="@dimen/spacing_l" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/user_name" />
-            <ImageView android:id="@id/image_vvv_card" android:background="@color/grayscale_100" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:src="@drawable/ic_no_picture_dark" android:minWidth="100.0dip" android:minHeight="100.0dip" android:contentDescription="@null" android:layout_marginStart="@dimen/spacing_l" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/user_dateOfBirth" />
-            <TextView android:textSize="16.0sp" android:textColor="@color/grayscale_020" android:id="@id/dvAuthorization" android:tag="binding_16" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_l" android:fontFamily="@font/lato_regular" android:layout_marginStart="@dimen/spacing_l" android:layout_marginEnd="@dimen/spacing_l" app:layout_constraintBottom_toTopOf="@id/fq_code" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/image_vvv_card" />
-            <TextView android:textSize="16.0sp" android:textColor="@color/grayscale_020" android:gravity="start" android:id="@id/fq_code" android:tag="binding_17" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/lato_regular" android:layout_marginStart="@dimen/spacing_l" android:layout_marginEnd="@dimen/spacing_l" app:layout_constraintBottom_toTopOf="@id/ticket_id" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/dvAuthorization" />
-            <TextView android:textSize="16.0sp" android:textColor="@color/grayscale_020" android:gravity="start" android:id="@id/ticket_id" android:tag="binding_18" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/lato_regular" android:layout_marginStart="@dimen/spacing_l" android:layout_marginEnd="@dimen/spacing_l" app:layout_constraintBottom_toTopOf="@id/short_code" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/fq_code" />
-            <TextView android:textSize="16.0sp" android:textColor="@color/grayscale_020" android:gravity="start" android:id="@id/short_code" android:tag="binding_19" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/lato_regular" android:layout_marginStart="@dimen/spacing_l" android:layout_marginEnd="@dimen/spacing_l" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ticket_id" />
+
+            <TextView
+                android:id="@id/valid_since"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:textSize="16.0sp"
+                android:tag="binding_12"
+                android:paddingTop="@dimen/spacing_m"
+                android:paddingBottom="@dimen/spacing_m"
+                android:fontFamily="@font/lato_regular"
+                android:textAlignment="center"
+                android:paddingStart="@dimen/spacing_l"
+                android:paddingEnd="@dimen/spacing_l"
+                app:layout_constraintBottom_toTopOf="@id/from"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ticket_color_block" />
+
+            <TextView
+                android:id="@id/from"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:textSize="20.0sp"
+                android:textColor="@color/grayscale_020"
+                android:ellipsize="end"
+                android:tag="binding_13"
+                android:layout_marginTop="@dimen/spacing_m"
+                android:maxLines="3"
+                android:fontFamily="@font/lato_regular"
+                android:layout_marginStart="@dimen/spacing_l"
+                android:layout_marginEnd="@dimen/spacing_l"
+                app:layout_constraintBottom_toTopOf="@id/user_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/valid_since" />
+
+            <TextView
+                android:id="@id/user_name"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:textSize="16.0sp"
+                android:textColor="@color/grayscale_020"
+                android:ellipsize="end"
+                android:tag="binding_14"
+                android:layout_marginTop="@dimen/spacing_s"
+                android:maxLines="2"
+                android:fontFamily="@font/lato_regular"
+                android:layout_marginStart="@dimen/spacing_l"
+                android:layout_marginEnd="@dimen/spacing_l"
+                app:layout_constraintBottom_toTopOf="@id/user_dateOfBirth"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/from" />
+
+            <TextView
+                android:id="@id/user_dateOfBirth"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:textSize="16.0sp"
+                android:textColor="@color/grayscale_020"
+                android:tag="binding_15"
+                android:maxLines="1"
+                android:fontFamily="@font/lato_regular"
+                android:layout_marginStart="@dimen/spacing_l"
+                android:layout_marginEnd="@dimen/spacing_l"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_name" />
+
+            <ImageView
+                android:id="@id/image_vvv_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/grayscale_100"
+                android:visibility="gone"
+                android:layout_marginTop="24.0dip"
+                android:src="@drawable/ic_no_picture_dark"
+                android:minWidth="100.0dip"
+                android:minHeight="100.0dip"
+                android:contentDescription="@null"
+                android:layout_marginStart="@dimen/spacing_l"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_dateOfBirth" />
+
+            <TextView
+                android:id="@id/dvAuthorization"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:textSize="16.0sp"
+                android:textColor="@color/grayscale_020"
+                android:tag="binding_16"
+                android:layout_marginTop="@dimen/spacing_l"
+                android:fontFamily="@font/lato_regular"
+                android:layout_marginStart="@dimen/spacing_l"
+                android:layout_marginEnd="@dimen/spacing_l"
+                app:layout_constraintBottom_toTopOf="@id/fq_code"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_vvv_card" />
+
+            <TextView
+                android:id="@id/fq_code"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16.0sp"
+                android:textColor="@color/grayscale_020"
+                android:gravity="start"
+                android:tag="binding_17"
+                android:fontFamily="@font/lato_regular"
+                android:layout_marginStart="@dimen/spacing_l"
+                android:layout_marginEnd="@dimen/spacing_l"
+                app:layout_constraintBottom_toTopOf="@id/ticket_id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dvAuthorization" />
+
+            <TextView
+                android:id="@id/ticket_id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16.0sp"
+                android:textColor="@color/grayscale_020"
+                android:gravity="start"
+                android:tag="binding_18"
+                android:fontFamily="@font/lato_regular"
+                android:layout_marginStart="@dimen/spacing_l"
+                android:layout_marginEnd="@dimen/spacing_l"
+                app:layout_constraintBottom_toTopOf="@id/short_code"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fq_code" />
+
+            <TextView
+                android:id="@id/short_code"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16.0sp"
+                android:textColor="@color/grayscale_020"
+                android:gravity="start"
+                android:tag="binding_19"
+                android:fontFamily="@font/lato_regular"
+                android:layout_marginStart="@dimen/spacing_l"
+                android:layout_marginEnd="@dimen/spacing_l"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ticket_id" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.core.widget.NestedScrollView>

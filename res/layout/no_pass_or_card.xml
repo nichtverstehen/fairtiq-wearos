@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@color/secondary_broken_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_marginTop="20.0dip" android:src="@drawable/illu_clouds_cards_passes_dark" android:contentDescription="@null" />
-    <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/PassCreationTitleEmptyTariff" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" style="@style/infoTitle" />
-    <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/PassCreationMessageEmptyTariff" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" style="@style/infoDescription" />
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/secondary_broken_white">
+
+    <ImageView
+        android:layout_width="70.0dip"
+        android:layout_height="70.0dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="20.0dip"
+        android:src="@drawable/illu_clouds_cards_passes_dark"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="8.0dip"
+        android:text="@string/PassCreationTitleEmptyTariff"
+        android:layout_marginStart="24.0dip"
+        android:layout_marginEnd="24.0dip"
+        style="@style/infoTitle" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="8.0dip"
+        android:text="@string/PassCreationMessageEmptyTariff"
+        android:layout_marginStart="24.0dip"
+        android:layout_marginEnd="24.0dip"
+        style="@style/infoDescription" />
+
 </LinearLayout>

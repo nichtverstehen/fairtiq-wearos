@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/component_promo_code_input_0" android:background="@color/grayscale_100" android:paddingLeft="@dimen/spacing_l" android:paddingTop="@dimen/spacing_m" android:paddingRight="@dimen/spacing_l" android:paddingBottom="@dimen/spacing_m" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/spacing_l" android:paddingVertical="@dimen/spacing_m"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bind="http://schemas.android.com/apk/res-auto">
-    <include android:id="@id/promoCodeInput" android:layout_width="0.0dip" android:layout_height="wrap_content" bind:layout_constraintBottom_toBottomOf="parent" bind:layout_constraintEnd_toStartOf="@id/promoCodeAction" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toTopOf="parent" layout="@layout/component_input_text" />
-    <ImageButton android:id="@id/promoCodeAction" android:tag="binding_1" android:background="@drawable/cloudy_blue_ripple_background" android:layout_width="64.0dip" android:layout_height="0.0dip" android:contentDescription="@string/GenericOK" bind:layout_constraintBottom_toBottomOf="@id/promoCodeInput" bind:layout_constraintEnd_toEndOf="parent" bind:layout_constraintStart_toEndOf="@id/promoCodeInput" bind:layout_constraintTop_toTopOf="@id/promoCodeInput" />
-    <FrameLayout android:tag="binding_2" android:background="@color/faded_background" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="0.0dip" bind:layout_constraintBottom_toBottomOf="@id/promoCodeAction" bind:layout_constraintEnd_toEndOf="@id/promoCodeAction" bind:layout_constraintStart_toStartOf="@id/promoCodeAction" bind:layout_constraintTop_toTopOf="@id/promoCodeAction">
-        <ProgressBar android:layout_gravity="center" android:layout_width="32.0dip" android:layout_height="32.0dip" style="?android:progressBarStyleSmall" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/component_promo_code_input_0"
+    android:background="@color/grayscale_100"
+    android:paddingLeft="@dimen/spacing_l"
+    android:paddingTop="@dimen/spacing_m"
+    android:paddingRight="@dimen/spacing_l"
+    android:paddingBottom="@dimen/spacing_m"
+    android:paddingHorizontal="@dimen/spacing_l"
+    android:paddingVertical="@dimen/spacing_m">
+
+    <include
+        android:id="@id/promoCodeInput"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        bind:layout_constraintBottom_toBottomOf="parent"
+        bind:layout_constraintEnd_toStartOf="@id/promoCodeAction"
+        bind:layout_constraintStart_toStartOf="parent"
+        bind:layout_constraintTop_toTopOf="parent"
+        layout="@layout/component_input_text" />
+
+    <ImageButton
+        android:id="@id/promoCodeAction"
+        android:layout_width="64.0dip"
+        android:layout_height="0.0dip"
+        android:tag="binding_1"
+        android:background="@drawable/cloudy_blue_ripple_background"
+        android:contentDescription="@string/GenericOK"
+        bind:layout_constraintBottom_toBottomOf="@id/promoCodeInput"
+        bind:layout_constraintEnd_toEndOf="parent"
+        bind:layout_constraintStart_toEndOf="@id/promoCodeInput"
+        bind:layout_constraintTop_toTopOf="@id/promoCodeInput" />
+
+    <FrameLayout
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:tag="binding_2"
+        android:background="@color/faded_background"
+        android:focusable="true"
+        android:clickable="true"
+        bind:layout_constraintBottom_toBottomOf="@id/promoCodeAction"
+        bind:layout_constraintEnd_toEndOf="@id/promoCodeAction"
+        bind:layout_constraintStart_toStartOf="@id/promoCodeAction"
+        bind:layout_constraintTop_toTopOf="@id/promoCodeAction">
+
+        <ProgressBar
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_gravity="center"
+            style="?android:progressBarStyleSmall" />
+
     </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

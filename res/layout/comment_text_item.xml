@@ -1,3 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:textSize="14.0sp" android:textColor="@color/grayscale_040" android:tag="layout/comment_text_item_0" android:background="@color/secondary_broken_white" android:paddingTop="@dimen/spacing_s" android:paddingBottom="@dimen/spacing_s" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="64.0dip" android:fontFamily="@font/lato_regular" android:paddingStart="@dimen/spacing_l" android:paddingEnd="@dimen/spacing_l"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="14.0sp"
+    android:textColor="@color/grayscale_040"
+    android:tag="layout/comment_text_item_0"
+    android:background="@color/secondary_broken_white"
+    android:paddingTop="@dimen/spacing_s"
+    android:paddingBottom="@dimen/spacing_s"
+    android:minHeight="64.0dip"
+    android:fontFamily="@font/lato_regular"
+    android:paddingStart="@dimen/spacing_l"
+    android:paddingEnd="@dimen/spacing_l" />

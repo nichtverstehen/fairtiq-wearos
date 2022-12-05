@@ -1,9 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/component_message_banner_0" android:background="@color/grayscale_100" android:padding="@dimen/spacing_m" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:id="@id/icon" android:tag="binding_1" android:layout_width="@dimen/spacing_xxl" android:layout_height="@dimen/spacing_xxl" android:contentDescription="@null" app:layout_constraintBottom_toBottomOf="@id/text" app:layout_constraintEnd_toStartOf="@id/text" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/text" app:tint="@color/fairtiq_red" />
-    <TextView android:id="@id/text" android:tag="binding_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="@dimen/spacing_m" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/icon" app:layout_constraintTop_toTopOf="parent" app:layout_goneMarginStart="0.0dip" style="@style/SubtitleDark" />
-    <TextView android:textColor="@color/grayscale_100" android:id="@id/primaryAction" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" android:backgroundTint="?colorPrimary" app:layout_constraintBottom_toBottomOf="@id/actionsFlow" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/secondaryAction" app:layout_constraintTop_toTopOf="@id/actionsFlow" style="@style/ButtonMedium" />
-    <TextView android:id="@id/secondaryAction" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" android:backgroundTint="@color/grayscale_100" app:layout_constraintBottom_toBottomOf="@id/primaryAction" app:layout_constraintEnd_toStartOf="@id/primaryAction" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/primaryAction" style="@style/ButtonMedium" />
-    <androidx.constraintlayout.helper.widget.Flow android:id="@id/actionsFlow" android:tag="binding_5" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_l" app:constraint_referenced_ids="secondaryAction, primaryAction" app:flow_horizontalBias="1.0" app:flow_horizontalStyle="packed" app:flow_wrapMode="chain" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/text" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/component_message_banner_0"
+    android:background="@color/grayscale_100"
+    android:padding="@dimen/spacing_m">
+
+    <ImageView
+        android:id="@id/icon"
+        android:layout_width="@dimen/spacing_xxl"
+        android:layout_height="@dimen/spacing_xxl"
+        android:tag="binding_1"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/text"
+        app:layout_constraintEnd_toStartOf="@id/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text"
+        app:tint="@color/fairtiq_red" />
+
+    <TextView
+        android:id="@id/text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:tag="binding_2"
+        android:layout_marginStart="@dimen/spacing_m"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginStart="0.0dip"
+        style="@style/SubtitleDark" />
+
+    <TextView
+        android:id="@id/primaryAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grayscale_100"
+        android:tag="binding_3"
+        android:textAllCaps="true"
+        android:backgroundTint="?colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/actionsFlow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/secondaryAction"
+        app:layout_constraintTop_toTopOf="@id/actionsFlow"
+        style="@style/ButtonMedium" />
+
+    <TextView
+        android:id="@id/secondaryAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_4"
+        android:textAllCaps="true"
+        android:backgroundTint="@color/grayscale_100"
+        app:layout_constraintBottom_toBottomOf="@id/primaryAction"
+        app:layout_constraintEnd_toStartOf="@id/primaryAction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/primaryAction"
+        style="@style/ButtonMedium" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@id/actionsFlow"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:tag="binding_5"
+        android:layout_marginTop="@dimen/spacing_l"
+        app:constraint_referenced_ids="secondaryAction, primaryAction"
+        app:flow_horizontalBias="1.0"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

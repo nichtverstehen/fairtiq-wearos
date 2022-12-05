@@ -1,13 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/transaction_item_0" android:background="@drawable/white_background" android:paddingTop="@dimen/spacing_m" android:paddingBottom="@dimen/spacing_m" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="72.0dip" android:paddingStart="@dimen/spacing_l" android:paddingEnd="@dimen/spacing_s" android:paddingVertical="@dimen/spacing_m"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:id="@id/transactionDate" android:tag="binding_1" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toStartOf="@id/amountBarrier" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/RegularDark" />
-    <TextView android:id="@id/pendingStatusText" android:tag="binding_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/TransactionHistoryDraftItemTitle" app:layout_constraintEnd_toStartOf="@id/amountBarrier" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/transactionDate" style="@style/RegularDark" />
-    <TextView android:id="@id/communityNameText" android:tag="binding_3" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toStartOf="@id/amountBarrier" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/pendingStatusText" style="@style/SubtitleGrey" />
-    <androidx.constraintlayout.helper.widget.Flow android:id="@id/flow" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="@dimen/spacing_xs" app:constraint_referenced_ids="paymentProfile,transactionStateText" app:flow_horizontalAlign="start" app:flow_horizontalBias="0.0" app:flow_horizontalGap="@dimen/spacing_xs" app:flow_horizontalStyle="packed" app:flow_verticalGap="@dimen/spacing_xs" app:flow_wrapMode="chain" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/amountBarrier" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/communityNameText" />
-    <TextView android:id="@id/paymentProfile" android:tag="binding_4" android:layout_width="wrap_content" android:drawablePadding="@dimen/spacing_xs" app:drawableStartCompat="@drawable/ic_payment" app:drawableTint="@color/grayscale_100" app:layout_constrainedWidth="true" style="@style/TagIcon" />
-    <TextView android:id="@id/transactionStateText" android:tag="binding_5" android:background="@drawable/transaction_status_paid" android:layout_width="wrap_content" android:minWidth="64.0dip" app:layout_constrainedWidth="true" style="@style/TagIcon" />
-    <androidx.constraintlayout.widget.Barrier android:id="@id/amountBarrier" android:layout_width="0.0dip" android:layout_height="0.0dip" app:barrierDirection="start" app:constraint_referenced_ids="amountText" />
-    <TextView android:id="@id/amountText" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_s" android:layout_marginRight="@dimen/spacing_s" android:layout_marginHorizontal="@dimen/spacing_s" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/chevron" app:layout_constraintHorizontal_bias="1.0" app:layout_constraintStart_toEndOf="@id/amountBarrier" app:layout_constraintTop_toTopOf="parent" style="@style/RegularDark" />
-    <ImageView android:layout_gravity="center_vertical" android:id="@id/chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_chevron_right_dark" android:contentDescription="@string/GoToTransactionDetailScreenAccessibilityHint" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/transaction_item_0"
+    android:background="@drawable/white_background"
+    android:paddingTop="@dimen/spacing_m"
+    android:paddingBottom="@dimen/spacing_m"
+    android:minHeight="72.0dip"
+    android:paddingStart="@dimen/spacing_l"
+    android:paddingEnd="@dimen/spacing_s"
+    android:paddingVertical="@dimen/spacing_m">
+
+    <TextView
+        android:id="@id/transactionDate"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:tag="binding_1"
+        app:layout_constraintEnd_toStartOf="@id/amountBarrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/RegularDark" />
+
+    <TextView
+        android:id="@id/pendingStatusText"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:tag="binding_2"
+        android:text="@string/TransactionHistoryDraftItemTitle"
+        app:layout_constraintEnd_toStartOf="@id/amountBarrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/transactionDate"
+        style="@style/RegularDark" />
+
+    <TextView
+        android:id="@id/communityNameText"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:tag="binding_3"
+        app:layout_constraintEnd_toStartOf="@id/amountBarrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pendingStatusText"
+        style="@style/SubtitleGrey" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@id/flow"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="@dimen/spacing_xs"
+        app:constraint_referenced_ids="paymentProfile,transactionStateText"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalBias="0.0"
+        app:flow_horizontalGap="@dimen/spacing_xs"
+        app:flow_horizontalStyle="packed"
+        app:flow_verticalGap="@dimen/spacing_xs"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/amountBarrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/communityNameText" />
+
+    <TextView
+        android:id="@id/paymentProfile"
+        android:layout_width="wrap_content"
+        android:tag="binding_4"
+        android:drawablePadding="@dimen/spacing_xs"
+        app:drawableStartCompat="@drawable/ic_payment"
+        app:drawableTint="@color/grayscale_100"
+        app:layout_constrainedWidth="true"
+        style="@style/TagIcon" />
+
+    <TextView
+        android:id="@id/transactionStateText"
+        android:layout_width="wrap_content"
+        android:tag="binding_5"
+        android:background="@drawable/transaction_status_paid"
+        android:minWidth="64.0dip"
+        app:layout_constrainedWidth="true"
+        style="@style/TagIcon" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/amountBarrier"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="amountText" />
+
+    <TextView
+        android:id="@id/amountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_6"
+        android:layout_marginLeft="@dimen/spacing_s"
+        android:layout_marginRight="@dimen/spacing_s"
+        android:layout_marginHorizontal="@dimen/spacing_s"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/chevron"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/amountBarrier"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/RegularDark" />
+
+    <ImageView
+        android:id="@id/chevron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_chevron_right_dark"
+        android:contentDescription="@string/GoToTransactionDetailScreenAccessibilityHint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

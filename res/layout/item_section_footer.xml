@@ -1,3 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:tag="layout/item_section_footer_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" style="@style/fieldFooter"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/item_section_footer_0"
+    android:layout_marginBottom="24.0dip"
+    style="@style/fieldFooter" />

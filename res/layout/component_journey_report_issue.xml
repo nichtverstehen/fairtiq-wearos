@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Button android:id="@id/reportAnIssueButton" android:tag="layout/component_journey_report_issue_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/JourneyEndedReportIssue" style="@style/smallButton"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<Button
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/reportAnIssueButton"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/component_journey_report_issue_0"
+    android:text="@string/JourneyEndedReportIssue"
+    style="@style/smallButton" />

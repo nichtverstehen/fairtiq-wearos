@@ -1,10 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/stationsViewContainer" android:tag="layout/component_region_settings_0" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:ellipsize="end" android:gravity="start" android:id="@id/stationName" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_xs" android:singleLine="true" app:layout_constrainedWidth="true" app:layout_constraintBottom_toTopOf="@id/communityName" app:layout_constraintEnd_toStartOf="@id/changeStationContainer" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/H1Dark" />
-    <FrameLayout android:id="@id/changeStationContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/spacing_s" app:layout_constrainedWidth="true" app:layout_constraintBottom_toBottomOf="@id/stationName" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/stationName" app:layout_constraintTop_toTopOf="parent">
-        <TextView android:id="@id/changeStationButton" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_xs" android:text="@string/StationRegionSelectorChangeIcon" android:layout_marginEnd="@dimen/spacing_xs" style="@style/ButtonSmall" />
-        <ImageView android:layout_gravity="end|center|top" android:id="@id/multipleCommunitiesIndicator" android:tag="binding_3" android:layout_width="12.0dip" android:layout_height="12.0dip" android:src="@drawable/ic_red" android:contentDescription="@null" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/stationsViewContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/component_region_settings_0"
+    android:background="@android:color/transparent"
+    android:animateLayoutChanges="true">
+
+    <TextView
+        android:id="@id/stationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:tag="binding_1"
+        android:layout_marginTop="@dimen/spacing_xs"
+        android:singleLine="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/communityName"
+        app:layout_constraintEnd_toStartOf="@id/changeStationContainer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/H1Dark" />
+
+    <FrameLayout
+        android:id="@id/changeStationContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_s"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/stationName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/stationName"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@id/changeStationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_2"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:text="@string/StationRegionSelectorChangeIcon"
+            android:layout_marginEnd="@dimen/spacing_xs"
+            style="@style/ButtonSmall" />
+
+        <ImageView
+            android:id="@id/multipleCommunitiesIndicator"
+            android:layout_width="12.0dip"
+            android:layout_height="12.0dip"
+            android:layout_gravity="end|center|top"
+            android:tag="binding_3"
+            android:src="@drawable/ic_red"
+            android:contentDescription="@null" />
+
     </FrameLayout>
-    <TextView android:ellipsize="end" android:id="@id/communityName" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/stationName" style="@style/RegularGrey" />
+
+    <TextView
+        android:id="@id/communityName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:tag="binding_4"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stationName"
+        style="@style/RegularGrey" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CheckBox android:id="@id/text" android:tag="layout/item_checkbox_label_0" android:background="@drawable/white_background" android:padding="@dimen/spacing_m" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:drawablePadding="@dimen/spacing_s" android:drawableStart="@drawable/selector_checkbox" style="@style/RegularDark"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<CheckBox
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/text"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/item_checkbox_label_0"
+    android:background="@drawable/white_background"
+    android:padding="@dimen/spacing_m"
+    android:button="@null"
+    android:drawablePadding="@dimen/spacing_s"
+    android:drawableStart="@drawable/selector_checkbox"
+    style="@style/RegularDark" />

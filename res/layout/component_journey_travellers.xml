@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@color/secondary_broken_white" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:id="@id/travellersHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_m" android:layout_marginTop="@dimen/spacing_xl" android:layout_marginRight="@dimen/spacing_m" android:layout_marginBottom="@dimen/spacing_s" android:text="@string/MenuHistoryJourneyDetailsTravellers" android:textAllCaps="true" android:layout_marginHorizontal="@dimen/spacing_m" style="@style/SubtitleDark" />
-    <androidx.recyclerview.widget.RecyclerView android:id="@id/travellers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" android:nestedScrollingEnabled="false" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/secondary_broken_white">
+
+    <TextView
+        android:id="@id/travellersHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_m"
+        android:layout_marginTop="@dimen/spacing_xl"
+        android:layout_marginRight="@dimen/spacing_m"
+        android:layout_marginBottom="@dimen/spacing_s"
+        android:text="@string/MenuHistoryJourneyDetailsTravellers"
+        android:textAllCaps="true"
+        android:layout_marginHorizontal="@dimen/spacing_m"
+        style="@style/SubtitleDark" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/travellers"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:nestedScrollingEnabled="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
 </LinearLayout>

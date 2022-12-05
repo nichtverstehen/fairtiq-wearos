@@ -1,8 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/state_tracking_idle_container" android:tag="layout/state_tracking_idle_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:id="@id/trackingIdleStateImage" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_xxl" android:layout_marginRight="@dimen/spacing_xxl" android:layout_marginBottom="@dimen/spacing_m" android:src="@drawable/illu_clouds_bus_dark" android:scaleType="center" android:contentDescription="@null" android:layout_marginHorizontal="@dimen/spacing_xxl" app:layout_constraintBottom_toTopOf="@id/trackingIdleStateTitle" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.4" app:layout_constraintVertical_chainStyle="packed" />
-    <TextView android:id="@id/trackingIdleStateTitle" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/trackingIdleStateReason" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/trackingIdleStateImage" style="@style/NotReadyTextTitle" />
-    <TextView android:id="@id/trackingIdleStateReason" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/stateTrackingIdleShowMoreInfo" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/trackingIdleStateTitle" style="@style/NotReadyTextDescription" />
-    <Button android:id="@id/stateTrackingIdleShowMoreInfo" android:tag="binding_3" android:layout_width="wrap_content" android:text="@string/PowerSavingTrackingIdleErrorMoreInfo" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/trackingIdleStateReason" style="@style/darkRoundButton" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/state_tracking_idle_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="layout/state_tracking_idle_0">
+
+    <ImageView
+        android:id="@id/trackingIdleStateImage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_xxl"
+        android:layout_marginRight="@dimen/spacing_xxl"
+        android:layout_marginBottom="@dimen/spacing_m"
+        android:src="@drawable/illu_clouds_bus_dark"
+        android:scaleType="center"
+        android:contentDescription="@null"
+        android:layout_marginHorizontal="@dimen/spacing_xxl"
+        app:layout_constraintBottom_toTopOf="@id/trackingIdleStateTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@id/trackingIdleStateTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:tag="binding_1"
+        app:layout_constraintBottom_toTopOf="@id/trackingIdleStateReason"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trackingIdleStateImage"
+        style="@style/NotReadyTextTitle" />
+
+    <TextView
+        android:id="@id/trackingIdleStateReason"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:tag="binding_2"
+        app:layout_constraintBottom_toTopOf="@id/stateTrackingIdleShowMoreInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trackingIdleStateTitle"
+        style="@style/NotReadyTextDescription" />
+
+    <Button
+        android:id="@id/stateTrackingIdleShowMoreInfo"
+        android:layout_width="wrap_content"
+        android:tag="binding_3"
+        android:text="@string/PowerSavingTrackingIdleErrorMoreInfo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trackingIdleStateReason"
+        style="@style/darkRoundButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

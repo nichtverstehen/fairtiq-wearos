@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.webkit.WebView android:scrollbarStyle="outsideInset" android:id="@id/webView_htmlChallengeContainer" android:padding="@dimen/a3ds2_padding_normal" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<android.webkit.WebView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/webView_htmlChallengeContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbarStyle="outsideInset"
+    android:padding="@dimen/a3ds2_padding_normal"
+    android:focusable="true" />

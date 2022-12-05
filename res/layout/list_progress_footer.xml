@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ProgressBar android:layout_gravity="center" android:tag="layout/list_progress_footer_0" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:progressBarStyleSmall"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<ProgressBar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:tag="layout/list_progress_footer_0"
+    android:padding="8.0dip"
+    style="?android:progressBarStyleSmall" />

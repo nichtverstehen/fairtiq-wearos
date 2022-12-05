@@ -1,13 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:tag="layout/fragment_activation_code_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.constraintlayout.widget.ConstraintLayout android:tag="binding_1" android:background="@color/secondary_broken_white" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <View android:id="@id/numberInputBackground" android:background="@color/grayscale_100" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/border" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-        <EditText android:textSize="16.0sp" android:textColor="@color/grayscale_020" android:textColorHint="@color/grey_2" android:id="@id/codeInput" android:tag="binding_2" android:background="@drawable/bg_input_gray" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:hint="@string/FtqLabActivationCodePlaceholder" android:inputType="textCapCharacters" android:paddingStart="20.0dip" android:paddingEnd="40.0dip" android:importantForAutofill="no" app:layout_constraintBottom_toBottomOf="@id/border" app:layout_constraintEnd_toEndOf="@id/numberInputBackground" app:layout_constraintStart_toStartOf="@id/numberInputBackground" app:layout_constraintTop_toTopOf="@id/numberInputBackground" style="@style/formTextInput" />
-        <TextView android:tag="binding_3" android:text="@string/FtqLabActivationCodeError" app:layout_constraintEnd_toEndOf="@id/codeInput" app:layout_constraintTop_toTopOf="@id/codeInput" style="@style/asterisk" />
-        <ProgressBar android:id="@id/progressBar" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16.0dip" android:indeterminateTint="@color/primary" android:indeterminateTintMode="src_in" app:layout_constraintBottom_toBottomOf="@id/codeInput" app:layout_constraintEnd_toEndOf="@id/codeInput" app:layout_constraintTop_toTopOf="@id/codeInput" style="?android:progressBarStyleSmall" />
-        <View android:id="@id/border" android:background="@color/grey_1" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_marginTop="18.0dip" app:layout_constraintEnd_toEndOf="@id/numberInputBackground" app:layout_constraintStart_toStartOf="@id/numberInputBackground" app:layout_constraintTop_toBottomOf="@id/codeInput" />
-        <TextView android:textSize="13.0sp" android:textColor="@color/grayscale_020" android:id="@id/phoneAccountLink" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="@string/FtqLabActivationCodePrompt" android:fontFamily="@font/lato_regular" android:letterSpacing="0.02" app:layout_constraintBottom_toTopOf="@id/buttonNextExperiment" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/border" app:layout_constraintVertical_bias="0.0" app:layout_constraintVertical_chainStyle="packed" />
-        <Button android:id="@id/buttonNextExperiment" android:tag="binding_5" android:layout_width="fill_parent" android:layout_marginBottom="24.0dip" android:text="@string/Next" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/darkRoundButton" />
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="layout/fragment_activation_code_0"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:tag="binding_1"
+        android:background="@color/secondary_broken_white">
+
+        <View
+            android:id="@id/numberInputBackground"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:background="@color/grayscale_100"
+            app:layout_constraintBottom_toTopOf="@id/border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@id/codeInput"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textSize="16.0sp"
+            android:textColor="@color/grayscale_020"
+            android:textColorHint="@color/grey_2"
+            android:tag="binding_2"
+            android:background="@drawable/bg_input_gray"
+            android:layout_margin="20.0dip"
+            android:hint="@string/FtqLabActivationCodePlaceholder"
+            android:inputType="textCapCharacters"
+            android:paddingStart="20.0dip"
+            android:paddingEnd="40.0dip"
+            android:importantForAutofill="no"
+            app:layout_constraintBottom_toBottomOf="@id/border"
+            app:layout_constraintEnd_toEndOf="@id/numberInputBackground"
+            app:layout_constraintStart_toStartOf="@id/numberInputBackground"
+            app:layout_constraintTop_toTopOf="@id/numberInputBackground"
+            style="@style/formTextInput" />
+
+        <TextView
+            android:tag="binding_3"
+            android:text="@string/FtqLabActivationCodeError"
+            app:layout_constraintEnd_toEndOf="@id/codeInput"
+            app:layout_constraintTop_toTopOf="@id/codeInput"
+            style="@style/asterisk" />
+
+        <ProgressBar
+            android:id="@id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_4"
+            android:layout_marginEnd="16.0dip"
+            android:indeterminateTint="@color/primary"
+            android:indeterminateTintMode="src_in"
+            app:layout_constraintBottom_toBottomOf="@id/codeInput"
+            app:layout_constraintEnd_toEndOf="@id/codeInput"
+            app:layout_constraintTop_toTopOf="@id/codeInput"
+            style="?android:progressBarStyleSmall" />
+
+        <View
+            android:id="@id/border"
+            android:layout_width="0.0dip"
+            android:layout_height="1.0dip"
+            android:background="@color/grey_1"
+            android:layout_marginTop="18.0dip"
+            app:layout_constraintEnd_toEndOf="@id/numberInputBackground"
+            app:layout_constraintStart_toStartOf="@id/numberInputBackground"
+            app:layout_constraintTop_toBottomOf="@id/codeInput" />
+
+        <TextView
+            android:id="@id/phoneAccountLink"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13.0sp"
+            android:textColor="@color/grayscale_020"
+            android:layout_margin="20.0dip"
+            android:text="@string/FtqLabActivationCodePrompt"
+            android:fontFamily="@font/lato_regular"
+            android:letterSpacing="0.02"
+            app:layout_constraintBottom_toTopOf="@id/buttonNextExperiment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/border"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@id/buttonNextExperiment"
+            android:layout_width="fill_parent"
+            android:tag="binding_5"
+            android:layout_marginBottom="24.0dip"
+            android:text="@string/Next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/darkRoundButton" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

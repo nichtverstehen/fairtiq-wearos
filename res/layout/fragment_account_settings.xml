@@ -1,14 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:tag="layout/fragment_account_settings_0" android:background="@color/secondary_broken_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bind="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:orientation="vertical" android:id="@id/contentLayout" android:tag="binding_1" android:paddingBottom="@dimen/spacing_xxl" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <include android:id="@id/userDetailsComponent" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/component_user_details" />
-        <include android:id="@id/dateOfBirthComponent" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/component_date_of_birth_selection" />
-        <include android:id="@id/promoCodeComponent" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/component_promo_code" />
-        <include android:id="@id/paymentContent" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/component_payment_settings" />
-        <include android:id="@id/notificationComponent" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/component_notification_settings" />
-        <include android:id="@id/legalDocumentComponent" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/component_legal_documents" />
-        <include android:id="@id/accountManagement" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/component_account_management" />
-        <Button android:id="@id/buttonNext" android:tag="binding_2" android:visibility="gone" android:layout_width="fill_parent" android:layout_marginTop="@dimen/spacing_xl" android:text="@string/Next" style="@style/darkRoundButton" />
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="layout/fragment_account_settings_0"
+    android:background="@color/secondary_broken_white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@id/contentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:tag="binding_1"
+        android:paddingBottom="@dimen/spacing_xxl">
+
+        <include
+            android:id="@id/userDetailsComponent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/component_user_details" />
+
+        <include
+            android:id="@id/dateOfBirthComponent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/component_date_of_birth_selection" />
+
+        <include
+            android:id="@id/promoCodeComponent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/component_promo_code" />
+
+        <include
+            android:id="@id/paymentContent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/component_payment_settings" />
+
+        <include
+            android:id="@id/notificationComponent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/component_notification_settings" />
+
+        <include
+            android:id="@id/legalDocumentComponent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/component_legal_documents" />
+
+        <include
+            android:id="@id/accountManagement"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/component_account_management" />
+
+        <Button
+            android:id="@id/buttonNext"
+            android:layout_width="fill_parent"
+            android:tag="binding_2"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/spacing_xl"
+            android:text="@string/Next"
+            style="@style/darkRoundButton" />
+
     </LinearLayout>
+
 </ScrollView>

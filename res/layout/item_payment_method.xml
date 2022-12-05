@@ -1,8 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/item_payment_method_0" android:background="@drawable/white_background" android:paddingLeft="@dimen/spacing_l" android:paddingTop="@dimen/spacing_s" android:paddingRight="@dimen/spacing_l" android:paddingBottom="@dimen/spacing_s" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip" android:paddingHorizontal="@dimen/spacing_l" android:paddingVertical="@dimen/spacing_s"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:id="@id/paymentMethodIcon" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/paymentMethodName" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <TextView android:id="@id/paymentMethodName" android:tag="binding_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="@dimen/spacing_m" android:layout_marginEnd="@dimen/spacing_s" app:layout_constraintBottom_toTopOf="@id/paymentMethodSubtitle" app:layout_constraintEnd_toStartOf="@id/icViewActions" app:layout_constraintStart_toEndOf="@id/paymentMethodIcon" app:layout_constraintTop_toTopOf="parent" style="@style/RegularDark" />
-    <TextView android:id="@id/paymentMethodSubtitle" android:tag="binding_3" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/icViewActions" app:layout_constraintStart_toStartOf="@id/paymentMethodName" app:layout_constraintTop_toBottomOf="@id/paymentMethodName" style="@style/SubtitleGrey" />
-    <ImageView android:id="@id/icViewActions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_view_actions_dark" android:contentDescription="@null" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/paymentMethodName" app:layout_constraintTop_toTopOf="parent" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/item_payment_method_0"
+    android:background="@drawable/white_background"
+    android:paddingLeft="@dimen/spacing_l"
+    android:paddingTop="@dimen/spacing_s"
+    android:paddingRight="@dimen/spacing_l"
+    android:paddingBottom="@dimen/spacing_s"
+    android:minHeight="60.0dip"
+    android:paddingHorizontal="@dimen/spacing_l"
+    android:paddingVertical="@dimen/spacing_s">
+
+    <ImageView
+        android:id="@id/paymentMethodIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_1"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/paymentMethodName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/paymentMethodName"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:tag="binding_2"
+        android:layout_marginStart="@dimen/spacing_m"
+        android:layout_marginEnd="@dimen/spacing_s"
+        app:layout_constraintBottom_toTopOf="@id/paymentMethodSubtitle"
+        app:layout_constraintEnd_toStartOf="@id/icViewActions"
+        app:layout_constraintStart_toEndOf="@id/paymentMethodIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/RegularDark" />
+
+    <TextView
+        android:id="@id/paymentMethodSubtitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:tag="binding_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/icViewActions"
+        app:layout_constraintStart_toStartOf="@id/paymentMethodName"
+        app:layout_constraintTop_toBottomOf="@id/paymentMethodName"
+        style="@style/SubtitleGrey" />
+
+    <ImageView
+        android:id="@id/icViewActions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_view_actions_dark"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/paymentMethodName"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

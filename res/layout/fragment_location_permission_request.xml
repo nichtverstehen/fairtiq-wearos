@@ -1,12 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:tag="layout/fragment_location_permission_request_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:id="@id/topSection" android:background="@drawable/background_shades" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="25.0sp" android:textColor="@color/grayscale_100" android:gravity="center_horizontal" android:background="@color/primary_dark" android:padding="@dimen/spacing_xl" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/BannerHeadingTitle" android:fontFamily="@font/lato_regular" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-        <ImageView android:id="@id/locationImage" android:layout_width="225.0dip" android:layout_height="70.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/illu_clouds_location_light" android:scaleType="fitXY" android:contentDescription="@null" app:layout_constraintBottom_toTopOf="@id/verticalCenterGuide" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="1.0" />
-        <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/verticalCenterGuide" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintGuide_percent="0.5" />
-        <TextView android:id="@id/locationTitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/LocationPermissionTitle" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/locationImage" style="@style/paragraphTitle" />
-        <TextView android:id="@id/locationSubTitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/LocationPermissionExplanation" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/locationTitle" style="@style/paragraph" />
-        <Button android:id="@id/continueButton" android:tag="binding_1" android:text="@string/WelcomeContinue" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/locationSubTitle" app:layout_constraintVertical_bias="1.0" style="@style/whiteRoundButton" />
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="layout/fragment_location_permission_request_0"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/topSection"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/background_shades">
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textSize="25.0sp"
+            android:textColor="@color/grayscale_100"
+            android:gravity="center_horizontal"
+            android:background="@color/primary_dark"
+            android:padding="@dimen/spacing_xl"
+            android:text="@string/BannerHeadingTitle"
+            android:fontFamily="@font/lato_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@id/locationImage"
+            android:layout_width="225.0dip"
+            android:layout_height="70.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:src="@drawable/illu_clouds_location_light"
+            android:scaleType="fitXY"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toTopOf="@id/verticalCenterGuide"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@id/verticalCenterGuide"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@id/locationTitle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24.0dip"
+            android:text="@string/LocationPermissionTitle"
+            android:layout_marginStart="32.0dip"
+            android:layout_marginEnd="32.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locationImage"
+            style="@style/paragraphTitle" />
+
+        <TextView
+            android:id="@id/locationSubTitle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24.0dip"
+            android:text="@string/LocationPermissionExplanation"
+            android:layout_marginStart="32.0dip"
+            android:layout_marginEnd="32.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locationTitle"
+            style="@style/paragraph" />
+
+        <Button
+            android:id="@id/continueButton"
+            android:tag="binding_1"
+            android:text="@string/WelcomeContinue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locationSubTitle"
+            app:layout_constraintVertical_bias="1.0"
+            style="@style/whiteRoundButton" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

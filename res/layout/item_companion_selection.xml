@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/white_background" android:paddingTop="@dimen/spacing_m" android:paddingBottom="@dimen/spacing_m" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/spacing_m" android:paddingEnd="@dimen/spacing_s" android:paddingVertical="@dimen/spacing_m"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:ellipsize="end" android:id="@id/companion_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:lines="1" android:layout_marginEnd="@dimen/spacing_s" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/item_action_button" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/RegularDark" />
-    <ImageView android:id="@id/item_action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_add_companion" android:contentDescription="@null" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/companion_name" app:layout_constraintTop_toTopOf="parent" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_background"
+    android:paddingTop="@dimen/spacing_m"
+    android:paddingBottom="@dimen/spacing_m"
+    android:paddingStart="@dimen/spacing_m"
+    android:paddingEnd="@dimen/spacing_s"
+    android:paddingVertical="@dimen/spacing_m">
+
+    <TextView
+        android:id="@id/companion_name"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:layout_marginEnd="@dimen/spacing_s"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_action_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/RegularDark" />
+
+    <ImageView
+        android:id="@id/item_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_companion"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/companion_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

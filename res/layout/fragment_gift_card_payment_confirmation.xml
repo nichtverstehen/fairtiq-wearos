@@ -1,10 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/standard_half_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/bottom_sheet_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/bottom_sheet_indicator" />
-    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView_giftCards" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/standard_half_margin" android:layout_marginBottom="@dimen/standard_half_margin" android:layout_weight="1.0" />
-    <androidx.appcompat.widget.AppCompatButton android:id="@id/payButton" android:layout_width="fill_parent" style="@style/AdyenCheckout.Button.Colored" />
-    <androidx.appcompat.widget.AppCompatTextView android:gravity="center" android:id="@id/textView_remainingBalance" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AdyenCheckout.TextAppearance.ButtonSubtext" />
-    <androidx.core.widget.ContentLoadingProgressBar android:layout_gravity="center" android:id="@id/progressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.AppCompat.ProgressBar" />
-    <androidx.appcompat.widget.AppCompatButton android:id="@id/change_payment_method_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/change_payment_method" style="@style/AdyenCheckout.SecondaryFlatButton" />
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/standard_half_margin">
+
+    <include
+        android:id="@id/bottom_sheet_indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/bottom_sheet_indicator" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/recyclerView_giftCards"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:clipToPadding="false"
+        android:layout_marginTop="@dimen/standard_half_margin"
+        android:layout_marginBottom="@dimen/standard_half_margin"
+        android:layout_weight="1.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@id/payButton"
+        android:layout_width="fill_parent"
+        style="@style/AdyenCheckout.Button.Colored" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textView_remainingBalance"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/AdyenCheckout.TextAppearance.ButtonSubtext" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        style="@style/Widget.AppCompat.ProgressBar" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@id/change_payment_method_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/change_payment_method"
+        style="@style/AdyenCheckout.SecondaryFlatButton" />
+
 </LinearLayout>

@@ -1,10 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/component_date_of_birth_selection_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bind="http://schemas.android.com/apk/res-auto">
-    <include android:id="@id/sectionHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" bind:layout_constraintEnd_toEndOf="parent" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toTopOf="parent" layout="@layout/item_section_header" />
-    <View android:id="@id/dobBackground" android:background="@color/grayscale_100" android:layout_width="0.0dip" android:layout_height="0.0dip" bind:layout_constraintBottom_toBottomOf="@id/dateBirth" bind:layout_constraintEnd_toEndOf="parent" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toBottomOf="@id/sectionHeader" />
-    <TextView android:textColorHint="@color/grayscale_040" android:gravity="center_vertical" android:id="@id/dateBirth" android:tag="binding_1" android:background="@color/secondary_broken_white" android:padding="@dimen/spacing_m" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_m" android:layout_marginBottom="@dimen/spacing_m" android:hint="@string/AccountSettingDateOfBirth" android:layout_marginStart="@dimen/spacing_l" android:layout_marginVertical="@dimen/spacing_m" bind:layout_constraintBottom_toBottomOf="@id/dobBackground" bind:layout_constraintEnd_toStartOf="@id/dateBirthButton" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toTopOf="@id/dobBackground" style="@style/RegularDark" />
-    <TextView android:id="@id/dateBirthAsterisk" android:tag="binding_2" bind:layout_constraintEnd_toEndOf="@id/dateBirth" bind:layout_constraintTop_toTopOf="@id/dateBirth" style="@style/asterisk" />
-    <ImageButton android:id="@id/dateBirthButton" android:tag="binding_3" android:background="@color/secondary_broken_white" android:layout_width="64.0dip" android:layout_height="0.0dip" android:src="@drawable/calendar_dark" android:contentDescription="@string/EditBirthDateAccessiblityHint" android:layout_marginEnd="@dimen/spacing_l" bind:layout_constraintBottom_toBottomOf="@id/dateBirth" bind:layout_constraintEnd_toEndOf="parent" bind:layout_constraintTop_toTopOf="@id/dateBirth" />
-    <TextView android:id="@id/dobHint" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_l" android:layout_marginTop="@dimen/spacing_s" android:layout_marginRight="@dimen/spacing_l" android:text="@string/AccountSettingsHalfFareAgeInfoText" android:layout_marginHorizontal="@dimen/spacing_l" bind:layout_constraintEnd_toEndOf="parent" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toBottomOf="@id/dobBackground" style="@style/SubtitleGrey" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/component_date_of_birth_selection_0">
+
+    <include
+        android:id="@id/sectionHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        bind:layout_constraintEnd_toEndOf="parent"
+        bind:layout_constraintStart_toStartOf="parent"
+        bind:layout_constraintTop_toTopOf="parent"
+        layout="@layout/item_section_header" />
+
+    <View
+        android:id="@id/dobBackground"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:background="@color/grayscale_100"
+        bind:layout_constraintBottom_toBottomOf="@id/dateBirth"
+        bind:layout_constraintEnd_toEndOf="parent"
+        bind:layout_constraintStart_toStartOf="parent"
+        bind:layout_constraintTop_toBottomOf="@id/sectionHeader" />
+
+    <TextView
+        android:id="@id/dateBirth"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/grayscale_040"
+        android:gravity="center_vertical"
+        android:tag="binding_1"
+        android:background="@color/secondary_broken_white"
+        android:padding="@dimen/spacing_m"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:layout_marginBottom="@dimen/spacing_m"
+        android:hint="@string/AccountSettingDateOfBirth"
+        android:layout_marginStart="@dimen/spacing_l"
+        android:layout_marginVertical="@dimen/spacing_m"
+        bind:layout_constraintBottom_toBottomOf="@id/dobBackground"
+        bind:layout_constraintEnd_toStartOf="@id/dateBirthButton"
+        bind:layout_constraintStart_toStartOf="parent"
+        bind:layout_constraintTop_toTopOf="@id/dobBackground"
+        style="@style/RegularDark" />
+
+    <TextView
+        android:id="@id/dateBirthAsterisk"
+        android:tag="binding_2"
+        bind:layout_constraintEnd_toEndOf="@id/dateBirth"
+        bind:layout_constraintTop_toTopOf="@id/dateBirth"
+        style="@style/asterisk" />
+
+    <ImageButton
+        android:id="@id/dateBirthButton"
+        android:layout_width="64.0dip"
+        android:layout_height="0.0dip"
+        android:tag="binding_3"
+        android:background="@color/secondary_broken_white"
+        android:src="@drawable/calendar_dark"
+        android:contentDescription="@string/EditBirthDateAccessiblityHint"
+        android:layout_marginEnd="@dimen/spacing_l"
+        bind:layout_constraintBottom_toBottomOf="@id/dateBirth"
+        bind:layout_constraintEnd_toEndOf="parent"
+        bind:layout_constraintTop_toTopOf="@id/dateBirth" />
+
+    <TextView
+        android:id="@id/dobHint"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_l"
+        android:layout_marginTop="@dimen/spacing_s"
+        android:layout_marginRight="@dimen/spacing_l"
+        android:text="@string/AccountSettingsHalfFareAgeInfoText"
+        android:layout_marginHorizontal="@dimen/spacing_l"
+        bind:layout_constraintEnd_toEndOf="parent"
+        bind:layout_constraintStart_toStartOf="parent"
+        bind:layout_constraintTop_toBottomOf="@id/dobBackground"
+        style="@style/SubtitleGrey" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

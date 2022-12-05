@@ -1,11 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/inputFieldsLayout" android:tag="layout/component_user_details_0" android:layout_width="fill_parent" android:layout_height="wrap_content" bind:layout_constraintEnd_toEndOf="parent" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toTopOf="parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bind="http://schemas.android.com/apk/res-auto">
-    <View android:background="@color/grayscale_100" android:padding="@dimen/spacing_l" android:layout_width="fill_parent" android:layout_height="0.0dip" bind:layout_constraintBottom_toBottomOf="@id/barrier" bind:layout_constraintTop_toTopOf="parent" />
-    <TextView android:textColorHint="@color/grayscale_040" android:id="@id/phoneNumberTextView" android:tag="binding_1" android:background="@color/secondary_broken_white" android:padding="@dimen/spacing_m" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/spacing_l" android:layout_marginTop="@dimen/spacing_l" android:layout_marginRight="@dimen/spacing_l" android:minHeight="@dimen/spacing_xxxl" android:maxLines="1" android:layout_marginHorizontal="@dimen/spacing_l" bind:layout_constraintEnd_toEndOf="parent" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toTopOf="parent" style="@style/RegularDark" />
-    <include android:id="@id/firstNameInput" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_l" android:layout_marginTop="@dimen/spacing_s" android:layout_marginRight="@dimen/spacing_l" android:layout_marginHorizontal="@dimen/spacing_l" bind:layout_constraintEnd_toEndOf="parent" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toBottomOf="@id/phoneNumberTextView" layout="@layout/component_input_text" />
-    <include android:id="@id/lastNameInput" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_l" android:layout_marginTop="@dimen/spacing_s" android:layout_marginRight="@dimen/spacing_l" android:layout_marginHorizontal="@dimen/spacing_l" bind:layout_constraintEnd_toEndOf="parent" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toBottomOf="@id/firstNameInput" layout="@layout/component_input_text" />
-    <include android:id="@id/emailInput" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_l" android:layout_marginTop="@dimen/spacing_s" android:layout_marginRight="@dimen/spacing_l" android:layout_marginHorizontal="@dimen/spacing_l" bind:layout_constraintEnd_toEndOf="parent" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toBottomOf="@id/lastNameInput" layout="@layout/component_input_text" />
-    <androidx.constraintlayout.widget.Barrier android:id="@id/barrier" android:layout_width="fill_parent" android:layout_height="0.0dip" bind:barrierDirection="bottom" bind:barrierMargin="@dimen/spacing_l" bind:constraint_referenced_ids="emailInput" />
-    <TextView android:textColorLink="@color/grayscale_030" android:autoLink="email" android:id="@id/emailPrivacyNotice" android:tag="binding_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_l" android:layout_marginTop="@dimen/spacing_s" android:layout_marginRight="@dimen/spacing_l" android:layout_marginHorizontal="@dimen/spacing_l" bind:layout_constraintEnd_toEndOf="parent" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toBottomOf="@id/barrier" style="@style/SubtitleGrey" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    android:id="@id/inputFieldsLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/component_user_details_0"
+    bind:layout_constraintEnd_toEndOf="parent"
+    bind:layout_constraintStart_toStartOf="parent"
+    bind:layout_constraintTop_toTopOf="parent">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:background="@color/grayscale_100"
+        android:padding="@dimen/spacing_l"
+        bind:layout_constraintBottom_toBottomOf="@id/barrier"
+        bind:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/phoneNumberTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textColorHint="@color/grayscale_040"
+        android:tag="binding_1"
+        android:background="@color/secondary_broken_white"
+        android:padding="@dimen/spacing_m"
+        android:layout_marginLeft="@dimen/spacing_l"
+        android:layout_marginTop="@dimen/spacing_l"
+        android:layout_marginRight="@dimen/spacing_l"
+        android:minHeight="@dimen/spacing_xxxl"
+        android:maxLines="1"
+        android:layout_marginHorizontal="@dimen/spacing_l"
+        bind:layout_constraintEnd_toEndOf="parent"
+        bind:layout_constraintStart_toStartOf="parent"
+        bind:layout_constraintTop_toTopOf="parent"
+        style="@style/RegularDark" />
+
+    <include
+        android:id="@id/firstNameInput"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_l"
+        android:layout_marginTop="@dimen/spacing_s"
+        android:layout_marginRight="@dimen/spacing_l"
+        android:layout_marginHorizontal="@dimen/spacing_l"
+        bind:layout_constraintEnd_toEndOf="parent"
+        bind:layout_constraintStart_toStartOf="parent"
+        bind:layout_constraintTop_toBottomOf="@id/phoneNumberTextView"
+        layout="@layout/component_input_text" />
+
+    <include
+        android:id="@id/lastNameInput"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_l"
+        android:layout_marginTop="@dimen/spacing_s"
+        android:layout_marginRight="@dimen/spacing_l"
+        android:layout_marginHorizontal="@dimen/spacing_l"
+        bind:layout_constraintEnd_toEndOf="parent"
+        bind:layout_constraintStart_toStartOf="parent"
+        bind:layout_constraintTop_toBottomOf="@id/firstNameInput"
+        layout="@layout/component_input_text" />
+
+    <include
+        android:id="@id/emailInput"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_l"
+        android:layout_marginTop="@dimen/spacing_s"
+        android:layout_marginRight="@dimen/spacing_l"
+        android:layout_marginHorizontal="@dimen/spacing_l"
+        bind:layout_constraintEnd_toEndOf="parent"
+        bind:layout_constraintStart_toStartOf="parent"
+        bind:layout_constraintTop_toBottomOf="@id/lastNameInput"
+        layout="@layout/component_input_text" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/barrier"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        bind:barrierDirection="bottom"
+        bind:barrierMargin="@dimen/spacing_l"
+        bind:constraint_referenced_ids="emailInput" />
+
+    <TextView
+        android:id="@id/emailPrivacyNotice"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:textColorLink="@color/grayscale_030"
+        android:autoLink="email"
+        android:tag="binding_2"
+        android:layout_marginLeft="@dimen/spacing_l"
+        android:layout_marginTop="@dimen/spacing_s"
+        android:layout_marginRight="@dimen/spacing_l"
+        android:layout_marginHorizontal="@dimen/spacing_l"
+        bind:layout_constraintEnd_toEndOf="parent"
+        bind:layout_constraintStart_toStartOf="parent"
+        bind:layout_constraintTop_toBottomOf="@id/barrier"
+        style="@style/SubtitleGrey" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

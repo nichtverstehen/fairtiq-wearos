@@ -1,10 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/credit_history_list_item_0" android:background="@drawable/white_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="64.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:id="@id/creditItemTitle" android:tag="binding_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_s" android:layout_marginStart="@dimen/spacing_l" android:layout_marginEnd="@dimen/spacing_xs" app:layout_constraintBottom_toTopOf="@id/creditItemDate" app:layout_constraintEnd_toStartOf="@id/creditItemAmount" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/RegularDark" />
-    <TextView android:id="@id/creditItemAmount" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/spacing_xs" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/creditItemChevron" app:layout_constraintTop_toTopOf="parent" style="@style/RegularDark" />
-    <ImageView android:id="@id/creditItemChevron" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_chevron_right_dark" android:contentDescription="@null" android:layout_marginEnd="@dimen/spacing_l" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <TextView android:id="@id/creditItemDate" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/spacing_s" android:fontFamily="@font/lato_regular" android:layout_marginStart="@dimen/spacing_l" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/creditItemTitle" style="@style/SubtitleGrey" />
-    <TextView android:id="@id/creditItemDotSeparator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="·" android:layout_marginStart="@dimen/spacing_xs" app:layout_constraintBottom_toBottomOf="@id/creditItemDate" app:layout_constraintStart_toEndOf="@id/creditItemDate" app:layout_constraintTop_toTopOf="@id/creditItemDate" style="@style/SubtitleGrey" />
-    <TextView android:id="@id/creditItemDotDescription" android:tag="binding_5" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_xs" android:layout_marginRight="@dimen/spacing_xs" android:layout_marginHorizontal="@dimen/spacing_xs" app:layout_constraintBottom_toBottomOf="@id/creditItemDate" app:layout_constraintEnd_toStartOf="@id/creditItemAmount" app:layout_constraintStart_toEndOf="@id/creditItemDotSeparator" app:layout_constraintTop_toTopOf="@id/creditItemDate" style="@style/SubtitleGrey" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/credit_history_list_item_0"
+    android:background="@drawable/white_background"
+    android:minHeight="64.0dip">
+
+    <TextView
+        android:id="@id/creditItemTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:tag="binding_1"
+        android:layout_marginTop="@dimen/spacing_s"
+        android:layout_marginStart="@dimen/spacing_l"
+        android:layout_marginEnd="@dimen/spacing_xs"
+        app:layout_constraintBottom_toTopOf="@id/creditItemDate"
+        app:layout_constraintEnd_toStartOf="@id/creditItemAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/RegularDark" />
+
+    <TextView
+        android:id="@id/creditItemAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_2"
+        android:layout_marginEnd="@dimen/spacing_xs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/creditItemChevron"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/RegularDark" />
+
+    <ImageView
+        android:id="@id/creditItemChevron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_3"
+        android:src="@drawable/ic_chevron_right_dark"
+        android:contentDescription="@null"
+        android:layout_marginEnd="@dimen/spacing_l"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/creditItemDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_4"
+        android:layout_marginBottom="@dimen/spacing_s"
+        android:fontFamily="@font/lato_regular"
+        android:layout_marginStart="@dimen/spacing_l"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/creditItemTitle"
+        style="@style/SubtitleGrey" />
+
+    <TextView
+        android:id="@id/creditItemDotSeparator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="·"
+        android:layout_marginStart="@dimen/spacing_xs"
+        app:layout_constraintBottom_toBottomOf="@id/creditItemDate"
+        app:layout_constraintStart_toEndOf="@id/creditItemDate"
+        app:layout_constraintTop_toTopOf="@id/creditItemDate"
+        style="@style/SubtitleGrey" />
+
+    <TextView
+        android:id="@id/creditItemDotDescription"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:tag="binding_5"
+        android:layout_marginLeft="@dimen/spacing_xs"
+        android:layout_marginRight="@dimen/spacing_xs"
+        android:layout_marginHorizontal="@dimen/spacing_xs"
+        app:layout_constraintBottom_toBottomOf="@id/creditItemDate"
+        app:layout_constraintEnd_toStartOf="@id/creditItemAmount"
+        app:layout_constraintStart_toEndOf="@id/creditItemDotSeparator"
+        app:layout_constraintTop_toTopOf="@id/creditItemDate"
+        style="@style/SubtitleGrey" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

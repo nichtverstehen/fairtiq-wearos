@@ -1,3 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:id="@id/text_spinner_item" android:padding="@dimen/spacing_s" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/RegularDark"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/text_spinner_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/spacing_s"
+    style="@style/RegularDark" />

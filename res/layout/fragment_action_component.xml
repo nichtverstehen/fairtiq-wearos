@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/bottom_sheet_indicator" />
-    <TextView android:id="@id/header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/AdyenCheckout.TextAppearance.HeaderTitle" />
-    <FrameLayout android:id="@id/componentContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <androidx.appcompat.widget.AppCompatButton android:id="@id/button_finish" android:visibility="gone" android:layout_width="fill_parent" android:layout_marginBottom="@dimen/standard_margin" android:text="@string/checkout_voucher_finish" style="@style/AdyenCheckout.Button.Colored" />
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/bottom_sheet_indicator" />
+
+    <TextView
+        android:id="@id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="false"
+        style="@style/AdyenCheckout.TextAppearance.HeaderTitle" />
+
+    <FrameLayout
+        android:id="@id/componentContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@id/button_finish"
+        android:layout_width="fill_parent"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/standard_margin"
+        android:text="@string/checkout_voucher_finish"
+        style="@style/AdyenCheckout.Button.Colored" />
+
 </LinearLayout>

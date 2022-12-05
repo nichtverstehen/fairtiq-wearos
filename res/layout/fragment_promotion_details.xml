@@ -1,9 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/fragment_promotion_details_0" android:background="@color/grayscale_100" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <WebView android:id="@id/webView" android:tag="binding_1" android:background="@android:color/transparent" android:scrollbars="none" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/termsAndConditionsSwitch" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <androidx.appcompat.widget.SwitchCompat android:id="@id/termsAndConditionsSwitch" android:tag="binding_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_l" android:layout_marginTop="@dimen/spacing_s" android:layout_marginRight="@dimen/spacing_l" android:layout_marginBottom="@dimen/spacing_s" android:text="@string/PromotionTermsAcceptTitle" android:elevation="@dimen/spacing_xs" android:layout_marginHorizontal="@dimen/spacing_l" android:layout_marginVertical="@dimen/spacing_s" app:layout_constraintBottom_toTopOf="@id/divider" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/webView" app:layout_constraintVertical_bias="1.0" app:layout_constraintVertical_chainStyle="packed" style="@style/RegularDark" />
-    <View android:id="@id/divider" android:background="@color/grey_1" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_marginBottom="@dimen/spacing_s" app:layout_constraintBottom_toTopOf="@id/actionDetails" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/termsAndConditionsSwitch" app:layout_goneMarginBottom="0.0dip" />
-    <Button android:id="@id/actionDetails" android:tag="binding_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_l" android:layout_marginRight="@dimen/spacing_l" android:layout_marginBottom="@dimen/spacing_s" android:layout_marginHorizontal="@dimen/spacing_l" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/divider" style="@style/ButtonBig" />
-    <ProgressBar android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="layout/fragment_promotion_details_0"
+    android:background="@color/grayscale_100">
+
+    <WebView
+        android:id="@id/webView"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:tag="binding_1"
+        android:background="@android:color/transparent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/termsAndConditionsSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@id/termsAndConditionsSwitch"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:tag="binding_2"
+        android:layout_marginLeft="@dimen/spacing_l"
+        android:layout_marginTop="@dimen/spacing_s"
+        android:layout_marginRight="@dimen/spacing_l"
+        android:layout_marginBottom="@dimen/spacing_s"
+        android:text="@string/PromotionTermsAcceptTitle"
+        android:elevation="@dimen/spacing_xs"
+        android:layout_marginHorizontal="@dimen/spacing_l"
+        android:layout_marginVertical="@dimen/spacing_s"
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/webView"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_chainStyle="packed"
+        style="@style/RegularDark" />
+
+    <View
+        android:id="@id/divider"
+        android:layout_width="0.0dip"
+        android:layout_height="1.0dip"
+        android:background="@color/grey_1"
+        android:layout_marginBottom="@dimen/spacing_s"
+        app:layout_constraintBottom_toTopOf="@id/actionDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/termsAndConditionsSwitch"
+        app:layout_goneMarginBottom="0.0dip" />
+
+    <Button
+        android:id="@id/actionDetails"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:tag="binding_3"
+        android:layout_marginLeft="@dimen/spacing_l"
+        android:layout_marginRight="@dimen/spacing_l"
+        android:layout_marginBottom="@dimen/spacing_s"
+        android:layout_marginHorizontal="@dimen/spacing_l"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        style="@style/ButtonBig" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_4"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

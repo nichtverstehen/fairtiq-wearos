@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/addPaymentMethodButton" android:tag="layout/item_active_payment_profile_section_footer_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bind="http://schemas.android.com/apk/res-auto">
-    <include layout="@layout/item_section_footer" />
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    android:id="@id/addPaymentMethodButton"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:tag="layout/item_active_payment_profile_section_footer_0">
+
+    <include
+        layout="@layout/item_section_footer" />
+
 </LinearLayout>

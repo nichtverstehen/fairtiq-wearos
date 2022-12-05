@@ -1,16 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:tag="layout/fragment_half_fare_pass_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.constraintlayout.widget.ConstraintLayout android:tag="binding_1" android:background="@color/secondary_broken_white" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ProgressBar android:id="@id/halfFareAddedLoading" android:tag="binding_2" android:background="@color/grayscale_100" android:layout_width="fill_parent" android:layout_height="wrap_content" android:indeterminate="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="?android:progressBarStyleHorizontal" />
-        <View android:background="@color/grayscale_100" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/halfFarePassName" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/halfFareAddedLoading" />
-        <ImageView android:id="@id/halfFareImage" android:tag="binding_3" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginTop="24.0dip" android:contentDescription="@null" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-        <TextView android:textSize="17.0sp" android:textColor="@color/grayscale_020" android:gravity="center_horizontal" android:id="@id/halfFareAddedTitle" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:fontFamily="@font/lato_regular" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/halfFareImage" />
-        <TextView android:textSize="15.0sp" android:textColor="@color/grayscale_020" android:gravity="center_horizontal" android:id="@id/halfFareAddedDescription" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/HalfFareAddedDescription" android:fontFamily="@font/lato_regular" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/halfFareAddedTitle" />
-        <TextView android:id="@id/halfFarePassName" android:tag="binding_5" android:paddingTop="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/halfFareAddedDescription" style="@style/halfFarePassInfoText" />
-        <TextView android:id="@id/halfFarePassDateOfBirth" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/halfFarePassName" style="@style/halfFarePassInfoText" />
-        <Button android:textSize="16.0sp" android:textColor="@color/grayscale_020" android:gravity="center_vertical" android:id="@id/halfFareAddSwissPassButton" android:tag="binding_7" android:background="@drawable/white_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:minHeight="64.0dip" android:text="@string/HalfFareAddSwissPassButton" android:drawablePadding="24.0dip" android:textAllCaps="false" android:drawableStart="@drawable/ic_card_solid_red" android:drawableEnd="@drawable/ic_chevron_right_dark" android:fontFamily="@font/lato_regular" android:paddingStart="24.0dip" android:paddingEnd="24.0dip" app:layout_constraintBottom_toTopOf="@id/deleteButton" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/halfFarePassDateOfBirth" app:layout_constraintVertical_bias="0.0" style="@style/Widget.AppCompat.Button.Borderless" />
-        <include android:id="@id/halfFareEditSwissPassButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:layout_constraintBottom_toTopOf="@id/deleteButton" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/halfFarePassDateOfBirth" app:layout_constraintVertical_bias="0.0" layout="@layout/item_travel_pass" />
-        <Button android:id="@id/deleteButton" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="24.0dip" android:text="@string/DeleteHalfFareButton" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/smallButton" />
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="layout/fragment_half_fare_pass_0"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:tag="binding_1"
+        android:background="@color/secondary_broken_white">
+
+        <ProgressBar
+            android:id="@id/halfFareAddedLoading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:tag="binding_2"
+            android:background="@color/grayscale_100"
+            android:indeterminate="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="?android:progressBarStyleHorizontal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:background="@color/grayscale_100"
+            app:layout_constraintBottom_toTopOf="@id/halfFarePassName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/halfFareAddedLoading" />
+
+        <ImageView
+            android:id="@id/halfFareImage"
+            android:layout_width="72.0dip"
+            android:layout_height="72.0dip"
+            android:tag="binding_3"
+            android:layout_marginTop="24.0dip"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/halfFareAddedTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17.0sp"
+            android:textColor="@color/grayscale_020"
+            android:gravity="center_horizontal"
+            android:tag="binding_4"
+            android:layout_marginTop="16.0dip"
+            android:fontFamily="@font/lato_regular"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginEnd="24.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/halfFareImage" />
+
+        <TextView
+            android:id="@id/halfFareAddedDescription"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15.0sp"
+            android:textColor="@color/grayscale_020"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/HalfFareAddedDescription"
+            android:fontFamily="@font/lato_regular"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginEnd="24.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/halfFareAddedTitle" />
+
+        <TextView
+            android:id="@id/halfFarePassName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:tag="binding_5"
+            android:paddingTop="16.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/halfFareAddedDescription"
+            style="@style/halfFarePassInfoText" />
+
+        <TextView
+            android:id="@id/halfFarePassDateOfBirth"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:tag="binding_6"
+            android:layout_marginTop="0.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/halfFarePassName"
+            style="@style/halfFarePassInfoText" />
+
+        <Button
+            android:id="@id/halfFareAddSwissPassButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16.0sp"
+            android:textColor="@color/grayscale_020"
+            android:gravity="center_vertical"
+            android:tag="binding_7"
+            android:background="@drawable/white_background"
+            android:layout_marginTop="16.0dip"
+            android:minHeight="64.0dip"
+            android:text="@string/HalfFareAddSwissPassButton"
+            android:drawablePadding="24.0dip"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/ic_card_solid_red"
+            android:drawableEnd="@drawable/ic_chevron_right_dark"
+            android:fontFamily="@font/lato_regular"
+            android:paddingStart="24.0dip"
+            android:paddingEnd="24.0dip"
+            app:layout_constraintBottom_toTopOf="@id/deleteButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/halfFarePassDateOfBirth"
+            app:layout_constraintVertical_bias="0.0"
+            style="@style/Widget.AppCompat.Button.Borderless" />
+
+        <include
+            android:id="@id/halfFareEditSwissPassButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            app:layout_constraintBottom_toTopOf="@id/deleteButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/halfFarePassDateOfBirth"
+            app:layout_constraintVertical_bias="0.0"
+            layout="@layout/item_travel_pass" />
+
+        <Button
+            android:id="@id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_8"
+            android:layout_marginTop="24.0dip"
+            android:layout_marginBottom="24.0dip"
+            android:text="@string/DeleteHalfFareButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/smallButton" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

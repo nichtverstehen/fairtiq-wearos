@@ -1,10 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/legacyTravelerSettingsContainer" android:tag="layout/component_traveler_settings_legacy_0" android:background="@drawable/transparent_ripple" android:padding="@dimen/spacing_m" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:id="@id/legacyTravelerName" android:tag="binding_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/spacing_xs" app:layout_constraintEnd_toStartOf="@id/paymentProfileBadge" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/H2Dark" />
-    <TextView android:id="@id/paymentProfileBadge" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_s" android:layout_marginRight="@dimen/spacing_s" android:layout_marginBottom="@dimen/spacing_xs" android:layout_marginHorizontal="@dimen/spacing_s" app:drawableStartCompat="@drawable/ic_payment" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintTop_toTopOf="parent" style="@style/ButtonMedium" />
-    <androidx.constraintlayout.widget.Barrier android:id="@id/barrier" android:layout_width="wrap_content" android:layout_height="0.0dip" app:barrierDirection="bottom" app:constraint_referenced_ids="legacyTravelerName,paymentProfileBadge" />
-    <TextView android:id="@id/legacyTicketClass" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toStartOf="@id/separator" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/barrier" style="@style/RegularGrey" />
-    <TextView android:id="@id/separator" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_xs" android:layout_marginRight="@dimen/spacing_xs" android:text="·" android:layout_marginHorizontal="@dimen/spacing_xs" app:layout_constraintEnd_toStartOf="@id/legacyTravelerPasses" app:layout_constraintStart_toEndOf="@id/legacyTicketClass" app:layout_constraintTop_toBottomOf="@id/barrier" style="@style/RegularGrey" />
-    <TextView android:id="@id/legacyTravelerPasses" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="3" app:layout_constrainedWidth="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/separator" app:layout_constraintTop_toBottomOf="@id/barrier" style="@style/PrefsHeaderGrayItem" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/legacyTravelerSettingsContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/component_traveler_settings_legacy_0"
+    android:background="@drawable/transparent_ripple"
+    android:padding="@dimen/spacing_m"
+    android:animateLayoutChanges="true">
+
+    <TextView
+        android:id="@id/legacyTravelerName"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:tag="binding_1"
+        android:layout_marginBottom="@dimen/spacing_xs"
+        app:layout_constraintEnd_toStartOf="@id/paymentProfileBadge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/H2Dark" />
+
+    <TextView
+        android:id="@id/paymentProfileBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_2"
+        android:layout_marginLeft="@dimen/spacing_s"
+        android:layout_marginRight="@dimen/spacing_s"
+        android:layout_marginBottom="@dimen/spacing_xs"
+        android:layout_marginHorizontal="@dimen/spacing_s"
+        app:drawableStartCompat="@drawable/ic_payment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/ButtonMedium" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="0.0dip"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="legacyTravelerName,paymentProfileBadge" />
+
+    <TextView
+        android:id="@id/legacyTicketClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_3"
+        app:layout_constraintEnd_toStartOf="@id/separator"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier"
+        style="@style/RegularGrey" />
+
+    <TextView
+        android:id="@id/separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_4"
+        android:layout_marginLeft="@dimen/spacing_xs"
+        android:layout_marginRight="@dimen/spacing_xs"
+        android:text="·"
+        android:layout_marginHorizontal="@dimen/spacing_xs"
+        app:layout_constraintEnd_toStartOf="@id/legacyTravelerPasses"
+        app:layout_constraintStart_toEndOf="@id/legacyTicketClass"
+        app:layout_constraintTop_toBottomOf="@id/barrier"
+        style="@style/RegularGrey" />
+
+    <TextView
+        android:id="@id/legacyTravelerPasses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_5"
+        android:maxLines="3"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/separator"
+        app:layout_constraintTop_toBottomOf="@id/barrier"
+        style="@style/PrefsHeaderGrayItem" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

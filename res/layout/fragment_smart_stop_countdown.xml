@@ -1,14 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/fragment_smart_stop_countdown_0" android:background="@color/grayscale_100" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:background="@drawable/bg_waved" android:layout_width="0.0dip" android:layout_height="wrap_content" android:contentDescription="@null" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <ImageView android:id="@id/smartStopCountdownImage" android:layout_width="161.0dip" android:layout_height="161.0dip" android:src="@drawable/ic_smart_stop_feature" android:contentDescription="@null" app:layout_constraintBottom_toTopOf="@id/smartStopCountdownTitle" app:layout_constraintEnd_toEndOf="@id/smartStopCountdownTitle" app:layout_constraintStart_toStartOf="@id/smartStopCountdownTitle" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" />
-    <TextView android:textStyle="bold" android:id="@id/smartStopCountdownTitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_m" android:text="@string/SmartStopDialogTitle" android:textAlignment="center" app:layout_constraintBottom_toTopOf="@id/smartStopCountdownMessage" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/smartStopCountdownImage" style="@style/TitleDark" />
-    <TextView android:id="@id/smartStopCountdownMessage" android:paddingLeft="@dimen/spacing_l" android:paddingRight="@dimen/spacing_l" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_l" android:layout_marginTop="@dimen/spacing_s" android:layout_marginRight="@dimen/spacing_l" android:text="@string/SmartStopDialogMessage" android:textAlignment="center" android:layout_marginHorizontal="@dimen/spacing_l" android:paddingHorizontal="@dimen/spacing_l" app:layout_constraintBottom_toTopOf="@id/smartStopCountdownTimerContainer" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/smartStopCountdownTitle" style="@style/RegularDark" />
-    <FrameLayout android:id="@id/smartStopCountdownTimerContainer" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_xl" android:animateLayoutChanges="true" app:layout_constraintBottom_toTopOf="@id/smartStopCountdownStopBtn" app:layout_constraintEnd_toEndOf="@id/smartStopCountdownStopBtn" app:layout_constraintStart_toStartOf="@id/smartStopCountdownStopBtn" app:layout_constraintTop_toBottomOf="@id/smartStopCountdownMessage">
-        <ProgressBar android:layout_gravity="center" android:id="@id/smartStopCountdownProgress" android:tag="binding_1" android:layout_width="120.0dip" android:layout_height="120.0dip" android:max="1000" android:progress="0" android:secondaryProgress="1000" android:indeterminateOnly="false" android:progressDrawable="@drawable/shape_progress_red" android:rotation="-90.0" />
-        <TextView android:textColor="@color/grayscale_020" android:layout_gravity="center" android:id="@id/smartStopCountdownTimer" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/H1Light" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/fragment_smart_stop_countdown_0"
+    android:background="@color/grayscale_100">
+
+    <ImageView
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_waved"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@id/smartStopCountdownImage"
+        android:layout_width="161.0dip"
+        android:layout_height="161.0dip"
+        android:src="@drawable/ic_smart_stop_feature"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toTopOf="@id/smartStopCountdownTitle"
+        app:layout_constraintEnd_toEndOf="@id/smartStopCountdownTitle"
+        app:layout_constraintStart_toStartOf="@id/smartStopCountdownTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@id/smartStopCountdownTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:text="@string/SmartStopDialogTitle"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/smartStopCountdownMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/smartStopCountdownImage"
+        style="@style/TitleDark" />
+
+    <TextView
+        android:id="@id/smartStopCountdownMessage"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/spacing_l"
+        android:paddingRight="@dimen/spacing_l"
+        android:layout_marginLeft="@dimen/spacing_l"
+        android:layout_marginTop="@dimen/spacing_s"
+        android:layout_marginRight="@dimen/spacing_l"
+        android:text="@string/SmartStopDialogMessage"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="@dimen/spacing_l"
+        android:paddingHorizontal="@dimen/spacing_l"
+        app:layout_constraintBottom_toTopOf="@id/smartStopCountdownTimerContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/smartStopCountdownTitle"
+        style="@style/RegularDark" />
+
+    <FrameLayout
+        android:id="@id/smartStopCountdownTimerContainer"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xl"
+        android:animateLayoutChanges="true"
+        app:layout_constraintBottom_toTopOf="@id/smartStopCountdownStopBtn"
+        app:layout_constraintEnd_toEndOf="@id/smartStopCountdownStopBtn"
+        app:layout_constraintStart_toStartOf="@id/smartStopCountdownStopBtn"
+        app:layout_constraintTop_toBottomOf="@id/smartStopCountdownMessage">
+
+        <ProgressBar
+            android:id="@id/smartStopCountdownProgress"
+            android:layout_width="120.0dip"
+            android:layout_height="120.0dip"
+            android:layout_gravity="center"
+            android:tag="binding_1"
+            android:max="1000"
+            android:progress="0"
+            android:secondaryProgress="1000"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/shape_progress_red"
+            android:rotation="-90.0" />
+
+        <TextView
+            android:id="@id/smartStopCountdownTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grayscale_020"
+            android:layout_gravity="center"
+            android:tag="binding_2"
+            style="@style/H1Light" />
+
     </FrameLayout>
-    <Button android:textSize="17.0sp" android:id="@id/smartStopCountdownStopBtn" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_m" android:text="@string/SmartStopStopJourneyButton" android:paddingStart="@dimen/spacing_xl" android:paddingEnd="@dimen/spacing_xl" app:layout_constraintBottom_toTopOf="@id/smartStopCountdownContinueBtn" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/smartStopCountdownTimerContainer" style="@style/smallButton" />
-    <Button android:id="@id/smartStopCountdownContinueBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/SmartStopContinueTraveling" android:backgroundTint="@color/general_confirm" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/smartStopCountdownStopBtn" style="@style/darkRoundButton" />
+
+    <Button
+        android:id="@id/smartStopCountdownStopBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17.0sp"
+        android:background="?selectableItemBackground"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:text="@string/SmartStopStopJourneyButton"
+        android:paddingStart="@dimen/spacing_xl"
+        android:paddingEnd="@dimen/spacing_xl"
+        app:layout_constraintBottom_toTopOf="@id/smartStopCountdownContinueBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/smartStopCountdownTimerContainer"
+        style="@style/smallButton" />
+
+    <Button
+        android:id="@id/smartStopCountdownContinueBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SmartStopContinueTraveling"
+        android:backgroundTint="@color/general_confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/smartStopCountdownStopBtn"
+        style="@style/darkRoundButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

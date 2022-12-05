@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/item_ticket_settings_automatic_stop_0" android:background="@drawable/white_background" android:paddingTop="@dimen/spacing_m" android:paddingBottom="@dimen/spacing_m" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/spacing_m" android:paddingEnd="@dimen/spacing_s" android:paddingVertical="@dimen/spacing_m"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:id="@id/ticketSettingsAutomaticStopTitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/TicketSettingsSmartStopEntryTitle" android:includeFontPadding="false" android:drawablePadding="@dimen/spacing_s" app:drawableStartCompat="@drawable/ic_smart_stop_dark" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/ticketSettingsAutomaticStopValue" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/RegularDark" />
-    <TextView android:id="@id/ticketSettingsAutomaticStopValue" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:drawablePadding="@dimen/spacing_xs" app:drawableEndCompat="@drawable/ic_chevron_right_dark" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/ticketSettingsAutomaticStopTitle" app:layout_constraintTop_toTopOf="parent" style="@style/RegularDark" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/item_ticket_settings_automatic_stop_0"
+    android:background="@drawable/white_background"
+    android:paddingTop="@dimen/spacing_m"
+    android:paddingBottom="@dimen/spacing_m"
+    android:paddingStart="@dimen/spacing_m"
+    android:paddingEnd="@dimen/spacing_s"
+    android:paddingVertical="@dimen/spacing_m">
+
+    <TextView
+        android:id="@id/ticketSettingsAutomaticStopTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/TicketSettingsSmartStopEntryTitle"
+        android:includeFontPadding="false"
+        android:drawablePadding="@dimen/spacing_s"
+        app:drawableStartCompat="@drawable/ic_smart_stop_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ticketSettingsAutomaticStopValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/RegularDark" />
+
+    <TextView
+        android:id="@id/ticketSettingsAutomaticStopValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_1"
+        android:includeFontPadding="false"
+        android:drawablePadding="@dimen/spacing_xs"
+        app:drawableEndCompat="@drawable/ic_chevron_right_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ticketSettingsAutomaticStopTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/RegularDark" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

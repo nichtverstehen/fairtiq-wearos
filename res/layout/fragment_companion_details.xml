@@ -1,17 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/secondary_broken_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.core.widget.NestedScrollView android:id="@id/companion_details_components" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <include android:id="@id/cannotEditCompanionBanner" app:layout_constraintBottom_toTopOf="@id/personalInfoHeader" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/component_message_banner" />
-            <include android:id="@id/personalInfoHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/cannotEditCompanionBanner" layout="@layout/item_section_header" />
-            <View android:id="@id/background" android:background="@color/grayscale_100" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/dateOfBirthComponent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/personalInfoHeader" />
-            <include android:id="@id/firstNameInput" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_l" android:layout_marginTop="@dimen/spacing_m" android:layout_marginRight="@dimen/spacing_l" android:layout_marginHorizontal="@dimen/spacing_l" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/background" layout="@layout/component_input_text" />
-            <include android:id="@id/lastNameInput" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_l" android:layout_marginTop="@dimen/spacing_s" android:layout_marginRight="@dimen/spacing_l" android:layout_marginHorizontal="@dimen/spacing_l" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/firstNameInput" layout="@layout/component_input_text" />
-            <include android:id="@id/dateOfBirthComponent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_m" app:layout_constraintBottom_toTopOf="@id/travelPassesListView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/lastNameInput" layout="@layout/component_date_of_birth_selection" />
-            <com.fairtiq.pass.ui.created.TravelPassesListView android:id="@id/travelPassesListView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/deleteCompanionButton" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/dateOfBirthComponent" />
-            <TextView android:id="@id/deleteCompanionButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_xl" android:layout_marginBottom="@dimen/spacing_xl" android:text="@string/DeleteCompanion" android:layout_marginVertical="@dimen/spacing_xl" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/travelPassesListView" style="@style/ButtonBigTransparent" />
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/secondary_broken_white">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@id/companion_details_components"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@id/cannotEditCompanionBanner"
+                app:layout_constraintBottom_toTopOf="@id/personalInfoHeader"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                layout="@layout/component_message_banner" />
+
+            <include
+                android:id="@id/personalInfoHeader"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cannotEditCompanionBanner"
+                layout="@layout/item_section_header" />
+
+            <View
+                android:id="@id/background"
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:background="@color/grayscale_100"
+                app:layout_constraintBottom_toTopOf="@id/dateOfBirthComponent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/personalInfoHeader" />
+
+            <include
+                android:id="@id/firstNameInput"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_l"
+                android:layout_marginTop="@dimen/spacing_m"
+                android:layout_marginRight="@dimen/spacing_l"
+                android:layout_marginHorizontal="@dimen/spacing_l"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/background"
+                layout="@layout/component_input_text" />
+
+            <include
+                android:id="@id/lastNameInput"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_l"
+                android:layout_marginTop="@dimen/spacing_s"
+                android:layout_marginRight="@dimen/spacing_l"
+                android:layout_marginHorizontal="@dimen/spacing_l"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstNameInput"
+                layout="@layout/component_input_text" />
+
+            <include
+                android:id="@id/dateOfBirthComponent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_m"
+                app:layout_constraintBottom_toTopOf="@id/travelPassesListView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lastNameInput"
+                layout="@layout/component_date_of_birth_selection" />
+
+            <com.fairtiq.pass.ui.created.TravelPassesListView
+                android:id="@id/travelPassesListView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/deleteCompanionButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dateOfBirthComponent" />
+
+            <TextView
+                android:id="@id/deleteCompanionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xl"
+                android:layout_marginBottom="@dimen/spacing_xl"
+                android:text="@string/DeleteCompanion"
+                android:layout_marginVertical="@dimen/spacing_xl"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/travelPassesListView"
+                style="@style/ButtonBigTransparent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.core.widget.NestedScrollView>
-    <ProgressBar android:id="@id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+
+    <ProgressBar
+        android:id="@id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
 </RelativeLayout>

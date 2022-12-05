@@ -1,8 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/travelerSettingsContainer" android:tag="layout/component_traveler_settings_0" android:background="@drawable/bg_white_top_rounded" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="86.0dip" android:paddingStart="@dimen/spacing_m" android:paddingEnd="@dimen/spacing_l" android:elevation="@dimen/spacing_m"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:id="@id/smartStopStatus" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/ic_smart_stop_dark" android:contentDescription="@null" app:layout_constraintBottom_toTopOf="@id/travelerName" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="1.0" />
-    <TextView android:id="@id/travelerName" android:tag="binding_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_xl" app:layout_constraintBottom_toTopOf="@id/travelerPasses" app:layout_constraintEnd_toStartOf="@id/ticketClass" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/SubtitleDark" />
-    <TextView android:id="@id/ticketClass" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/travelerName" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/travelerName" app:layout_constraintTop_toTopOf="@id/travelerName" style="@style/SubtitleDark" />
-    <TextView android:id="@id/travelerPasses" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/spacing_m" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/travelerName" style="@style/SubtitleGrey" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/travelerSettingsContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/component_traveler_settings_0"
+    android:background="@drawable/bg_white_top_rounded"
+    android:minHeight="86.0dip"
+    android:paddingStart="@dimen/spacing_m"
+    android:paddingEnd="@dimen/spacing_l"
+    android:elevation="@dimen/spacing_m">
+
+    <ImageView
+        android:id="@id/smartStopStatus"
+        android:layout_width="18.0dip"
+        android:layout_height="18.0dip"
+        android:src="@drawable/ic_smart_stop_dark"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toTopOf="@id/travelerName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@id/travelerName"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:tag="binding_1"
+        android:layout_marginTop="@dimen/spacing_xl"
+        app:layout_constraintBottom_toTopOf="@id/travelerPasses"
+        app:layout_constraintEnd_toStartOf="@id/ticketClass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/SubtitleDark" />
+
+    <TextView
+        android:id="@id/ticketClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_2"
+        app:layout_constraintBottom_toBottomOf="@id/travelerName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/travelerName"
+        app:layout_constraintTop_toTopOf="@id/travelerName"
+        style="@style/SubtitleDark" />
+
+    <TextView
+        android:id="@id/travelerPasses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_3"
+        android:layout_marginBottom="@dimen/spacing_m"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/travelerName"
+        style="@style/SubtitleGrey" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

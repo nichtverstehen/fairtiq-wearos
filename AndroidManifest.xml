@@ -1,279 +1,995 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="com.fairtiq.android" platformBuildVersionCode="33" platformBuildVersionName="13">
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
-    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
-    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
-    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <permission android:name="com.fairtiq.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
-    <uses-permission android:name="com.fairtiq.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:compileSdkVersion="33"
+    android:compileSdkVersionCodename="13"
+    package="com.fairtiq.android"
+    platformBuildVersionCode="33"
+    platformBuildVersionName="13">
+
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+
+    <uses-permission
+        android:name="android.permission.VIBRATE" />
+
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission
+        android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+
+    <uses-permission
+        android:name="android.permission.ACTIVITY_RECOGNITION" />
+
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <uses-permission
+        android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <uses-permission
+        android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission
+        android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <permission
+        android:name="com.fairtiq.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission
+        android:name="com.fairtiq.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
     <queries>
+
         <intent>
-            <action android:name="ch.twint.action.TWINT_PAYMENT"/>
+
+            <action
+                android:name="ch.twint.action.TWINT_PAYMENT" />
+
         </intent>
+
         <intent>
-            <action android:name="ch.twint.action.TWINT_UOF_REGISTRATION"/>
+
+            <action
+                android:name="ch.twint.action.TWINT_UOF_REGISTRATION" />
+
         </intent>
+
         <intent>
-            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+
+            <action
+                android:name="android.support.customtabs.action.CustomTabsService" />
+
         </intent>
-        <package android:name="ch.postfinance.android"/>
-        <package android:name="ch.postfinance.android.t1"/>
-        <package android:name="ch.postfinance.android.t2"/>
+
+        <package
+            android:name="ch.postfinance.android" />
+
+        <package
+            android:name="ch.postfinance.android.t1" />
+
+        <package
+            android:name="ch.postfinance.android.t2" />
+
     </queries>
-    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher" android:label="@string/application_name" android:name="com.fairtiq.androidkit.FairtiqApplication" android:networkSecurityConfig="@xml/network_security_config" android:requestLegacyExternalStorage="true" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="false">
-        <activity android:exported="true" android:launchMode="singleTop" android:name="com.fairtiq.androidkit.signup.StartupActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Launcher">
-            <intent-filter android:autoVerify="true">
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:host="use.fairtiq.com" android:scheme="https"/>
+
+    <application
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:extractNativeLibs="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/application_name"
+        android:name="com.fairtiq.androidkit.FairtiqApplication"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="false">
+
+        <activity
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:name="com.fairtiq.androidkit.signup.StartupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Launcher">
+
+            <intent-filter
+                android:autoVerify="true">
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="use.fairtiq.com"
+                    android:scheme="https" />
+
             </intent-filter>
+
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
+
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:host="launch" android:scheme="fairtiq"/>
-                <data android:host="" android:scheme="fairtiq"/>
-                <data android:host="home" android:scheme="fairtiq"/>
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="launch"
+                    android:scheme="fairtiq" />
+
+                <data
+                    android:host=""
+                    android:scheme="fairtiq" />
+
+                <data
+                    android:host="home"
+                    android:scheme="fairtiq" />
+
             </intent-filter>
+
         </activity>
-        <meta-data android:name="APPCENTER_APP_SECRET" android:value="68f05b7d-86bf-4be0-a2c7-9c8401f8f63d"/>
-        <meta-data android:name="SDK_APP_NAME" android:value="FAIRTIQ"/>
-        <meta-data android:name="SDK_APP_DOMAIN" android:value="fairtiq"/>
-        <meta-data android:name="google_analytics_adid_collection_enabled" android:value="false"/>
-        <meta-data android:name="firebase_analytics_collection_enabled" android:value="false"/>
-        <meta-data android:name="firebase_analytics_collection_deactivated" android:value="true"/>
-        <meta-data android:name="google_analytics_ssaid_collection_enabled" android:value="false"/>
-        <meta-data android:name="google_analytics_default_allow_ad_personalization_signals" android:value="false"/>
-        <activity android:name="com.fairtiq.androidkit.MainActivity" android:screenOrientation="portrait"/>
-        <activity android:name="com.fairtiq.androidkit.login.LoginActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
-        <activity android:name="com.fairtiq.androidkit.station.StationSelectionActivity" android:parentActivityName="com.fairtiq.androidkit.MainActivity" android:screenOrientation="portrait">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.fairtiq.androidkit.MainActivity"/>
+
+        <meta-data
+            android:name="APPCENTER_APP_SECRET"
+            android:value="68f05b7d-86bf-4be0-a2c7-9c8401f8f63d" />
+
+        <meta-data
+            android:name="SDK_APP_NAME"
+            android:value="FAIRTIQ" />
+
+        <meta-data
+            android:name="SDK_APP_DOMAIN"
+            android:value="fairtiq" />
+
+        <meta-data
+            android:name="google_analytics_adid_collection_enabled"
+            android:value="false" />
+
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+
+        <meta-data
+            android:name="firebase_analytics_collection_deactivated"
+            android:value="true" />
+
+        <meta-data
+            android:name="google_analytics_ssaid_collection_enabled"
+            android:value="false" />
+
+        <meta-data
+            android:name="google_analytics_default_allow_ad_personalization_signals"
+            android:value="false" />
+
+        <activity
+            android:name="com.fairtiq.androidkit.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.fairtiq.androidkit.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.fairtiq.androidkit.station.StationSelectionActivity"
+            android:parentActivityName="com.fairtiq.androidkit.MainActivity"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fairtiq.androidkit.MainActivity" />
+
         </activity>
-        <activity android:name="com.fairtiq.androidkit.history.HistoryActivity" android:parentActivityName="com.fairtiq.androidkit.MainActivity" android:screenOrientation="portrait">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.fairtiq.androidkit.MainActivity"/>
+
+        <activity
+            android:name="com.fairtiq.androidkit.history.HistoryActivity"
+            android:parentActivityName="com.fairtiq.androidkit.MainActivity"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fairtiq.androidkit.MainActivity" />
+
         </activity>
-        <activity android:name="com.fairtiq.androidkit.payment.PaymentActivity" android:parentActivityName="com.fairtiq.androidkit.MainActivity" android:screenOrientation="portrait">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.fairtiq.androidkit.MainActivity"/>
+
+        <activity
+            android:name="com.fairtiq.androidkit.payment.PaymentActivity"
+            android:parentActivityName="com.fairtiq.androidkit.MainActivity"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fairtiq.androidkit.MainActivity" />
+
         </activity>
-        <activity android:name="com.fairtiq.androidkit.communityselection.CommunitySelectionActivity" android:parentActivityName="com.fairtiq.androidkit.MainActivity" android:screenOrientation="portrait">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.fairtiq.androidkit.MainActivity"/>
+
+        <activity
+            android:name="com.fairtiq.androidkit.communityselection.CommunitySelectionActivity"
+            android:parentActivityName="com.fairtiq.androidkit.MainActivity"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fairtiq.androidkit.MainActivity" />
+
         </activity>
-        <activity android:name="com.fairtiq.androidkit.promotion.PromotionsActivity" android:parentActivityName="com.fairtiq.androidkit.MainActivity" android:screenOrientation="portrait">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.fairtiq.androidkit.MainActivity"/>
+
+        <activity
+            android:name="com.fairtiq.androidkit.promotion.PromotionsActivity"
+            android:parentActivityName="com.fairtiq.androidkit.MainActivity"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fairtiq.androidkit.MainActivity" />
+
         </activity>
-        <activity android:name="com.fairtiq.androidkit.settings.account.promotion.PromotionsRegistrationActivity" android:parentActivityName="com.fairtiq.androidkit.settings.account.AccountSettingsRegistrationActivity" android:screenOrientation="portrait">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.fairtiq.androidkit.settings.account.AccountSettingsRegistrationActivity"/>
+
+        <activity
+            android:name="com.fairtiq.androidkit.settings.account.promotion.PromotionsRegistrationActivity"
+            android:parentActivityName="com.fairtiq.androidkit.settings.account.AccountSettingsRegistrationActivity"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fairtiq.androidkit.settings.account.AccountSettingsRegistrationActivity" />
+
         </activity>
-        <activity android:name="com.fairtiq.androidkit.freeRides.FreeRidesActivity" android:parentActivityName="com.fairtiq.androidkit.MainActivity" android:screenOrientation="portrait">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.fairtiq.androidkit.MainActivity"/>
+
+        <activity
+            android:name="com.fairtiq.androidkit.freeRides.FreeRidesActivity"
+            android:parentActivityName="com.fairtiq.androidkit.MainActivity"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fairtiq.androidkit.MainActivity" />
+
         </activity>
-        <activity android:launchMode="singleTop" android:name="com.fairtiq.androidkit.ticket.TicketActivity" android:parentActivityName="com.fairtiq.androidkit.MainActivity" android:screenOrientation="portrait">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.fairtiq.androidkit.MainActivity"/>
+
+        <activity
+            android:launchMode="singleTop"
+            android:name="com.fairtiq.androidkit.ticket.TicketActivity"
+            android:parentActivityName="com.fairtiq.androidkit.MainActivity"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fairtiq.androidkit.MainActivity" />
+
         </activity>
-        <activity android:name="com.fairtiq.androidkit.settings.account.AccountSettingsRegistrationActivity" android:parentActivityName="com.fairtiq.androidkit.login.LoginActivity" android:screenOrientation="portrait">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.fairtiq.androidkit.login.LoginActivity"/>
+
+        <activity
+            android:name="com.fairtiq.androidkit.settings.account.AccountSettingsRegistrationActivity"
+            android:parentActivityName="com.fairtiq.androidkit.login.LoginActivity"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fairtiq.androidkit.login.LoginActivity" />
+
         </activity>
-        <activity android:name="com.fairtiq.androidkit.settings.SettingsActivity" android:parentActivityName="com.fairtiq.androidkit.MainActivity" android:screenOrientation="portrait">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.fairtiq.androidkit.MainActivity"/>
+
+        <activity
+            android:name="com.fairtiq.androidkit.settings.SettingsActivity"
+            android:parentActivityName="com.fairtiq.androidkit.MainActivity"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fairtiq.androidkit.MainActivity" />
+
         </activity>
-        <activity android:name="com.fairtiq.androidkit.settings.ticket.smartstop.SmartStopSettingsActivity" android:parentActivityName="com.fairtiq.androidkit.settings.SettingsActivity" android:screenOrientation="portrait">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.fairtiq.androidkit.settings.SettingsActivity"/>
+
+        <activity
+            android:name="com.fairtiq.androidkit.settings.ticket.smartstop.SmartStopSettingsActivity"
+            android:parentActivityName="com.fairtiq.androidkit.settings.SettingsActivity"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fairtiq.androidkit.settings.SettingsActivity" />
+
         </activity>
-        <activity android:launchMode="singleTop" android:name="com.fairtiq.pass.ui.PassActivity" android:parentActivityName="com.fairtiq.androidkit.MainActivity" android:screenOrientation="portrait" android:theme="@style/SwissPassActionModeTheme">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.fairtiq.androidkit.MainActivity"/>
+
+        <activity
+            android:launchMode="singleTop"
+            android:name="com.fairtiq.pass.ui.PassActivity"
+            android:parentActivityName="com.fairtiq.androidkit.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SwissPassActionModeTheme">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fairtiq.androidkit.MainActivity" />
+
         </activity>
-        <activity android:name="com.fairtiq.about.ui.AboutActivity" android:parentActivityName="com.fairtiq.androidkit.MainActivity" android:screenOrientation="portrait">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:screenOrientation="portrait" android:value="com.fairtiq.androidkit.MainActivity"/>
+
+        <activity
+            android:name="com.fairtiq.about.ui.AboutActivity"
+            android:parentActivityName="com.fairtiq.androidkit.MainActivity"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:screenOrientation="portrait"
+                android:value="com.fairtiq.androidkit.MainActivity" />
+
         </activity>
-        <activity android:name="com.fairtiq.androidkit.legalDocument.LegalDocumentUpdateActivity" android:screenOrientation="portrait"/>
-        <activity android:launchMode="singleTop" android:name="com.fairtiq.androidkit.zendesk.ContactActivity" android:screenOrientation="portrait"/>
-        <activity android:launchMode="singleTop" android:name="com.fairtiq.androidkit.howitwork.HowItWorkActivity" android:screenOrientation="portrait"/>
-        <activity android:launchMode="singleTop" android:name="com.fairtiq.androidkit.journey.JourneyActivity" android:screenOrientation="portrait"/>
-        <activity android:launchMode="singleTop" android:name="com.fairtiq.androidkit.legalDocument.LegalDocumentActivity" android:screenOrientation="portrait"/>
-        <activity android:name="com.fairtiq.androidkit.web.WebViewActivity" android:parentActivityName="com.fairtiq.androidkit.MainActivity" android:screenOrientation="portrait">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:screenOrientation="portrait" android:value="com.fairtiq.androidkit.MainActivity"/>
+
+        <activity
+            android:name="com.fairtiq.androidkit.legalDocument.LegalDocumentUpdateActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:launchMode="singleTop"
+            android:name="com.fairtiq.androidkit.zendesk.ContactActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:launchMode="singleTop"
+            android:name="com.fairtiq.androidkit.howitwork.HowItWorkActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:launchMode="singleTop"
+            android:name="com.fairtiq.androidkit.journey.JourneyActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:launchMode="singleTop"
+            android:name="com.fairtiq.androidkit.legalDocument.LegalDocumentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.fairtiq.androidkit.web.WebViewActivity"
+            android:parentActivityName="com.fairtiq.androidkit.MainActivity"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:screenOrientation="portrait"
+                android:value="com.fairtiq.androidkit.MainActivity" />
+
         </activity>
-        <activity android:name="com.fairtiq.androidkit.payment.method.create.CreatePaymentMethodActivity" android:theme="@style/AppTheme.Transparent"/>
-        <service android:name="com.fairtiq.payment.service.adyen.AdyenDropInService"/>
-        <activity android:exported="true" android:launchMode="singleTask" android:name="ch.datatrans.payment.ExternalProcessRelayActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+
+        <activity
+            android:name="com.fairtiq.androidkit.payment.method.create.CreatePaymentMethodActivity"
+            android:theme="@style/AppTheme.Transparent" />
+
+        <service
+            android:name="com.fairtiq.payment.service.adyen.AdyenDropInService" />
+
+        <activity
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:name="ch.datatrans.payment.ExternalProcessRelayActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="com.fairtiq.android.dtpl"/>
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="com.fairtiq.android.dtpl" />
+
             </intent-filter>
+
         </activity>
-        <activity android:launchMode="singleTop" android:name="com.fairtiq.androidkit.signup.permissions.PermissionsAcceptanceActivity" android:screenOrientation="portrait"/>
-        <activity android:name="com.fairtiq.multitraveler.ui.CompanionsActivity" android:screenOrientation="portrait"/>
-        <activity android:launchMode="singleTop" android:name="com.fairtiq.about.easteregg.ui.EasterEggActivity" android:screenOrientation="portrait"/>
-        <activity android:name="com.fairtiq.about.ui.AboutFairtiqActivity" android:screenOrientation="portrait"/>
-        <service android:exported="false" android:name="com.fairtiq.common.push.FirebaseMessagingServiceImpl">
+
+        <activity
+            android:launchMode="singleTop"
+            android:name="com.fairtiq.androidkit.signup.permissions.PermissionsAcceptanceActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.fairtiq.multitraveler.ui.CompanionsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:launchMode="singleTop"
+            android:name="com.fairtiq.about.easteregg.ui.EasterEggActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.fairtiq.about.ui.AboutFairtiqActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:exported="false"
+            android:name="com.fairtiq.common.push.FirebaseMessagingServiceImpl">
+
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT" />
+
             </intent-filter>
+
         </service>
-        <activity android:exported="true" android:launchMode="singleTask" android:name="com.adyen.checkout.dropin.ui.DropInActivity" android:theme="@style/AdyenCheckout.Translucent">
+
+        <activity
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:name="com.adyen.checkout.dropin.ui.DropInActivity"
+            android:theme="@style/AdyenCheckout.Translucent">
+
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:host="com.fairtiq.android" android:scheme="adyencheckout"/>
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.fairtiq.android"
+                    android:scheme="adyencheckout" />
+
             </intent-filter>
+
         </activity>
-        <activity android:name="zendesk.support.request.RequestActivity" android:windowSoftInputMode="adjustResize"/>
-        <activity android:label="@string/request_list_activity_title" android:name="zendesk.support.requestlist.RequestListActivity"/>
-        <receiver android:exported="false" android:name="zendesk.support.DeepLinkingBroadcastReceiver">
+
+        <activity
+            android:name="zendesk.support.request.RequestActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:label="@string/request_list_activity_title"
+            android:name="zendesk.support.requestlist.RequestListActivity" />
+
+        <receiver
+            android:exported="false"
+            android:name="zendesk.support.DeepLinkingBroadcastReceiver">
+
             <intent-filter>
-                <action android:name="zendesk.support"/>
+
+                <action
+                    android:name="zendesk.support" />
+
             </intent-filter>
+
         </receiver>
-        <provider android:authorities="com.fairtiq.android.zendesk.support.SupportSdkStartupProvider" android:enabled="true" android:exported="false" android:name="zendesk.support.SupportSdkStartupProvider"/>
-        <meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true"/>
-        <activity android:configChanges="orientation|screenSize" android:label="@string/zs_view_article_loading_title" android:name="zendesk.support.guide.ViewArticleActivity"/>
-        <activity android:label="@string/support_activity_title" android:name="zendesk.support.guide.HelpCenterActivity" android:windowSoftInputMode="adjustResize"/>
-        <provider android:authorities="com.fairtiq.android.zendesk.support.GuideSdkStartupProvider" android:enabled="true" android:exported="false" android:name="zendesk.support.guide.GuideSdkStartupProvider"/>
-        <activity android:name="zendesk.messaging.MessagingActivity" android:windowSoftInputMode="adjustResize"/>
-        <service android:name="com.adyen.checkout.components.analytics.AnalyticsDispatcher" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <service android:exported="false" android:foregroundServiceType="dataSync|location" android:name="com.fairtiq.sdk.internal.services.tracking.TrackingServiceImpl"/>
-        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
-        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.ktx.FirebaseRemoteConfigKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+
+        <provider
+            android:authorities="com.fairtiq.android.zendesk.support.SupportSdkStartupProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:name="zendesk.support.SupportSdkStartupProvider" />
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:label="@string/zs_view_article_loading_title"
+            android:name="zendesk.support.guide.ViewArticleActivity" />
+
+        <activity
+            android:label="@string/support_activity_title"
+            android:name="zendesk.support.guide.HelpCenterActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <provider
+            android:authorities="com.fairtiq.android.zendesk.support.GuideSdkStartupProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:name="zendesk.support.guide.GuideSdkStartupProvider" />
+
+        <activity
+            android:name="zendesk.messaging.MessagingActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name="com.adyen.checkout.components.analytics.AnalyticsDispatcher"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <service
+            android:exported="false"
+            android:foregroundServiceType="dataSync|location"
+            android:name="com.fairtiq.sdk.internal.services.tracking.TrackingServiceImpl" />
+
+        <activity
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:exported="true"
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:visibleToInstantApps="true" />
+
+        <service
+            android:directBootAware="true"
+            android:exported="false"
+            android:name="com.google.firebase.components.ComponentDiscoveryService">
+
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.ktx.FirebaseRemoteConfigKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+
         </service>
-        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
-        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
-        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+
+        <receiver
+            android:enabled="true"
+            android:exported="false"
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver" />
+
+        <service
+            android:enabled="true"
+            android:exported="false"
+            android:name="com.google.android.gms.measurement.AppMeasurementService" />
+
+        <service
+            android:enabled="true"
+            android:exported="false"
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:exported="true"
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+
             <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+
+                <action
+                    android:name="com.google.android.c2dm.intent.RECEIVE" />
+
             </intent-filter>
+
         </receiver>
-        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
-            <intent-filter android:priority="-500">
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+
+        <service
+            android:directBootAware="true"
+            android:exported="false"
+            android:name="com.google.firebase.messaging.FirebaseMessagingService">
+
+            <intent-filter
+                android:priority="-500">
+
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT" />
+
             </intent-filter>
+
         </service>
-        <provider android:authorities="com.fairtiq.android.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
-        <activity android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
-        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
-        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
-        <provider android:authorities="com.fairtiq.android.belvedere2.attachments" android:exported="false" android:grantUriPermissions="true" android:name="zendesk.belvedere.BelvedereFileProvider" android:readPermission="true">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/belvedere_attachment_storage_v2"/>
+
+        <provider
+            android:authorities="com.fairtiq.android.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100"
+            android:name="com.google.firebase.provider.FirebaseInitProvider" />
+
+        <activity
+            android:exported="false"
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.PlayCore.Transparent" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:exported="false"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:authorities="com.fairtiq.android.belvedere2.attachments"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            android:name="zendesk.belvedere.BelvedereFileProvider"
+            android:readPermission="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/belvedere_attachment_storage_v2" />
+
         </provider>
-        <activity android:exported="true" android:launchMode="singleTask" android:name="com.adyen.threeds2.internal.ui.activity.ChallengeActivity" android:theme="@style/ThreeDS2Theme.Internal" android:windowSoftInputMode="stateHidden">
+
+        <activity
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:name="com.adyen.threeds2.internal.ui.activity.ChallengeActivity"
+            android:theme="@style/ThreeDS2Theme.Internal"
+            android:windowSoftInputMode="stateHidden">
+
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:host="com.fairtiq.android" android:scheme="adyen3ds2"/>
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.fairtiq.android"
+                    android:scheme="adyen3ds2" />
+
             </intent-filter>
+
         </activity>
-        <receiver android:exported="true" android:name="com.adyen.threeds2.internal.AppUpgradeBroadcastReceiver">
+
+        <receiver
+            android:exported="true"
+            android:name="com.adyen.threeds2.internal.AppUpgradeBroadcastReceiver">
+
             <intent-filter>
-                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+
+                <action
+                    android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+
             </intent-filter>
+
         </receiver>
-        <uses-library android:name="androidx.window.extensions" android:required="false"/>
-        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
-        <provider android:authorities="com.fairtiq.android.com.squareup.picasso" android:exported="false" android:name="com.squareup.picasso.PicassoProvider"/>
-        <provider android:authorities="com.fairtiq.android.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
-            <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
-            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
-            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
-            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+
+        <provider
+            android:authorities="com.fairtiq.android.com.squareup.picasso"
+            android:exported="false"
+            android:name="com.squareup.picasso.PicassoProvider" />
+
+        <provider
+            android:authorities="com.fairtiq.android.androidx-startup"
+            android:exported="false"
+            android:name="androidx.startup.InitializationProvider">
+
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup" />
+
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+
         </provider>
-        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
-        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <service android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:name="androidx.work.impl.foreground.SystemForegroundService"/>
-        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
-        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+
+        <service
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" />
+
+        <service
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <service
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false"
+            android:name="androidx.work.impl.foreground.SystemForegroundService" />
+
+        <receiver
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="false"
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" />
+
+        <receiver
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false"
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+
             <intent-filter>
-                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
-                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+
+                <action
+                    android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+
+                <action
+                    android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+
             </intent-filter>
+
         </receiver>
-        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+
+        <receiver
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false"
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+
             <intent-filter>
-                <action android:name="android.intent.action.BATTERY_OKAY"/>
-                <action android:name="android.intent.action.BATTERY_LOW"/>
+
+                <action
+                    android:name="android.intent.action.BATTERY_OKAY" />
+
+                <action
+                    android:name="android.intent.action.BATTERY_LOW" />
+
             </intent-filter>
+
         </receiver>
-        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+
+        <receiver
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false"
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+
             <intent-filter>
-                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
-                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+
+                <action
+                    android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+
+                <action
+                    android:name="android.intent.action.DEVICE_STORAGE_OK" />
+
             </intent-filter>
+
         </receiver>
-        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+
+        <receiver
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false"
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+
             <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
             </intent-filter>
+
         </receiver>
-        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+
+        <receiver
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false"
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                <action android:name="android.intent.action.TIME_SET"/>
-                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <action
+                    android:name="android.intent.action.TIME_SET" />
+
+                <action
+                    android:name="android.intent.action.TIMEZONE_CHANGED" />
+
             </intent-filter>
+
         </receiver>
-        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+
+        <receiver
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+
             <intent-filter>
-                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+
+                <action
+                    android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+
             </intent-filter>
+
         </receiver>
-        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP">
+
+        <receiver
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP">
+
             <intent-filter>
-                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+
+                <action
+                    android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+
             </intent-filter>
+
         </receiver>
-        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+
+        <receiver
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP">
+
             <intent-filter>
-                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+
+                <action
+                    android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+
             </intent-filter>
+
             <intent-filter>
-                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+
+                <action
+                    android:name="androidx.profileinstaller.action.SKIP_FILE" />
+
             </intent-filter>
+
         </receiver>
-        <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
-        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
-            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+
+        <service
+            android:directBootAware="true"
+            android:exported="false"
+            android:name="androidx.room.MultiInstanceInvalidationService" />
+
+        <service
+            android:exported="false"
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct" />
+
         </service>
-        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
-        <activity android:launchMode="singleTask" android:name="ch.datatrans.payment.GooglePayActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
-        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
-        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_STANDALONE_APK"/>
-        <meta-data android:name="com.android.vending.splits" android:value="@xml/splits0"/>
-        <meta-data android:name="com.android.vending.derived.apk.id" android:value="2"/>
+
+        <service
+            android:exported="false"
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:exported="false"
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="ch.datatrans.payment.GooglePayActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.android.dynamic.apk.fused.modules"
+            android:value="base" />
+
+        <meta-data
+            android:name="com.android.stamp.source"
+            android:value="https://play.google.com/store" />
+
+        <meta-data
+            android:name="com.android.stamp.type"
+            android:value="STAMP_TYPE_STANDALONE_APK" />
+
+        <meta-data
+            android:name="com.android.vending.splits"
+            android:value="@xml/splits0" />
+
+        <meta-data
+            android:name="com.android.vending.derived.apk.id"
+            android:value="2" />
+
     </application>
+
 </manifest>

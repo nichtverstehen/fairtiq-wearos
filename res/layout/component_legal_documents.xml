@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/ll" android:tag="layout/component_legal_documents_0" android:paddingTop="@dimen/spacing_l" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bind="http://schemas.android.com/apk/res-auto">
-    <include android:id="@id/gtcSwitch" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/item_label_subtitle_toggle" />
-    <include android:id="@id/wrwSwitch" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/item_label_subtitle_toggle" />
-    <include android:id="@id/dataProtectionTextItem" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/item_label_action" />
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    android:id="@id/ll"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:tag="layout/component_legal_documents_0"
+    android:paddingTop="@dimen/spacing_l">
+
+    <include
+        android:id="@id/gtcSwitch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/item_label_subtitle_toggle" />
+
+    <include
+        android:id="@id/wrwSwitch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/item_label_subtitle_toggle" />
+
+    <include
+        android:id="@id/dataProtectionTextItem"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/item_label_action" />
+
 </LinearLayout>

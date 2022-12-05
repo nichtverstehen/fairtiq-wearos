@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:id="@id/text_tag_item" android:tag="layout/text_tag_item_0" android:layout_marginBottom="10.0dip" android:textAlignment="viewStart" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/TagIcon"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/text_tag_item"
+    android:tag="layout/text_tag_item_0"
+    android:layout_marginBottom="10.0dip"
+    android:textAlignment="viewStart"
+    android:paddingStart="16.0dip"
+    android:paddingEnd="16.0dip"
+    style="@style/TagIcon" />

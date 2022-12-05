@@ -1,26 +1,284 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:tag="layout/fragment_where_it_works_0" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.constraintlayout.widget.ConstraintLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ImageView android:id="@id/ticketImage" android:layout_width="105.0dip" android:layout_height="80.0dip" android:layout_marginTop="32.0dip" android:layout_marginBottom="32.0dip" android:src="@drawable/ic_illu_details_ticket_dark" android:scaleType="fitXY" android:contentDescription="@string/TicketSetupTitle" android:layout_marginStart="24.0dip" app:layout_constraintBottom_toTopOf="@id/div1" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-        <TextView android:textSize="20.0sp" android:textColor="@color/grayscale_020" android:id="@id/ticketSetup" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="23.0dip" android:text="@string/TicketSetupTitle" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" android:letterSpacing="0.02" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toEndOf="@id/ticketImage" app:layout_constraintTop_toTopOf="parent" />
-        <TextView android:textSize="14.0sp" android:textColor="@color/grayscale_020" android:id="@id/ticketSetupDescription" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/TicketSetupSubtitle" android:lineSpacingExtra="6.0sp" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/ticketImage" app:layout_constraintTop_toBottomOf="@id/ticketSetup" />
-        <View android:id="@id/div1" android:background="@color/grey_1" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="32.0dip" android:layout_marginBottom="8.0dip" app:layout_constraintTop_toBottomOf="@id/ticketSetupDescription" />
-        <ImageView android:id="@id/startSliderImage" android:layout_width="105.0dip" android:layout_height="80.0dip" android:layout_marginTop="32.0dip" android:layout_marginBottom="32.0dip" android:src="@drawable/ic_slider_start_dark" android:scaleType="fitXY" android:contentDescription="@string/StartingAJourneyTitle" android:layout_marginEnd="24.0dip" app:layout_constraintBottom_toTopOf="@id/div2" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/div1" />
-        <TextView android:textSize="20.0sp" android:textColor="@color/grayscale_020" android:id="@id/startJourney" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/StartingAJourneyTitle" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" android:letterSpacing="0.02" app:layout_constraintEnd_toStartOf="@id/startSliderImage" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/div1" />
-        <TextView android:textSize="14.0sp" android:textColor="@color/grayscale_020" android:id="@id/startJourneyDescription" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/StartingAJourneySubtitle" android:lineSpacingExtra="6.0sp" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" app:layout_constraintEnd_toStartOf="@id/startSliderImage" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/startJourney" />
-        <View android:id="@id/div2" android:background="@color/grey_1" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="32.0dip" android:layout_marginBottom="8.0dip" app:layout_constraintTop_toBottomOf="@id/startJourneyDescription" />
-        <ImageView android:id="@id/ticketInspectionImage" android:layout_width="105.0dip" android:layout_height="80.0dip" android:layout_marginTop="32.0dip" android:layout_marginBottom="32.0dip" android:src="@drawable/ic_illu_details_show_ticket_dark" android:scaleType="fitXY" android:contentDescription="@string/TicketInspectionTitle" android:layout_marginStart="24.0dip" app:layout_constraintBottom_toTopOf="@id/div3" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/div2" />
-        <TextView android:textSize="20.0sp" android:textColor="@color/grayscale_020" android:id="@id/ticketInspection" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/TicketInspectionTitle" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" android:letterSpacing="0.02" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toEndOf="@id/ticketInspectionImage" app:layout_constraintTop_toBottomOf="@id/div2" />
-        <TextView android:textSize="14.0sp" android:textColor="@color/grayscale_020" android:id="@id/ticketInspectionDescription" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/TicketInspectionSubtitle" android:lineSpacingExtra="6.0sp" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/ticketInspectionImage" app:layout_constraintTop_toBottomOf="@id/ticketInspection" />
-        <View android:id="@id/div3" android:background="@color/grey_1" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="32.0dip" app:layout_constraintTop_toBottomOf="@id/ticketInspectionDescription" />
-        <ImageView android:id="@id/stopSliderImage" android:layout_width="105.0dip" android:layout_height="80.0dip" android:layout_marginTop="32.0dip" android:layout_marginBottom="32.0dip" android:src="@drawable/ic_slider_stop_dark" android:scaleType="fitXY" android:contentDescription="@string/Stopping_a_journey" android:layout_marginEnd="24.0dip" app:layout_constraintBottom_toTopOf="@id/div4" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/div3" />
-        <TextView android:textSize="20.0sp" android:textColor="@color/grayscale_020" android:id="@id/stopJourney" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/Stopping_a_journey" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" android:letterSpacing="0.02" app:layout_constraintEnd_toStartOf="@id/stopSliderImage" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/div3" />
-        <TextView android:textSize="14.0sp" android:textColor="@color/grayscale_020" android:id="@id/stopJourneyDescription" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/StoppingAJourneySubtitle" android:lineSpacingExtra="6.0sp" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" app:layout_constraintEnd_toStartOf="@id/stopSliderImage" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/stopJourney" />
-        <View android:id="@id/div4" android:background="@color/grey_1" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="32.0dip" android:layout_marginBottom="8.0dip" app:layout_constraintTop_toBottomOf="@id/stopJourneyDescription" />
-        <ImageView android:id="@id/pricingImage" android:layout_width="105.0dip" android:layout_height="80.0dip" android:layout_marginTop="32.0dip" android:layout_marginBottom="32.0dip" android:src="@drawable/ic_illu_pig_dark" android:scaleType="fitXY" android:contentDescription="@string/PricingTitle" android:layout_marginStart="24.0dip" app:layout_constraintBottom_toTopOf="@id/div5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/div4" />
-        <TextView android:textSize="20.0sp" android:textColor="@color/grayscale_020" android:id="@id/pricing" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/PricingTitle" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" android:letterSpacing="0.02" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toEndOf="@id/pricingImage" app:layout_constraintTop_toBottomOf="@id/div4" />
-        <TextView android:textSize="14.0sp" android:textColor="@color/grayscale_020" android:id="@id/pricingDescription" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/PricingSubtitle" android:lineSpacingExtra="6.0sp" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/pricingImage" app:layout_constraintTop_toBottomOf="@id/pricing" />
-        <View android:id="@id/div5" android:background="@color/grey_1" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="32.0dip" app:layout_constraintTop_toBottomOf="@id/pricingDescription" />
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="layout/fragment_where_it_works_0">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@id/ticketImage"
+            android:layout_width="105.0dip"
+            android:layout_height="80.0dip"
+            android:layout_marginTop="32.0dip"
+            android:layout_marginBottom="32.0dip"
+            android:src="@drawable/ic_illu_details_ticket_dark"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/TicketSetupTitle"
+            android:layout_marginStart="24.0dip"
+            app:layout_constraintBottom_toTopOf="@id/div1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/ticketSetup"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textSize="20.0sp"
+            android:textColor="@color/grayscale_020"
+            android:layout_marginTop="23.0dip"
+            android:text="@string/TicketSetupTitle"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginEnd="24.0dip"
+            android:letterSpacing="0.02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/ticketImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/ticketSetupDescription"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textSize="14.0sp"
+            android:textColor="@color/grayscale_020"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/TicketSetupSubtitle"
+            android:lineSpacingExtra="6.0sp"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginEnd="24.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ticketImage"
+            app:layout_constraintTop_toBottomOf="@id/ticketSetup" />
+
+        <View
+            android:id="@id/div1"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/grey_1"
+            android:layout_marginTop="32.0dip"
+            android:layout_marginBottom="8.0dip"
+            app:layout_constraintTop_toBottomOf="@id/ticketSetupDescription" />
+
+        <ImageView
+            android:id="@id/startSliderImage"
+            android:layout_width="105.0dip"
+            android:layout_height="80.0dip"
+            android:layout_marginTop="32.0dip"
+            android:layout_marginBottom="32.0dip"
+            android:src="@drawable/ic_slider_start_dark"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/StartingAJourneyTitle"
+            android:layout_marginEnd="24.0dip"
+            app:layout_constraintBottom_toTopOf="@id/div2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/div1" />
+
+        <TextView
+            android:id="@id/startJourney"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textSize="20.0sp"
+            android:textColor="@color/grayscale_020"
+            android:layout_marginTop="24.0dip"
+            android:text="@string/StartingAJourneyTitle"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginEnd="24.0dip"
+            android:letterSpacing="0.02"
+            app:layout_constraintEnd_toStartOf="@id/startSliderImage"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/div1" />
+
+        <TextView
+            android:id="@id/startJourneyDescription"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textSize="14.0sp"
+            android:textColor="@color/grayscale_020"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/StartingAJourneySubtitle"
+            android:lineSpacingExtra="6.0sp"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginEnd="24.0dip"
+            app:layout_constraintEnd_toStartOf="@id/startSliderImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startJourney" />
+
+        <View
+            android:id="@id/div2"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/grey_1"
+            android:layout_marginTop="32.0dip"
+            android:layout_marginBottom="8.0dip"
+            app:layout_constraintTop_toBottomOf="@id/startJourneyDescription" />
+
+        <ImageView
+            android:id="@id/ticketInspectionImage"
+            android:layout_width="105.0dip"
+            android:layout_height="80.0dip"
+            android:layout_marginTop="32.0dip"
+            android:layout_marginBottom="32.0dip"
+            android:src="@drawable/ic_illu_details_show_ticket_dark"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/TicketInspectionTitle"
+            android:layout_marginStart="24.0dip"
+            app:layout_constraintBottom_toTopOf="@id/div3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/div2" />
+
+        <TextView
+            android:id="@id/ticketInspection"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textSize="20.0sp"
+            android:textColor="@color/grayscale_020"
+            android:layout_marginTop="24.0dip"
+            android:text="@string/TicketInspectionTitle"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginEnd="24.0dip"
+            android:letterSpacing="0.02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/ticketInspectionImage"
+            app:layout_constraintTop_toBottomOf="@id/div2" />
+
+        <TextView
+            android:id="@id/ticketInspectionDescription"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textSize="14.0sp"
+            android:textColor="@color/grayscale_020"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/TicketInspectionSubtitle"
+            android:lineSpacingExtra="6.0sp"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginEnd="24.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ticketInspectionImage"
+            app:layout_constraintTop_toBottomOf="@id/ticketInspection" />
+
+        <View
+            android:id="@id/div3"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/grey_1"
+            android:layout_marginTop="32.0dip"
+            app:layout_constraintTop_toBottomOf="@id/ticketInspectionDescription" />
+
+        <ImageView
+            android:id="@id/stopSliderImage"
+            android:layout_width="105.0dip"
+            android:layout_height="80.0dip"
+            android:layout_marginTop="32.0dip"
+            android:layout_marginBottom="32.0dip"
+            android:src="@drawable/ic_slider_stop_dark"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/Stopping_a_journey"
+            android:layout_marginEnd="24.0dip"
+            app:layout_constraintBottom_toTopOf="@id/div4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/div3" />
+
+        <TextView
+            android:id="@id/stopJourney"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textSize="20.0sp"
+            android:textColor="@color/grayscale_020"
+            android:layout_marginTop="24.0dip"
+            android:text="@string/Stopping_a_journey"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginEnd="24.0dip"
+            android:letterSpacing="0.02"
+            app:layout_constraintEnd_toStartOf="@id/stopSliderImage"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/div3" />
+
+        <TextView
+            android:id="@id/stopJourneyDescription"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textSize="14.0sp"
+            android:textColor="@color/grayscale_020"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/StoppingAJourneySubtitle"
+            android:lineSpacingExtra="6.0sp"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginEnd="24.0dip"
+            app:layout_constraintEnd_toStartOf="@id/stopSliderImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stopJourney" />
+
+        <View
+            android:id="@id/div4"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/grey_1"
+            android:layout_marginTop="32.0dip"
+            android:layout_marginBottom="8.0dip"
+            app:layout_constraintTop_toBottomOf="@id/stopJourneyDescription" />
+
+        <ImageView
+            android:id="@id/pricingImage"
+            android:layout_width="105.0dip"
+            android:layout_height="80.0dip"
+            android:layout_marginTop="32.0dip"
+            android:layout_marginBottom="32.0dip"
+            android:src="@drawable/ic_illu_pig_dark"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/PricingTitle"
+            android:layout_marginStart="24.0dip"
+            app:layout_constraintBottom_toTopOf="@id/div5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/div4" />
+
+        <TextView
+            android:id="@id/pricing"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textSize="20.0sp"
+            android:textColor="@color/grayscale_020"
+            android:layout_marginTop="24.0dip"
+            android:text="@string/PricingTitle"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginEnd="24.0dip"
+            android:letterSpacing="0.02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/pricingImage"
+            app:layout_constraintTop_toBottomOf="@id/div4" />
+
+        <TextView
+            android:id="@id/pricingDescription"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textSize="14.0sp"
+            android:textColor="@color/grayscale_020"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/PricingSubtitle"
+            android:lineSpacingExtra="6.0sp"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginEnd="24.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/pricingImage"
+            app:layout_constraintTop_toBottomOf="@id/pricing" />
+
+        <View
+            android:id="@id/div5"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/grey_1"
+            android:layout_marginTop="32.0dip"
+            app:layout_constraintTop_toBottomOf="@id/pricingDescription" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

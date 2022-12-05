@@ -1,11 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:tag="layout/component_message_alert_0" android:background="@color/grayscale_100" android:padding="@dimen/spacing_m" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="312.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ImageView android:id="@id/illustration" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-        <TextView android:gravity="center" android:id="@id/messageAlertTitle" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_m" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/illustration" app:layout_goneMarginTop="0.0dip" style="@style/H2Dark" />
-        <TextView android:id="@id/description" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_s" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/messageAlertTitle" style="@style/SubtitleDark" />
-        <TextView android:id="@id/negative_button" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_xl" android:textAllCaps="true" android:layout_marginEnd="@dimen/spacing_s" app:layout_constraintEnd_toStartOf="@id/positive_button" app:layout_constraintTop_toBottomOf="@id/description" style="@style/ButtonMedium" />
-        <TextView android:textColor="@color/grayscale_100" android:id="@id/positive_button" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_xl" android:textAllCaps="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/description" style="@style/ButtonMedium" />
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/component_message_alert_0"
+    android:background="@color/grayscale_100"
+    android:padding="@dimen/spacing_m"
+    android:minWidth="312.0dip">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@id/illustration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/messageAlertTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:tag="binding_2"
+            android:layout_marginTop="@dimen/spacing_m"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/illustration"
+            app:layout_goneMarginTop="0.0dip"
+            style="@style/H2Dark" />
+
+        <TextView
+            android:id="@id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_3"
+            android:layout_marginTop="@dimen/spacing_s"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/messageAlertTitle"
+            style="@style/SubtitleDark" />
+
+        <TextView
+            android:id="@id/negative_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_4"
+            android:layout_marginTop="@dimen/spacing_xl"
+            android:textAllCaps="true"
+            android:layout_marginEnd="@dimen/spacing_s"
+            app:layout_constraintEnd_toStartOf="@id/positive_button"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            style="@style/ButtonMedium" />
+
+        <TextView
+            android:id="@id/positive_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grayscale_100"
+            android:tag="binding_5"
+            android:layout_marginTop="@dimen/spacing_xl"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            style="@style/ButtonMedium" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

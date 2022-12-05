@@ -1,8 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/secondary_broken_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ProgressBar android:id="@id/companionsProgressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <TextView android:gravity="center" android:id="@id/companionsEmptyList" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/spacing_m" android:text="@string/TravelCompanionsEmptyListMessage" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.1" style="@style/SubtitleGrey" />
-    <androidx.recyclerview.widget.RecyclerView android:id="@id/companionsList" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constrainedHeight="true" app:layout_constraintBottom_toTopOf="@id/companionsListFooter" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.0" app:layout_constraintVertical_chainStyle="packed" />
-    <TextView android:id="@id/companionsListFooter" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/spacing_m" android:text="@string/CompanionListFooterInstructions" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/companionsList" style="@style/SubtitleDark" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/secondary_broken_white">
+
+    <ProgressBar
+        android:id="@id/companionsProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/companionsEmptyList"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_margin="@dimen/spacing_m"
+        android:text="@string/TravelCompanionsEmptyListMessage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        style="@style/SubtitleGrey" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/companionsList"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/companionsListFooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@id/companionsListFooter"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_m"
+        android:text="@string/CompanionListFooterInstructions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/companionsList"
+        style="@style/SubtitleDark" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

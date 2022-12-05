@@ -1,8 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:tag="layout/component_promo_code_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bind="http://schemas.android.com/apk/res-auto">
-    <androidx.appcompat.widget.SwitchCompat android:id="@id/promoCodeSwitch" android:layout_width="fill_parent" android:layout_marginTop="24.0dip" android:text="@string/PromotionPromoCodeHeader" bind:layout_constraintBottom_toTopOf="@id/divider" style="@style/switchField" />
-    <View android:id="@id/divider" android:tag="binding_1" android:background="@color/grey_1" android:layout_width="fill_parent" android:layout_height="1.0dip" />
-    <include android:id="@id/codeInputComponent" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/component_promo_code_input" />
-    <TextView android:id="@id/promoCodeHint" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_l" android:layout_marginTop="@dimen/spacing_s" android:layout_marginRight="@dimen/spacing_l" android:text="@string/PromotionPromoCodeFooter" android:layout_marginHorizontal="@dimen/spacing_l" style="@style/SubtitleGrey" />
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:tag="layout/component_promo_code_0">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@id/promoCodeSwitch"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="24.0dip"
+        android:text="@string/PromotionPromoCodeHeader"
+        bind:layout_constraintBottom_toTopOf="@id/divider"
+        style="@style/switchField" />
+
+    <View
+        android:id="@id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:tag="binding_1"
+        android:background="@color/grey_1" />
+
+    <include
+        android:id="@id/codeInputComponent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/component_promo_code_input" />
+
+    <TextView
+        android:id="@id/promoCodeHint"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:tag="binding_2"
+        android:layout_marginLeft="@dimen/spacing_l"
+        android:layout_marginTop="@dimen/spacing_s"
+        android:layout_marginRight="@dimen/spacing_l"
+        android:text="@string/PromotionPromoCodeFooter"
+        android:layout_marginHorizontal="@dimen/spacing_l"
+        style="@style/SubtitleGrey" />
+
 </LinearLayout>

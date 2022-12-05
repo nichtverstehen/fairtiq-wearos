@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/fragment_transaction_0" android:background="@color/secondary_broken_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view_transaction" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="true" android:divider="@color/grey_1" android:dividerHeight="1.0dip" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-    <TextView android:textSize="18.0sp" android:textColor="@color/grayscale_020" android:gravity="center" android:id="@id/textview_no_history" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="24.0dip" android:text="@string/TransactionNoTransactions" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:fontFamily="@font/lato_regular" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="layout/fragment_transaction_0"
+    android:background="@color/secondary_broken_white">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/recycler_view_transaction"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:tag="binding_1"
+        android:drawSelectorOnTop="true"
+        android:divider="@color/grey_1"
+        android:dividerHeight="1.0dip"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <TextView
+        android:id="@id/textview_no_history"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18.0sp"
+        android:textColor="@color/grayscale_020"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_margin="24.0dip"
+        android:text="@string/TransactionNoTransactions"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/lato_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

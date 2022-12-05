@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.viewpager2.widget.ViewPager2 android:id="@id/tickets_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <com.google.android.material.tabs.TabLayout android:layout_gravity="bottom|center" android:id="@id/ticketsDotIndicator" android:background="@drawable/pager_bg_rounded_white" android:paddingLeft="@dimen/spacing_l" android:paddingRight="@dimen/spacing_l" android:layout_width="wrap_content" android:layout_height="@dimen/spacing_l" android:layout_marginBottom="@dimen/spacing_l" android:elevation="3.0dip" android:paddingHorizontal="@dimen/spacing_l" app:tabBackground="@drawable/pager_tab_selector" app:tabGravity="center" app:tabIndicatorHeight="0.0dip" app:tabPaddingBottom="@dimen/spacing_s" app:tabPaddingEnd="6.0dip" app:tabPaddingStart="6.0dip" app:tabPaddingTop="@dimen/spacing_s" />
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@id/tickets_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@id/ticketsDotIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/spacing_l"
+        android:layout_gravity="bottom|center"
+        android:background="@drawable/pager_bg_rounded_white"
+        android:paddingLeft="@dimen/spacing_l"
+        android:paddingRight="@dimen/spacing_l"
+        android:layout_marginBottom="@dimen/spacing_l"
+        android:elevation="3.0dip"
+        android:paddingHorizontal="@dimen/spacing_l"
+        app:tabBackground="@drawable/pager_tab_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0.0dip"
+        app:tabPaddingBottom="@dimen/spacing_s"
+        app:tabPaddingEnd="6.0dip"
+        app:tabPaddingStart="6.0dip"
+        app:tabPaddingTop="@dimen/spacing_s" />
+
 </FrameLayout>

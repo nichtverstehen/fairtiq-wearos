@@ -1,17 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/main_view" android:tag="layout/fragment_travel_0" android:background="@color/grayscale_100" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <include android:id="@id/legacyTravelerSettings" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/component_traveler_settings_legacy" />
-    <ScrollView android:scrollbarThumbVertical="@color/primary" android:id="@id/contents" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:fadeScrollbars="false" android:requiresFadingEdge="vertical" app:layout_constrainedHeight="true" app:layout_constraintBottom_toTopOf="@id/stations_container" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHeight_default="spread" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/legacyTravelerSettings">
-        <FrameLayout android:id="@id/journeyStateViewContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/main_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="layout/fragment_travel_0"
+    android:background="@color/grayscale_100"
+    android:clipChildren="false">
+
+    <include
+        android:id="@id/legacyTravelerSettings"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/component_traveler_settings_legacy" />
+
+    <ScrollView
+        android:id="@id/contents"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:scrollbarThumbVertical="@color/primary"
+        android:fillViewport="true"
+        android:fadeScrollbars="false"
+        android:requiresFadingEdge="vertical"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/stations_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/legacyTravelerSettings">
+
+        <FrameLayout
+            android:id="@id/journeyStateViewContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
     </ScrollView>
-    <include android:id="@id/stations_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_l" android:layout_marginRight="@dimen/spacing_l" android:layout_marginHorizontal="@dimen/spacing_l" app:layout_constraintBottom_toTopOf="@id/journeyToggle" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/contents" layout="@layout/component_region_settings" />
-    <com.fairtiq.androidkit.custom.JourneyToggle android:id="@id/journeyToggle" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_marginLeft="@dimen/spacing_l" android:layout_marginTop="@dimen/spacing_m" android:layout_marginRight="@dimen/spacing_l" android:layout_marginBottom="@dimen/spacing_m" android:fontFamily="@font/lato_bold" android:layout_marginHorizontal="@dimen/spacing_l" app:layout_constrainedHeight="true" app:layout_constraintBottom_toTopOf="@id/travelerSettings" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/stations_container" />
-    <ImageView android:id="@id/smartStopStatusImageView" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_smart_stop_dark" android:contentDescription="@null" android:layout_marginEnd="@dimen/spacing_l" android:elevation="@dimen/spacing_xs" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/stations_container" />
-    <include android:id="@id/travelerSettings" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/journeyToggle" layout="@layout/component_traveler_settings" />
-    <com.fairtiq.common.reporter.ui.SnackBarView android:id="@id/snack_bar" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent" />
-    <FrameLayout android:id="@id/multitraveler_selection" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/spacing_m" android:layout_marginEnd="@dimen/spacing_l" app:layout_constraintBottom_toTopOf="@id/stations_container" app:layout_constraintEnd_toEndOf="parent">
-        <ImageButton android:id="@id/companion_selection_btn" android:background="@drawable/circle_white" android:layout_width="@dimen/spacing_xxxxl" android:layout_height="@dimen/spacing_xxxxl" android:layout_marginTop="@dimen/spacing_xs" android:src="@drawable/ic_companions" android:contentDescription="@null" android:elevation="@dimen/spacing_xs" />
-        <TextView android:layout_gravity="end|center|top" android:id="@id/companion_selection_btn_number" android:background="@drawable/circle_red" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="@dimen/spacing_xs" style="@style/FootnoteLight" />
+
+    <include
+        android:id="@id/stations_container"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_l"
+        android:layout_marginRight="@dimen/spacing_l"
+        android:layout_marginHorizontal="@dimen/spacing_l"
+        app:layout_constraintBottom_toTopOf="@id/journeyToggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contents"
+        layout="@layout/component_region_settings" />
+
+    <com.fairtiq.androidkit.custom.JourneyToggle
+        android:id="@id/journeyToggle"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        android:tag="binding_1"
+        android:layout_marginLeft="@dimen/spacing_l"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:layout_marginRight="@dimen/spacing_l"
+        android:layout_marginBottom="@dimen/spacing_m"
+        android:fontFamily="@font/lato_bold"
+        android:layout_marginHorizontal="@dimen/spacing_l"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/travelerSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stations_container" />
+
+    <ImageView
+        android:id="@id/smartStopStatusImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_2"
+        android:src="@drawable/ic_smart_stop_dark"
+        android:contentDescription="@null"
+        android:layout_marginEnd="@dimen/spacing_l"
+        android:elevation="@dimen/spacing_xs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stations_container" />
+
+    <include
+        android:id="@id/travelerSettings"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/journeyToggle"
+        layout="@layout/component_traveler_settings" />
+
+    <com.fairtiq.common.reporter.ui.SnackBarView
+        android:id="@id/snack_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:tag="binding_3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@id/multitraveler_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/spacing_m"
+        android:layout_marginEnd="@dimen/spacing_l"
+        app:layout_constraintBottom_toTopOf="@id/stations_container"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@id/companion_selection_btn"
+            android:layout_width="@dimen/spacing_xxxxl"
+            android:layout_height="@dimen/spacing_xxxxl"
+            android:background="@drawable/circle_white"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:src="@drawable/ic_companions"
+            android:contentDescription="@null"
+            android:elevation="@dimen/spacing_xs" />
+
+        <TextView
+            android:id="@id/companion_selection_btn_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center|top"
+            android:background="@drawable/circle_red"
+            android:visibility="gone"
+            android:elevation="@dimen/spacing_xs"
+            style="@style/FootnoteLight" />
+
     </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
